@@ -147,3 +147,33 @@ button {
   border-color: rgba(215, 185, 104, .3) !important;
   background: rgba(7, 17, 15, .74) !important;
 }
+/* Square-edged controls override every legacy rounded button rule. */
+html body button:not(#ui-square-a):not(#ui-square-b),
+html body [role="button"]:not(#ui-square-a):not(#ui-square-b),
+html body input[type="button"]:not(#ui-square-a):not(#ui-square-b),
+html body input[type="submit"]:not(#ui-square-a):not(#ui-square-b),
+html body input[type="reset"]:not(#ui-square-a):not(#ui-square-b),
+html body select:not(#ui-square-a):not(#ui-square-b),
+html body .costumeIcon:not(#ui-square-a):not(#ui-square-b),
+html body .eqCard:not(#ui-square-a):not(#ui-square-b),
+html body .eqSlot:not(#ui-square-a):not(#ui-square-b),
+html body .classCard:not(#ui-square-a):not(#ui-square-b),
+html body .mapCard:not(#ui-square-a):not(#ui-square-b){
+  border-radius:0!important;
+}
+html body button:not(#ui-square-a):not(#ui-square-b)::before,
+html body button:not(#ui-square-a):not(#ui-square-b)::after,
+html body [role="button"]:not(#ui-square-a):not(#ui-square-b)::before,
+html body [role="button"]:not(#ui-square-a):not(#ui-square-b)::after,
+html body .costumeIcon:not(#ui-square-a):not(#ui-square-b)::before,
+html body .costumeIcon:not(#ui-square-a):not(#ui-square-b)::after,
+html body .eqCard:not(#ui-square-a):not(#ui-square-b)::before,
+html body .eqCard:not(#ui-square-a):not(#ui-square-b)::after,
+html body .eqSlot:not(#ui-square-a):not(#ui-square-b)::before,
+html body .eqSlot:not(#ui-square-a):not(#ui-square-b)::after,
+html body .classCard:not(#ui-square-a):not(#ui-square-b)::before,
+html body .classCard:not(#ui-square-a):not(#ui-square-b)::after,
+html body .mapCard:not(#ui-square-a):not(#ui-square-b)::before,
+html body .mapCard:not(#ui-square-a):not(#ui-square-b)::after{
+  border-radius:0!important;
+}
