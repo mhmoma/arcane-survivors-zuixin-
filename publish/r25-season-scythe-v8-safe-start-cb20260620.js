@@ -8,7 +8,7 @@ window.GameModules.season = (() => {
       theme: '深渊初醒',
       levelCap: 20,
       introTitle: '第一赛季：深渊初醒',
-      promo: './assets/generated/season-1-promo.cbf7c517-cb20260618a.webp?v=20260629-cache-refresh-r1',
+      promo: './assets/generated/cultivation-cover-landscape.c17ae7e5.webp',
       story: [
         '王城的第一口钟是在午夜自己响起来的。钟声落下时，地面裂开，紫黑色的火从井口、墓穴和旧矿道里一起冒出。',
         '第二天清晨，巡逻队只带回一副盔甲。盔甲还在动，里面却没有人，胸口嵌着一块会呼吸的深渊结晶。',

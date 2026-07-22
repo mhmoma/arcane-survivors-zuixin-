@@ -10,7 +10,6 @@
 publish/     # 可部署前端
 functions/   # 云端函数（若启用）
 scripts/     # 发布/缓存刷新脚本
-PNG/         # 素材
 PUBLISH.md   # 发布与强制刷新缓存流程
 ```
 
