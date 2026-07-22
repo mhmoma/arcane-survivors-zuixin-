@@ -1,8 +1,8 @@
 (() => {
   'use strict';
   const config = window.CultivationSpineConfig, spine = window.spine;
-  const frames = window.CultivationSpineFrames;
-  if (!config?.classes || !spine?.canvas || !frames) {
+  const gpu = window.CultivationSpineGPU;
+  if (!config?.classes || !spine?.Skeleton || !gpu?.available) {
     console.warn('Spine角色运行时不可用，继续使用原角色素材');
     return;
   }
@@ -29,19 +29,20 @@
       fetchAsset(def.skeleton, 'binary'),
       loadImage(def.texture),
     ]);
-    const texture = new spine.canvas.CanvasTexture(image);
+    if (!gpu.available) return null;
+    const texture = gpu.createTexture(image);
     const atlas = new spine.TextureAtlas(atlasText, () => texture);
     const loader = new spine.AtlasAttachmentLoader(atlas);
     const binary = new spine.SkeletonBinary(loader);
     const data = binary.readSkeletonData(new Uint8Array(binaryData));
     const skeleton = new spine.Skeleton(data);
-    skeleton.scaleY = -1;
     skeleton.updateWorldTransform();
     const offset = new spine.Vector2(), size = new spine.Vector2();
     skeleton.getBounds(offset, size, []);
     return {
       id, def, data,
       bounds: { offset, size },
+      gpuInstance: null,
       action: 'idle', lockUntil: 0, lastTime: performance.now(),
       actionStartedAt: performance.now(),
     };
@@ -89,14 +90,25 @@
     const player = window.S.player;
     const now = performance.now();
     play(actor, desiredAction(actor, player, row, now), now);
-    frames.draw(window.ctx, actor, actor.action, x, y, {
+    const options = {
       elapsed: now - actor.actionStartedAt,
       speed: config.speeds[actor.action] || 1,
       height: actor.def.height,
       groundOffset: actor.def.groundOffset,
       alpha: Number.isFinite(alpha) ? alpha : 1,
       face: face || 1,
-    });
+    };
+    if (!gpu.available) return false;
+    actor.gpuInstance ||= gpu.createInstance(actor);
+    return gpu.draw(
+      window.ctx,
+      actor,
+      actor.gpuInstance,
+      actor.action,
+      x,
+      y,
+      options,
+    );
   }
   function installDrawPatch() {
     const fallback = window.drawAction;
@@ -113,7 +125,9 @@
         load(player.cls);
         return fallback.apply(this, arguments);
       }
-      drawActor(actor, x, y, row, alpha, face);
+      if (!drawActor(actor, x, y, row, alpha, face)) {
+        return fallback.apply(this, arguments);
+      }
     };
     wrapped.__cultivationSpine = true;
     window.drawAction = wrapped;
@@ -167,5 +181,12 @@
     if (id && config.classes[id]) load(id);
   }, { passive: true });
   installIntegrations();
-  window.CultivationSpine = { load, playSkill: () => trigger('skill', 560), actors };
+  window.CultivationSpine = {
+    load,
+    playSkill: () => trigger('skill', 560),
+    actors,
+    get backend() {
+      return gpu?.lastBackend || 'canvas';
+    },
+  };
 })();
