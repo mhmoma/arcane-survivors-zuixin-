@@ -7,19 +7,21 @@ window.GameModules.startTipTypewriter = (() => {
     if (document.getElementById('startTipTypewriterStyle')) return;
     const style = document.createElement('style');
     style.id = 'startTipTypewriterStyle';
-    style.textContent = `.startTypeTip{min-height:42px;margin:0 0 10px;padding:8px 12px;border:1px solid rgba(250,204,21,.34);border-radius:12px;background:rgba(5,8,18,.36);color:#ffe9a8;font-size:13px;line-height:1.45;text-shadow:0 2px 4px #000,0 0 10px rgba(250,204,21,.28);letter-spacing:.03em}.startTypeTip:after{content:'|';display:inline-block;margin-left:2px;color:#facc15;animation:startTipCaret .75s step-end infinite}@keyframes startTipCaret{50%{opacity:0}}@media (orientation:portrait){.startTypeTip{font-size:12px;min-height:54px;padding:7px 10px}}`;
+    style.textContent = `#start .coverOnly{position:relative}.startTypeTip{position:absolute;right:24px;top:24px;z-index:5;width:min(310px,32%);min-height:42px;margin:0;padding:8px 12px;border:1px solid rgba(250,204,21,.34);border-radius:12px;background:rgba(5,8,18,.36);color:#ffe9a8;font-size:13px;line-height:1.45;text-align:left;text-shadow:0 2px 4px #000,0 0 10px rgba(250,204,21,.28);letter-spacing:.03em;pointer-events:none}.startTypeTip:after{content:'|';display:inline-block;margin-left:2px;color:#facc15;animation:startTipCaret .75s step-end infinite}@keyframes startTipCaret{50%{opacity:0}}@media (orientation:portrait){.startTypeTip{right:10px;top:58px;width:min(210px,52%);font-size:11px;min-height:54px;padding:7px 9px}}`;
     document.head.appendChild(style);
   }
   function ensureStartUi() {
     ensureStyle();
-    const menu = document.querySelector('#start .coverMenu');
-    if (!menu) return null;
+    const cover = document.querySelector('#start .coverOnly');
+    if (!cover) return null;
     let tip = document.getElementById('startTypeTip');
     if (!tip) {
       tip = document.createElement('p');
       tip.id = 'startTypeTip';
       tip.className = 'startTypeTip';
-      menu.insertBefore(tip, menu.firstChild);
+      cover.appendChild(tip);
+    } else if (tip.parentElement !== cover) {
+      cover.appendChild(tip);
     }
     return tip;
   }
