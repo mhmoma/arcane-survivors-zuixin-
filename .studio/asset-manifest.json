@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-13T14:08:29Z",
-  "updatedAt": "2026-07-22T10:31:50Z",
+  "updatedAt": "2026-07-22T11:52:24Z",
   "assets": [
     {
       "name": "loading-runner",
@@ -152,32 +152,6 @@
       },
       "traceId": "trace_mqum7cyx_70rbdgz9",
       "createdAt": "2026-06-26T07:34:57Z"
-    },
-    {
-      "name": "gunslinger-skill-fx-sheet",
-      "status": "success",
-      "path": "publish/assets/generated/gunslinger/gunslinger-skill-fx-sheet.8f59c0e9.webp",
-      "contentHash": "8f59c0e9",
-      "revisedPrompt": "A 4x4 sprite sheet of magical gunslinger combat VFX for a top-down 3/4 arcade survivor game. Bright arcade fantasy chibi style, clean dark outline, soft glow and high contrast, palette accents #38bdf8 cyan, #facc15 gold, #fb923c orange, #f43f5e red, #7c3aed purple. Sixteen separate readable effect sprites arranged in an even grid with consistent padding, centered in each cell, designed for canvas drawImage sprite sheet animation: silver bullet muzzle flashes, fast bullet streaks, ricochet sparks, golden impact starbursts, shotgun cone blasts, rolling smoke puffs, fire bomb explosion, burning ground circle, bullet storm spiral, eagle-eye target reticle, reload glint, critical hit spark, small smoke ring, ember burst, tracer line, magic powder flash. No characters, no weapons, no UI text. Each cell isolated with padding, centered, designed for canvas drawImage sprite sheet animation. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
-      "model": "gpt-image-2",
-      "size": "1254x1254",
-      "wantsTransparent": true,
-      "chromaKey": {
-        "color": "#00B140",
-        "alphaZeroPct": 80.3,
-        "edgeGreenBiasPct": 0,
-        "verdict": "PASS"
-      },
-      "outputFormat": "webp",
-      "compressionProfile": "lossy_q85_alpha",
-      "originalBytes": 1629536,
-      "finalBytes": 200246,
-      "usage": {
-        "inputTokens": 308,
-        "outputImageTokens": 2058
-      },
-      "traceId": "trace_mquq2pnf_3yohflmr",
-      "createdAt": "2026-06-26T09:25:38Z"
     },
     {
       "name": "ground-wilds",
@@ -492,6 +466,942 @@
       },
       "traceId": "trace_mrvxlrmu_moyqlu2g",
       "createdAt": "2026-07-22T10:23:49Z"
+    },
+    {
+      "name": "cultivation-paladin-golden-bell-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-paladin-golden-bell-sheet.ea93e08a.webp",
+      "contentHash": "ea93e08a",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, jade, cinnabar and restrained gold glow. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous transparent padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Golden Bell Astral Domain, a circular golden Buddhist bell-shaped protective qi aura with Sanskrit-free cloud scroll motifs, warm gold shock rings and small jade sparks. The four frames expand from a compact bell seal into a broad circular defensive domain, then fade. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 76.8,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1739195,
+      "finalBytes": 257610,
+      "usage": {
+        "inputTokens": 302,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvygix6_j00bi3nu",
+      "createdAt": "2026-07-22T10:45:39Z"
+    },
+    {
+      "name": "cultivation-mage-talisman-sword-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-talisman-sword-sheet.8b881fd5.webp",
+      "contentHash": "8b881fd5",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, jade, cinnabar and restrained gold glow. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid on a single canvas. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Skill concept: Talisman Flying Sword, a slim ancient Chinese spirit sword wrapped by cinnabar paper talismans and pale gold qi trails. Frame 1: talisman ignition; Frame 2: sword launch; Frame 3: bright piercing streak; Frame 4: fading paper ash. Every effect must stay centered inside its own cell with generous transparent padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly place the sprite sheet on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 79.3,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1769375,
+      "finalBytes": 247944,
+      "usage": {
+        "inputTokens": 319,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvyi6h3_v2idis7s",
+      "createdAt": "2026-07-22T10:47:06Z"
+    },
+    {
+      "name": "cultivation-saintess-red-dust-reflection-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-saintess-red-dust-reflection-sheet.f365d77c.webp",
+      "contentHash": "f365d77c",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, jade, cinnabar and restrained gold glow. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous transparent padding and must not cross cell boundaries. Skill concept: Red Dust Reflection, a dignified crimson and lotus-pink circular counterattack made of flowing silk ribbons, peach blossom petals and a small luminous bronze mirror seal. Graceful celestial maiden cultivation aesthetics, calm and ceremonial. Four frames expand from mirror glint to petal shockwave and fade. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 69.4,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1878952,
+      "finalBytes": 247784,
+      "usage": {
+        "inputTokens": 310,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvynxp9_ws9pjkda",
+      "createdAt": "2026-07-22T10:51:28Z"
+    },
+    {
+      "name": "cultivation-paladin-evil-breaking-light-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-paladin-evil-breaking-light-sheet.2cddba13.webp",
+      "contentHash": "2cddba13",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Evil-Breaking Golden Light, a narrow forward lance of warm golden vajra qi with cloud-scroll edges and a small lotus seal, clearly directional and piercing. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 82.5,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1453461,
+      "finalBytes": 145844,
+      "usage": {
+        "inputTokens": 288,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvyu8jf_8sc40fro",
+      "createdAt": "2026-07-22T10:56:15Z"
+    },
+    {
+      "name": "cultivation-paladin-blood-return-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-paladin-blood-return-sheet.e0442ecb.webp",
+      "contentHash": "e0442ecb",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. The skill concept is Blood Fiend Return: a circular crimson life-force ring with dark red ink wisps flowing inward toward a central golden core, powerful but clean and ceremonial. Keep every effect centered within its own cell with generous clear padding and do not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly use a SOLID UNIFORM #00B140 chroma key flat color background filling all non-effect pixels, with no gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 65.4,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 2073387,
+      "finalBytes": 296714,
+      "usage": {
+        "inputTokens": 236,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvyvtb0_ivrh81oe",
+      "createdAt": "2026-07-22T10:57:41Z"
+    },
+    {
+      "name": "cultivation-paladin-lihuo-wheel-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-paladin-lihuo-wheel-sheet.657e2772.webp",
+      "contentHash": "657e2772",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Li Fire Dharma Wheel, a compact rotating red-gold fire wheel made of ancient bronze spokes, cinnabar flame and cloud motifs. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 70.1,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1788064,
+      "finalBytes": 211974,
+      "usage": {
+        "inputTokens": 282,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvyxnew_gnah4xed",
+      "createdAt": "2026-07-22T10:59:23Z"
+    },
+    {
+      "name": "cultivation-paladin-demon-subduing-wheel-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-paladin-demon-subduing-wheel-sheet.47cf5193.webp",
+      "contentHash": "47cf5193",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly sixteen equal square animation frames arranged in a strict 4 columns by 4 rows grid. Reading left to right and top to bottom, show one isolated skill effect through sixteen smooth consecutive animation stages from gathering energy to full motion to impact to fading. Keep the effect centered in every cell with generous clear padding. Nothing may cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Demon-Subduing Wheel Dance, one heavy bronze-and-jade ritual wheel attached to a short chain of golden qi, spinning around a circular path through sixteen smooth stages. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 75.1,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1948458,
+      "finalBytes": 301544,
+      "usage": {
+        "inputTokens": 295,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvyztwk_1s1gzydj",
+      "createdAt": "2026-07-22T11:00:41Z"
+    },
+    {
+      "name": "cultivation-paladin-kunlun-guard-wheel-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-paladin-kunlun-guard-wheel-sheet.8bac2d04.webp",
+      "contentHash": "8bac2d04",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly sixteen equal square animation frames arranged in a strict 4 columns by 4 rows grid. Reading left to right and top to bottom, show one isolated skill effect through sixteen smooth consecutive animation stages from gathering energy to full motion to impact to fading. Keep the effect centered in every cell with generous clear padding. Nothing may cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Kunlun Guard Wheel, one round jade-and-gold defensive ritual shield wheel orbiting through sixteen smooth stages, with mountain-cloud engravings and pale gold protection light. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 70.5,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 2009812,
+      "finalBytes": 323794,
+      "usage": {
+        "inputTokens": 293,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvz1i13_mk9e8kii",
+      "createdAt": "2026-07-22T11:02:21Z"
+    },
+    {
+      "name": "cultivation-mage-samadhi-fire-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-samadhi-fire-sheet.bf37f1f5.webp",
+      "contentHash": "bf37f1f5",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Samadhi True Fire, a compact cinnabar-red spirit flame projectile with three curling flame tongues, bright gold core and trailing talisman ash. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 83.9,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1496596,
+      "finalBytes": 179266,
+      "usage": {
+        "inputTokens": 284,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvz3nes_m47gtr81",
+      "createdAt": "2026-07-22T11:03:36Z"
+    },
+    {
+      "name": "cultivation-mage-mystic-ice-pearl-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-mystic-ice-pearl-sheet.454ca3bf.webp",
+      "contentHash": "454ca3bf",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. EXACTLY four equal square animation frames arranged in a strict 2 columns by 2 rows grid, with no outer border. Each cell contains the same isolated skill effect progressing through four consecutive stages from left-to-right, top-to-bottom: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Skill concept: Mystic Ice Spirit Pearl — a silver-blue frost pearl projectile surrounded by crystalline plum-blossom ice shards and cold mist. Center each effect inside its own cell with generous clear padding; nothing may cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Use a SOLID UNIFORM chroma key flat background color #00B140, filling 100% of all pixels not occupied by the effects. The green background must be perfectly uniform, no gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background like a VFX green screen.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 70.3,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1903508,
+      "finalBytes": 279820,
+      "usage": {
+        "inputTokens": 277,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvz59k7_xzmbw5pr",
+      "createdAt": "2026-07-22T11:04:54Z"
+    },
+    {
+      "name": "cultivation-mage-heaven-fire-starfall-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-heaven-fire-starfall-sheet.cf096ddf.webp",
+      "contentHash": "cf096ddf",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Keep each effect centered inside its own cell with generous clear padding; nothing may cross cell boundaries. Skill concept: Heaven-Fire Falling Star, a red-gold celestial stone descending diagonally with long fire-cloud trails, impact ring and scattering ember seals. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly on a solid uniform #00B140 chroma key flat color background; the background must be a single uniform shade of #00B140 green filling 100% of pixels not occupied by the effects, with no gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 79,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1614907,
+      "finalBytes": 185028,
+      "usage": {
+        "inputTokens": 268,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvz6xcw_0pmbo8rz",
+      "createdAt": "2026-07-22T11:06:09Z"
+    },
+    {
+      "name": "cultivation-mage-purple-thunder-chain-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-purple-thunder-chain-sheet.7ef734f0.webp",
+      "contentHash": "7ef734f0",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Purple Heaven Thunder Chain, branching violet-white lightning arcs linking small floating talisman seals, readable as a chained electrical strike. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 78.9,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1712730,
+      "finalBytes": 235006,
+      "usage": {
+        "inputTokens": 280,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvz8j40_e207utxa",
+      "createdAt": "2026-07-22T11:07:26Z"
+    },
+    {
+      "name": "cultivation-mage-earth-vein-crystal-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-earth-vein-crystal-sheet.d8f0a6bd.webp",
+      "contentHash": "d8f0a6bd",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Earth Vein Crystal Edge, amber and pale-jade crystal blades thrusting upward from a circular stone qi seal, sharp and centered. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 76.4,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1741008,
+      "finalBytes": 198974,
+      "usage": {
+        "inputTokens": 283,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvza6mk_duvsdw05",
+      "createdAt": "2026-07-22T11:08:40Z"
+    },
+    {
+      "name": "cultivation-mage-yin-soul-guide-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-yin-soul-guide-sheet.1b85919f.webp",
+      "contentHash": "1b85919f",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Yin Soul Guide, a pale cyan ghost-fire orb carrying a tiny paper talisman tail and flowing ink-smoke wisps, mysterious rather than horrific. Strictly on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 80.9,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1612460,
+      "finalBytes": 173752,
+      "usage": {
+        "inputTokens": 282,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzbsbk_vhbjlbu2",
+      "createdAt": "2026-07-22T11:10:05Z"
+    },
+    {
+      "name": "cultivation-mage-taiyi-light-beam-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-taiyi-light-beam-sheet.81c85008.webp",
+      "contentHash": "81c85008",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. The skill concept is Taiyi Mystic Light: a horizontal white-gold and violet energy beam with a compact seal-shaped emitter, straight readable core and fading cloud sparks. Every effect centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly placed on a solid uniform #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 84.9,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1413182,
+      "finalBytes": 133582,
+      "usage": {
+        "inputTokens": 272,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzdl8m_m1r0pzzo",
+      "createdAt": "2026-07-22T11:11:18Z"
+    },
+    {
+      "name": "cultivation-mage-void-return-rift-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mage-void-return-rift-sheet.4773e564.webp",
+      "contentHash": "4773e564",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Void Return Rift, a circular indigo spatial crack with black ink center, silver star fragments and inward curling cloud currents. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 64.6,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 2045421,
+      "finalBytes": 244858,
+      "usage": {
+        "inputTokens": 292,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzf5gz_wwirbxj6",
+      "createdAt": "2026-07-22T11:12:42Z"
+    },
+    {
+      "name": "cultivation-ranger-sword-orbit-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-sword-orbit-sheet.336fb722.webp",
+      "contentHash": "336fb722",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. EXACTLY four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the SAME isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Every effect centered inside its own cell with generous clear padding, never crossing cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Sword-Control Return Arc, one elegant silver-blue ancient Chinese flying sword spinning through a circular returning arc with pale cyan ink-wash wind ribbons. STRICTLY on a SOLID UNIFORM #00B140 chroma key flat color background, filling 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 82.9,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1644398,
+      "finalBytes": 218402,
+      "usage": {
+        "inputTokens": 266,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzgysc_dh6z75u3",
+      "createdAt": "2026-07-22T11:14:09Z"
+    },
+    {
+      "name": "cultivation-ranger-formless-sword-qi-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-formless-sword-qi-sheet.ac83e066.webp",
+      "contentHash": "ac83e066",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Formless Sword Qi, a nearly invisible pale-white cutting wave revealed by thin ink edges and displaced cloud wisps, fast and directional. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 86.6,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1486102,
+      "finalBytes": 163092,
+      "usage": {
+        "inputTokens": 283,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzitps_wglday0d",
+      "createdAt": "2026-07-22T11:15:24Z"
+    },
+    {
+      "name": "cultivation-ranger-azure-wind-blade-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-azure-wind-blade-sheet.e0b03e53.webp",
+      "contentHash": "e0b03e53",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. The skill concept is an Azure Astral Wind Blade: a broad silver-cyan crescent wind slash with dark ink feathering and sharp trailing air ribbons. Keep every effect centered inside its own cell with generous clear padding and ensure nothing crosses cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons, and modern technology. Background must be a SOLID UNIFORM chroma key flat color #00B140 filling 100% of non-effect pixels, with no gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 80,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1817415,
+      "finalBytes": 220914,
+      "usage": {
+        "inputTokens": 252,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzkfbh_svq4qvpt",
+      "createdAt": "2026-07-22T11:16:39Z"
+    },
+    {
+      "name": "cultivation-ranger-ten-thousand-swords-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-ten-thousand-swords-sheet.bf10cba9.webp",
+      "contentHash": "bf10cba9",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Ten Thousand Swords Return, a dense downward rain of miniature silver spirit swords converging on one target circle, no Western daggers. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 74.8,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1897183,
+      "finalBytes": 299966,
+      "usage": {
+        "inputTokens": 283,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzm1l0_n9mpzevg",
+      "createdAt": "2026-07-22T11:19:04Z"
+    },
+    {
+      "name": "cultivation-ranger-taiyin-moon-blade-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-taiyin-moon-blade-sheet.9866f993.webp",
+      "contentHash": "9866f993",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Taiyin Moon Blade, an enormous silver-blue crescent sword wave with moonlit frost dust and restrained indigo edge. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 74.3,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1818893,
+      "finalBytes": 232952,
+      "usage": {
+        "inputTokens": 280,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzp5pu_pse09mtd",
+      "createdAt": "2026-07-22T11:20:31Z"
+    },
+    {
+      "name": "cultivation-ranger-myriad-gu-miasma-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-myriad-gu-miasma-sheet.3a871d1d.webp",
+      "contentHash": "3a871d1d",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Myriad Gu Miasma, a circular violet-black poisonous qi cloud with tiny crimson moth-like spirit motes, dark herbal smoke and no green coloration. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 68.4,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1867963,
+      "finalBytes": 207076,
+      "usage": {
+        "inputTokens": 299,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzsjse_tcn5a4hu",
+      "createdAt": "2026-07-22T11:23:11Z"
+    },
+    {
+      "name": "cultivation-ranger-yellow-spring-sand-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-yellow-spring-sand-sheet.cee7df38.webp",
+      "contentHash": "cee7df38",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Skill concept: Yellow Spring Sand Calamity, a compact ochre-gold sand vortex with black ink stones and ghostly pale ribbons spiraling inward. Every effect centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly on a SOLID UNIFORM #00B140 chroma key flat color background, single uniform shade filling 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 66.7,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 2053641,
+      "finalBytes": 272324,
+      "usage": {
+        "inputTokens": 269,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzufo5_z0w2pj1p",
+      "createdAt": "2026-07-22T11:24:35Z"
+    },
+    {
+      "name": "cultivation-ranger-northern-dipper-array-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-ranger-northern-dipper-array-sheet.1498300f.webp",
+      "contentHash": "1498300f",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. The skill concept is: Northern Dipper Sword Array — seven tiny silver flying swords arranged like a celestial constellation around a blue-white star seal. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Use a SOLID UNIFORM #00B140 chroma key flat color background; the background is a single uniform shade of #00B140 that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 80.3,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1717293,
+      "finalBytes": 247636,
+      "usage": {
+        "inputTokens": 277,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzw8re_3219o0r9",
+      "createdAt": "2026-07-22T11:25:52Z"
+    },
+    {
+      "name": "cultivation-saintess-flying-blossom-heart-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-saintess-flying-blossom-heart-sheet.3073da93.webp",
+      "contentHash": "3073da93",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Flying Blossom Heart Inquiry, a graceful projectile made of one peach blossom, a thin red silk ribbon and a small warm-gold spirit pearl, dignified celestial style. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 83.2,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1401745,
+      "finalBytes": 146134,
+      "usage": {
+        "inputTokens": 289,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzxwh1_r03nv1sl",
+      "createdAt": "2026-07-22T11:27:05Z"
+    },
+    {
+      "name": "cultivation-saintess-lotus-heart-domain-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-saintess-lotus-heart-domain-sheet.cdb9de8d.webp",
+      "contentHash": "cdb9de8d",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Lotus Heart Domain, a broad circular pink-red lotus platform aura with layered petals, bronze mirror lines and drifting blossom motes. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 64.9,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1921789,
+      "finalBytes": 243190,
+      "usage": {
+        "inputTokens": 281,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrvzzgdx_44axmimh",
+      "createdAt": "2026-07-22T11:28:18Z"
+    },
+    {
+      "name": "cultivation-saintess-seven-emotions-tide-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-saintess-seven-emotions-tide-sheet.ae2ff1a3.webp",
+      "contentHash": "ae2ff1a3",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid, each cell isolated and centered with generous clear padding, no overlap across cells. The same skill effect progresses through four consecutive stages across the frames: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Skill concept: Seven Emotions Tide — a large expanding wave of seven colored silk ribbons, lotus petals and luminous pearl droplets, elegant and ceremonial. Pure effect only, no characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Background must be a single solid uniform chroma key flat color #00B140 filling 100% of pixels not occupied by effects; no gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color green screen background, VFX compositing style.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 76,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1961901,
+      "finalBytes": 325250,
+      "usage": {
+        "inputTokens": 256,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw0118f_pwwz9md5",
+      "createdAt": "2026-07-22T11:29:37Z"
+    },
+    {
+      "name": "cultivation-scythe-nether-moon-slash-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-nether-moon-slash-sheet.d339659a.webp",
+      "contentHash": "d339659a",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Keep every effect centered inside its own cell with generous clear padding and do not let any effect cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Nether Moon Slash, a broad crescent soul-cutting blade wave shaped like an ancient Chinese moon arc, deep indigo, cyan ghost flame and restrained blood-red edge. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 79.5,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1743500,
+      "finalBytes": 196894,
+      "usage": {
+        "inputTokens": 303,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw02pyy_6ysjld2b",
+      "createdAt": "2026-07-22T11:30:57Z"
+    },
+    {
+      "name": "cultivation-scythe-blood-river-cycle-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-blood-river-cycle-sheet.2fecc5e6.webp",
+      "contentHash": "2fecc5e6",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. EXACTLY four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. The skill concept is Blood River Cycle: a circular crimson blade-current flowing around a black jade center, with inward blood-red ink ribbons and silver cutting edges. Each effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 66.8,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 2133373,
+      "finalBytes": 291992,
+      "usage": {
+        "inputTokens": 287,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw04fw7_dqtqzgiz",
+      "createdAt": "2026-07-22T11:32:20Z"
+    },
+    {
+      "name": "cultivation-scythe-soul-cleaving-blade-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-soul-cleaving-blade-sheet.a9123c67.webp",
+      "contentHash": "a9123c67",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Soul-Cleaving Flying Blade, one dark silver crescent ritual blade with cyan soul flame, long directional trail and a clear planted impact stage. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 83.7,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1636920,
+      "finalBytes": 218488,
+      "usage": {
+        "inputTokens": 285,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw067oc_y5mr90a2",
+      "createdAt": "2026-07-22T11:33:38Z"
+    },
+    {
+      "name": "cultivation-scythe-soul-lock-chain-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-soul-lock-chain-sheet.378c97db.webp",
+      "contentHash": "378c97db",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Create exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Every effect must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Soul-Locking Chain, a sweeping arc of black iron chain links ending in a crescent Chinese ritual blade, wrapped in cyan paper talisman sparks. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 78.3,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1854653,
+      "finalBytes": 274092,
+      "usage": {
+        "inputTokens": 286,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw07vlk_ngrdc7sm",
+      "createdAt": "2026-07-22T11:35:06Z"
+    },
+    {
+      "name": "cultivation-scythe-nine-nether-rift-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-nine-nether-rift-sheet.5fca75da.webp",
+      "contentHash": "5fca75da",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. EXACTLY four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. Keep each effect centered inside its own cell with generous clear padding and ensure nothing crosses cell boundaries. Skill concept: Nine Nether Rift, a circular black-indigo ground rupture with cyan soul fire, cracked jade fragments, and inward pulling ghost mist. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons, and modern technology. STRICTLY on a SOLID UNIFORM #00B140 chroma key flat color background filling all unused pixels, pure flat color only, no gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 65.5,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 2039798,
+      "finalBytes": 271818,
+      "usage": {
+        "inputTokens": 246,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw09rmu_wv3bohbn",
+      "createdAt": "2026-07-22T11:36:21Z"
+    },
+    {
+      "name": "cultivation-scythe-nether-moon-rebirth-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-nether-moon-rebirth-sheet.99df1a3d.webp",
+      "contentHash": "99df1a3d",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid, with clean separation between cells. Each cell shows the same isolated skill effect progressing through four consecutive stages: gathering energy, forming, peak impact, dissipating. Effect concept: Nether Moon Rebirth — multiple overlapping indigo crescent slashes forming a circular reincarnation wheel with cyan spirit trails. Keep each effect centered inside its own cell with generous clear padding; nothing crosses cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons, and modern technology. Strictly use a SOLID UNIFORM #00B140 chroma key flat color background, filling 100% of all non-effect pixels. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat chroma green background exactly like a VFX green screen.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 72.8,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1974691,
+      "finalBytes": 280710,
+      "usage": {
+        "inputTokens": 252,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw0bdsq_zqkkwney",
+      "createdAt": "2026-07-22T11:37:39Z"
+    },
+    {
+      "name": "cultivation-scythe-blood-river-sacrifice-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-blood-river-sacrifice-sheet.6e59e1e2.webp",
+      "contentHash": "6e59e1e2",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. Exactly four equal square animation frames arranged in a strict 2 columns by 2 rows grid. Each cell shows the same isolated skill effect progressing through four consecutive stages: (1) gathering energy, (2) forming, (3) peak impact, (4) dissipating. Skill concept: Blood River Sacrifice Wheel — a larger crimson circular ritual blade current with black jade core, silver edges, and intense inward-flowing life-force ribbons. Every effect centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no text, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Strictly on a solid uniform #00B140 chroma key flat color background filling all non-effect pixels; no gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat green screen background, exactly uniform #00B140.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 67.6,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 2140025,
+      "finalBytes": 295932,
+      "usage": {
+        "inputTokens": 255,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw0d1cz_llsnkiao",
+      "createdAt": "2026-07-22T11:38:58Z"
+    },
+    {
+      "name": "cultivation-scythe-soul-cleaving-heaven-blade-sheet",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-scythe-soul-cleaving-heaven-blade-sheet.7e23309c.webp",
+      "contentHash": "7e23309c",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy game effect sprite sheet, top-down three-quarter arcade readability, dark ink contour, refined gongbi detail, moonlit spirit glow, cinnabar fire and restrained gold accents. EXACTLY four equal square animation frames arranged in a strict 2 columns by 2 rows grid, with no outer border and no text. Each cell shows the same isolated skill effect progressing through four consecutive stages: 1) gathering energy, 2) forming, 3) peak impact, 4) dissipating. The effect in every frame must stay centered inside its own cell with generous clear padding and must not cross cell boundaries. No characters, no scenery, no UI, no frame borders, no letters, no numbers, no logo, no watermark. Avoid Western fantasy symbols, crosses, churches, modern weapons and modern technology. Skill concept: Soul-Cleaving Heaven Blade, a huge vertical dark-silver spirit blade descending through cyan ghost fire and indigo cloud裂光, readable as an ultimate execution strike. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 74.6,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1914726,
+      "finalBytes": 250928,
+      "usage": {
+        "inputTokens": 301,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw0eqwi_g9z4na8j",
+      "createdAt": "2026-07-22T11:40:22Z"
+    },
+    {
+      "name": "cultivation-mechanist-skill-fx-atlas",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-skills/cultivation-mechanist-skill-fx-atlas.dd014b82.webp",
+      "contentHash": "dd014b82",
+      "revisedPrompt": "Chinese xianxia Tiangong Mechanist combat effects sprite atlas, polished 2D game art, top-down three-quarter view, brass, jade, cinnabar red and gold. Exactly 4 columns by 4 rows, sixteen equal square cells, one centered isolated effect per cell, generous padding, no overlap across cells. Exact index order left to right, top to bottom: 0 jade mechanism spirit bolt; 1 paired flying shuttles; 2 fan of rune darts; 3 red-gold thunder-fire pellet; 4 small talisman impact spark; 5 bronze rune ricochet star; 6 thunder-fire explosion; 7 circular lingering fire formation; 8 evasive cloud and dust puff; 9 golden mechanical compass target mark; 10 narrow spirit-bolt streak; 11 wide shuttle volley; 12 jade impact shock; 13 brass mechanism burst; 14 red smoke ember burst; 15 fading ash and qi sparks. Ancient cultivation mechanisms only. No characters, guns, bullets, cartridges, shell casings, modern weapons, modern technology, text, letters, numbers, logos, watermarks or frame borders. Strictly placed on a SOLID UNIFORM #00B140 chroma key flat color background. The background is a single uniform shade of #00B140 chroma key green that fills 100% of pixels not occupied by the effects. No gradient, no shadow, no texture, no scenery, no ground, no decoration, no environmental elements. Pure flat color background, exactly like a green screen used for VFX compositing. No text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1254x1254",
+      "wantsTransparent": true,
+      "chromaKey": {
+        "color": "#00B140",
+        "alphaZeroPct": 82.1,
+        "edgeGreenBiasPct": 0,
+        "verdict": "PASS"
+      },
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q85_alpha",
+      "originalBytes": 1731641,
+      "finalBytes": 231486,
+      "usage": {
+        "inputTokens": 337,
+        "outputImageTokens": 2058
+      },
+      "traceId": "trace_mrw0ljwo_f2adxa9r",
+      "createdAt": "2026-07-22T11:45:40Z"
     }
   ]
 }
