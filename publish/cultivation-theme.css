@@ -248,6 +248,43 @@ html body .mapCard:not(#ui-square-a):not(#ui-square-b)::after{
   white-space: nowrap;
 }
 
+#progressionModal {
+  padding: calc(8px + env(safe-area-inset-top)) calc(8px + env(safe-area-inset-right))
+    calc(8px + env(safe-area-inset-bottom)) calc(8px + env(safe-area-inset-left));
+}
+
+#progressionModal .panel {
+  width: min(1040px, 97vw) !important;
+  height: min(94dvh, 760px) !important;
+  max-height: 94dvh !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+#progressionModal .progressTreeWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+  padding: 0 6px 14px !important;
+}
+
+#progressionModal .treeCanvas {
+  flex: 0 0 auto;
+  overflow: visible !important;
+}
+
+#progressionModal .panel > p.sub:last-child {
+  flex: 0 0 auto;
+  margin: 6px 0 0 !important;
+}
+
 @media (orientation: portrait), (max-width: 720px) {
   #settings .settingsPanelLatest {
     grid-template-columns: 1fr;

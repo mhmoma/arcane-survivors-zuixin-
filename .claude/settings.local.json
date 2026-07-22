@@ -12,7 +12,16 @@
       "Bash(gh auth:*)",
       "Bash(ssh-keygen:*)",
       "Bash(GIT_SSH_COMMAND='ssh -i /root/.ssh/id_ed25519_github -o IdentitiesOnly=yes' git push -u github main)",
-      "Bash(GIT_SSH_COMMAND='ssh -i /root/.ssh/id_ed25519_github -o IdentitiesOnly=yes' git push github main)"
+      "Bash(GIT_SSH_COMMAND='ssh -i /root/.ssh/id_ed25519_github -o IdentitiesOnly=yes' git push github main)",
+      "Bash(curl -s http://localhost:3005/git/status -H \"X-Container-Secret: 447a00dd-8c43-4c5d-8b49-64aa680a891c\")",
+      "Bash(curl -s \"http://localhost:3005/git/commits?count=8\" -H \"X-Container-Secret: 447a00dd-8c43-4c5d-8b49-64aa680a891c\")",
+      "Bash(node --check \"publish/r25-game-core-scythe-v31-gunslinger-cache-r29r4.js\")",
+      "Bash(node --check \"publish/r25-town-hub-v2-stone-cache-r4.js\")",
+      "Bash(node --check \"publish/r25-rift-scythe-v26-gunslinger-cache-r29r2.js\")",
+      "Bash(node --check \"publish/cultivation-theme-data.js\")",
+      "Bash(node --check \"publish/cultivation-theme.js\")",
+      "Bash(python3:*)",
+      "Bash(curl:*)"
     ]
   }
 }

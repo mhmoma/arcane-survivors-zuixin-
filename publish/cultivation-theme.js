@@ -114,10 +114,14 @@
       const next = rewrite(node.data);
       if (next !== node.data) node.data = next;
     });
-    root.querySelectorAll?.('[placeholder],[title],[aria-label]').forEach(el => {
-      ['placeholder', 'title', 'aria-label'].forEach(attr => {
+    root.querySelectorAll?.('[placeholder],[title],[aria-label],[alt],[data-tip]').forEach(el => {
+      ['placeholder', 'title', 'aria-label', 'alt', 'data-tip'].forEach(attr => {
         if (el.hasAttribute(attr)) el.setAttribute(attr, rewrite(el.getAttribute(attr)));
       });
+    });
+    root.querySelectorAll?.('input[type="text"],textarea').forEach(el => {
+      const next = rewrite(el.value);
+      if (next !== el.value) el.value = next;
     });
   }
   function install() {
