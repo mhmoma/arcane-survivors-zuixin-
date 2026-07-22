@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "name": "arcane survivor chibi fantasy",
-  "description": "Bright arcade fantasy survivor game art with cute chibi characters, readable top-down sprites, glowing magic effects, and dark dungeon colors.",
-  "palette": ["#111827", "#7c3aed", "#38bdf8", "#22c55e", "#f43f5e", "#facc15"],
-  "view": "top-down 3/4 arcade sprite",
-  "outline": "clean dark outline",
-  "lighting": "soft glow and high contrast",
-  "avoid": ["text", "logo", "watermark", "copyrighted characters", "real brands"]
+  "name": "eastern cultivation ink fantasy",
+  "description": "Chinese xianxia cultivation fantasy blending refined gongbi detail with ink-wash atmosphere, readable top-down action silhouettes, jade talismans, flying swords, spirit fire, cloud seas, ancient sect architecture, and celestial tribulation effects.",
+  "palette": ["#07110f", "#123c36", "#2f7668", "#d7b968", "#9f2f2f", "#8fd8d0"],
+  "view": "top-down 3/4 arcade action with vertical cinematic key art",
+  "outline": "dark ink contour with restrained gold accents",
+  "lighting": "moonlit mist, jade spirit glow, cinnabar fire, high readability",
+  "avoid": ["text", "logo", "watermark", "western armor", "guns", "churches", "demons", "copyrighted characters", "real brands"]
 }

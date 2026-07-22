@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-13T14:08:29Z",
-  "updatedAt": "2026-07-01T04:26:13Z",
+  "updatedAt": "2026-07-22T07:36:05Z",
   "assets": [
     {
       "name": "player-paladin",
@@ -2881,6 +2881,46 @@
       },
       "traceId": "trace_mr1ko4lm_3l2szt2e",
       "createdAt": "2026-07-01T04:26:13Z"
+    },
+    {
+      "name": "cultivation-cover",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-cover.9b2f3725.webp",
+      "contentHash": "9b2f3725",
+      "revisedPrompt": "Cinematic Chinese xianxia cultivation fantasy key art cover for a top-down survivor action game, vertical composition. Six distinct cultivator heroes stand on a celestial mountain platform above a sea of clouds: a golden-robed body cultivator with protective qi aura, a jade-robed talisman daoist with talisman papers and seals, an azure flying-sword cultivator with a hovering sword, a crimson spirit enchantress with flowing ribbons and ember-like spiritual energy, a black-robed nether cultivator holding a crescent soul blade surrounded by shadowy qi, and a bronze mechanism sect cultivator controlling floating spiritual crossbows and gears. Ancient sect gates, distant pagodas, flying swords, spirit beasts as tiny silhouettes, jade energy currents, cinnabar fire, moonlit mist. Refined gongbi detail blended with dramatic ink-wash atmosphere, epic scale, elegant Eastern fantasy costumes, hero subjects clearly visible, strong readable silhouettes, high detail, painterly yet polished game cover art, no Western armor, no firearms, no churches, no UI, no text, no logo, no watermark.",
+      "model": "gpt-image-2",
+      "size": "1024x1536",
+      "wantsTransparent": false,
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q80_opaque",
+      "originalBytes": 3270438,
+      "finalBytes": 297498,
+      "usage": {
+        "inputTokens": 225,
+        "outputImageTokens": 1372
+      },
+      "traceId": "trace_mrvrfp41_fi1lnn1g",
+      "createdAt": "2026-07-22T07:33:39Z"
+    },
+    {
+      "name": "cultivation-class-roster",
+      "status": "success",
+      "path": "publish/assets/generated/cultivation-class-roster.fc55a219.webp",
+      "contentHash": "fc55a219",
+      "revisedPrompt": "Polished Chinese xianxia cultivation fantasy character roster sheet for a game, wide 3 by 2 grid composition with exactly six isolated full-body heroes, one hero centered in each equal cell, clean dark ink-mist backdrop with subtle atmospheric swirls and clear separation between cells, no frames, no text, no logos, no watermark, no UI. Refined gongbi details blended with ink-wash atmosphere, consistent proportions, strong readable silhouettes, Eastern hairstyles and robes, no Western armor.\n\nTop row left to right: (1) golden-robed muscular body cultivator, protective qi aura, jade prayer beads, powerful stance; (2) elegant jade-robed talisman daoist controlling floating paper seals and talismans, serene expression; (3) azure-robed flying-sword cultivator with three spirit swords orbiting, dynamic martial pose.\nBottom row left to right: (4) crimson-robed spirit enchantress wielding silk ribbons and lotus fire, dignified and non-explicit, graceful and powerful; (5) black-robed nether cultivator with crescent soul blade and ghost lantern, eerie yet refined; (6) bronze-and-teal mechanism sect cultivator controlling floating spiritual crossbows and formation disks, intricate mechanical motifs, no firearm.\n\nAll six figures isolated, fully visible head to toe, each centered in their own equal cell, harmonious palette, cinematic fantasy illustration, high detail, clean composition, no guns, no churches.",
+      "model": "gpt-image-2",
+      "size": "1536x1024",
+      "wantsTransparent": false,
+      "outputFormat": "webp",
+      "compressionProfile": "lossy_q80_opaque",
+      "originalBytes": 3080349,
+      "finalBytes": 266432,
+      "usage": {
+        "inputTokens": 300,
+        "outputImageTokens": 1372
+      },
+      "traceId": "trace_mrvrnwmr_7cyyub6y",
+      "createdAt": "2026-07-22T07:36:05Z"
     }
   ]
 }

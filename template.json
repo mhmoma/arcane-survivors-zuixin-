@@ -1,5 +1,6 @@
 {
   "id": "blank-template",
-  "name": "空白模板",
-  "description": "干净的起点，包含 SDK 初始化和 API 用法示例，适合从零开始创作"
+  "name": "太虚仙途",
+  "description": "东方玄幻修仙幸存者游戏：选择道途、参悟功法、淬炼灵器、镇压妖潮并渡劫登仙。",
+  "orientation": "portrait"
 }
