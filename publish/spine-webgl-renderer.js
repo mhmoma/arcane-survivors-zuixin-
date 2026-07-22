@@ -2,28 +2,35 @@
   'use strict';
 
   const spine = window.spine;
-  const SIZE = 320;
-  const GROUND = 270;
-  const RENDER_HEIGHT = 128;
   let canvas = null;
   let gl = null;
   let renderer = null;
   let contextLost = false;
+  let targetCanvas = null;
+  let lastDraw = 0;
   let warned = false;
 
   function initialize() {
     if (!spine?.webgl?.SceneRenderer) return false;
     try {
       canvas = document.createElement('canvas');
-      canvas.width = SIZE;
-      canvas.height = SIZE;
+      canvas.width = 2;
+      canvas.height = 2;
+      canvas.setAttribute('aria-hidden', 'true');
+      canvas.style.cssText = [
+        'position:absolute',
+        'display:none',
+        'pointer-events:none',
+        'z-index:2',
+      ].join(';');
       gl = canvas.getContext('webgl', {
         alpha: true,
-        antialias: true,
+        antialias: false,
         depth: false,
         stencil: false,
         premultipliedAlpha: true,
         preserveDrawingBuffer: false,
+        powerPreference: 'high-performance',
       });
       if (!gl) return false;
       renderer = new spine.webgl.SceneRenderer(canvas, gl);
@@ -35,6 +42,7 @@
       canvas.addEventListener('webglcontextrestored', () => {
         contextLost = false;
       });
+      requestAnimationFrame(monitorVisibility);
       return true;
     } catch (error) {
       console.warn('Spine WebGL 初始化失败:', error.message);
@@ -66,7 +74,49 @@
     instance.action = action;
   }
 
-  function render(instance, source, action, options) {
+  function monitorVisibility(now) {
+    if (canvas && now - lastDraw > 500) canvas.style.display = 'none';
+    requestAnimationFrame(monitorVisibility);
+  }
+
+  function attachTo(target) {
+    const parent = target?.parentElement;
+    if (!parent) return false;
+    if (getComputedStyle(parent).position === 'static') {
+      parent.style.position = 'relative';
+    }
+    const targetRect = target.getBoundingClientRect();
+    const parentRect = parent.getBoundingClientRect();
+    canvas.style.left = `${targetRect.left - parentRect.left}px`;
+    canvas.style.top = `${targetRect.top - parentRect.top}px`;
+    canvas.style.width = `${targetRect.width}px`;
+    canvas.style.height = `${targetRect.height}px`;
+    canvas.style.display = 'block';
+    if (canvas.parentElement !== parent) parent.appendChild(canvas);
+    const width = Math.max(1, Math.round(targetRect.width));
+    const height = Math.max(1, Math.round(targetRect.height));
+    if (canvas.width !== width || canvas.height !== height) {
+      canvas.width = width;
+      canvas.height = height;
+    }
+    targetCanvas = target;
+    return true;
+  }
+
+  function screenPlacement(context, source, x, y, options) {
+    const matrix = context.getTransform();
+    const ratioX = canvas.width / Math.max(1, context.canvas.width);
+    const ratioY = canvas.height / Math.max(1, context.canvas.height);
+    const groundY = y + (options.groundOffset || 0);
+    const px = (matrix.a * x + matrix.c * groundY + matrix.e) * ratioX;
+    const py = (matrix.b * x + matrix.d * groundY + matrix.f) * ratioY;
+    const pixelScale = Math.max(0.001, Math.hypot(matrix.c, matrix.d) * ratioY);
+    const height = (options.height || 128) * pixelScale;
+    const scale = height / Math.max(1, source.bounds.size.y);
+    return { px, py, scale };
+  }
+
+  function render(context, instance, source, action, x, y, options) {
     const now = performance.now();
     const speed = options.speed || 1;
     const delta = Math.min(0.05, Math.max(0, now - instance.lastTime) / 1000);
@@ -75,24 +125,25 @@
     instance.state.update(delta * speed);
     instance.state.apply(instance.skeleton);
 
+    const placement = screenPlacement(context, source, x, y, options);
     const facing = (source.def.facing || 1) * (options.face || 1);
     const skeleton = instance.skeleton;
-    skeleton.scaleX = facing;
-    skeleton.scaleY = 1;
+    const bounds = source.bounds;
+    const centerX = bounds.offset.x + bounds.size.x / 2;
+    skeleton.scaleX = placement.scale * facing;
+    skeleton.scaleY = placement.scale;
+    skeleton.x = placement.px - centerX * placement.scale * facing;
+    skeleton.y = canvas.height - placement.py - bounds.offset.y * placement.scale;
+    skeleton.color.a = options.alpha ?? 1;
     skeleton.updateWorldTransform();
 
-    const bounds = source.bounds;
-    const worldHeight = Math.max(1, bounds.size.y);
-    const viewport = worldHeight * SIZE / RENDER_HEIGHT;
-    const bottomMargin = SIZE - GROUND;
-    renderer.camera.viewportWidth = viewport;
-    renderer.camera.viewportHeight = viewport;
-    renderer.camera.position.x = (bounds.offset.x + bounds.size.x / 2) * facing;
-    renderer.camera.position.y = bounds.offset.y
-      + viewport * (0.5 - bottomMargin / SIZE);
+    renderer.camera.viewportWidth = canvas.width;
+    renderer.camera.viewportHeight = canvas.height;
+    renderer.camera.position.x = canvas.width / 2;
+    renderer.camera.position.y = canvas.height / 2;
     renderer.camera.update();
 
-    gl.viewport(0, 0, SIZE, SIZE);
+    gl.viewport(0, 0, canvas.width, canvas.height);
     gl.clearColor(0, 0, 0, 0);
     gl.clear(gl.COLOR_BUFFER_BIT);
     renderer.begin();
@@ -103,19 +154,9 @@
   function draw(context, source, instance, action, x, y, options = {}) {
     if (!api.available || !context || !source || !instance) return false;
     try {
-      render(instance, source, action, options);
-      const ratio = (options.height || RENDER_HEIGHT) / RENDER_HEIGHT;
-      context.save();
-      context.globalAlpha = options.alpha ?? 1;
-      context.translate(x, y + (options.groundOffset || 0));
-      context.drawImage(
-        canvas,
-        -SIZE * ratio / 2,
-        -GROUND * ratio,
-        SIZE * ratio,
-        SIZE * ratio,
-      );
-      context.restore();
+      if (!attachTo(context.canvas)) return false;
+      render(context, instance, source, action, x, y, options);
+      lastDraw = performance.now();
       api.lastBackend = 'webgl';
       return true;
     } catch (error) {
@@ -134,6 +175,9 @@
     },
     canvas: null,
     gl: null,
+    get targetCanvas() {
+      return targetCanvas;
+    },
     lastBackend: 'unavailable',
     createTexture,
     createInstance,
