@@ -1,0 +1,153 @@
+
+cha_302.png
+size: 1024,496
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+eye_1
+  rotate: false
+  xy: 2, 466
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+head_1
+  rotate: 270
+  xy: 2, 75
+  size: 168, 158
+  orig: 168, 158
+  offset: 0, 0
+  index: -1
+head_2
+  rotate: false
+  xy: 793, 426
+  size: 69, 68
+  orig: 69, 68
+  offset: 0, 0
+  index: -1
+head_3
+  rotate: false
+  xy: 864, 457
+  size: 22, 37
+  orig: 22, 37
+  offset: 0, 0
+  index: -1
+head_4
+  rotate: 180
+  xy: 856, 115
+  size: 166, 155
+  orig: 166, 155
+  offset: 0, 0
+  index: -1
+head_she
+  rotate: false
+  xy: 954, 294
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+l_foot
+  rotate: true
+  xy: 353, 62
+  size: 148, 150
+  orig: 148, 150
+  offset: 0, 0
+  index: -1
+l_leg
+  rotate: false
+  xy: 639, 247
+  size: 166, 247
+  orig: 166, 247
+  offset: 0, 0
+  index: -1
+l_mei
+  rotate: false
+  xy: 427, 231
+  size: 82, 80
+  orig: 82, 80
+  offset: 0, 0
+  index: -1
+r_hand
+  rotate: 180
+  xy: 802, 248
+  size: 184, 247
+  orig: 184, 247
+  offset: 0, 0
+  index: -1
+r_mei
+  rotate: 180
+  xy: 532, 68
+  size: 190, 125
+  orig: 190, 125
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 162, 74
+  size: 137, 59
+  orig: 137, 59
+  offset: 0, 0
+  index: -1
+tail_2
+  rotate: false
+  xy: 301, 35
+  size: 75, 93
+  orig: 75, 93
+  offset: 0, 0
+  index: -1
+tail_3
+  rotate: false
+  xy: 408, 420
+  size: 19, 75
+  orig: 23, 83
+  offset: 4, 8
+  index: -1
+tail_head
+  rotate: false
+  xy: 654, 3
+  size: 218, 172
+  orig: 218, 172
+  offset: 0, 0
+  index: -1
+tail_head_2
+  rotate: false
+  xy: 874, 12
+  size: 69, 106
+  orig: 69, 106
+  offset: 0, 0
+  index: -1
+tail_head_3
+  rotate: false
+  xy: 2, 436
+  size: 109, 58
+  orig: 109, 58
+  offset: 0, 0
+  index: -1
+tail_head_4
+  rotate: false
+  xy: 945, 8
+  size: 66, 105
+  orig: 66, 105
+  offset: 0, 0
+  index: -1
+tal_1
+  rotate: true
+  xy: 505, 135
+  size: 145, 286
+  orig: 145, 286
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 2, 135
+  size: 434, 359
+  orig: 434, 359
+  offset: 0, 0
+  index: -1
+torso_2
+  rotate: false
+  xy: 433, 269
+  size: 222, 225
+  orig: 222, 225
+  offset: 0, 0
+  index: -1
