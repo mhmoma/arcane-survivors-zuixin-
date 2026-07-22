@@ -1,7 +1,5 @@
 {
   "id": "blank-template",
-  "name": "Gamefy 空白起点",
-  "description": "轻量、配置驱动的竖屏起点，内置用户信息、显式 AI 文本与安全 KV 存储示例。",
-  "kind": "starter",
-  "orientation": "portrait"
+  "name": "空白模板",
+  "description": "干净的起点，包含 SDK 初始化和 API 用法示例，适合从零开始创作"
 }

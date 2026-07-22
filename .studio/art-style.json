@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "name": "arcane survivor chibi fantasy",
+  "description": "Bright arcade fantasy survivor game art with cute chibi characters, readable top-down sprites, glowing magic effects, and dark dungeon colors.",
+  "palette": ["#111827", "#7c3aed", "#38bdf8", "#22c55e", "#f43f5e", "#facc15"],
+  "view": "top-down 3/4 arcade sprite",
+  "outline": "clean dark outline",
+  "lighting": "soft glow and high contrast",
+  "avoid": ["text", "logo", "watermark", "copyrighted characters", "real brands"]
+}

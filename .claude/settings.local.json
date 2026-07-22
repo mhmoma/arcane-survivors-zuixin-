@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tr ';' '\\\\n')",
+      "Bash(echo \"ANTHROPIC_BASE_URL=$ANTHROPIC_BASE_URL\")",
+      "Bash(echo \"ANTHROPIC_AUTH_TOKEN=$ANTHROPIC_AUTH_TOKEN\")",
+      "Bash(env)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"$ANTHROPIC_BASE_URL/v1/images/generations\" -H \"Authorization: Bearer $ANTHROPIC_AUTH_TOKEN\")",
+      "Bash(echo \"BASE_URL: $ANTHROPIC_BASE_URL\")",
+      "Bash(git push:*)",
+      "Bash(ssh-add:*)",
+      "Bash(gh auth:*)",
+      "Bash(ssh-keygen:*)",
+      "Bash(GIT_SSH_COMMAND='ssh -i /root/.ssh/id_ed25519_github -o IdentitiesOnly=yes' git push -u github main)",
+      "Bash(GIT_SSH_COMMAND='ssh -i /root/.ssh/id_ed25519_github -o IdentitiesOnly=yes' git push github main)"
+    ]
+  }
+}
