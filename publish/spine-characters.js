@@ -2,8 +2,8 @@
   'use strict';
   const config = window.CultivationSpineConfig, spine = window.spine;
   const gpu = window.CultivationSpineGPU;
-  if (!config?.classes || !spine?.Skeleton || !gpu?.available) {
-    console.warn('Spine角色运行时不可用，继续使用原角色素材');
+  if (!config?.classes || !spine?.Skeleton || !gpu) {
+    console.error('Spine WebGL 角色运行时不可用');
     return;
   }
   const actors = new Map(), pending = new Map();
@@ -24,13 +24,12 @@
   }
   async function createActor(id) {
     const def = config.classes[id];
-    if (!def) return null;
+    if (!def || !gpu.available) return null;
     const [atlasText, binaryData, image] = await Promise.all([
       fetchAsset(def.atlas, 'text'),
       fetchAsset(def.skeleton, 'binary'),
       loadImage(def.texture),
     ]);
-    if (!gpu.available) return null;
     const texture = gpu.createTexture(image);
     const atlas = new spine.TextureAtlas(atlasText, () => texture);
     const loader = new spine.AtlasAttachmentLoader(atlas);
@@ -44,7 +43,7 @@
       id, def, data,
       bounds: { offset, size },
       gpuInstance: null,
-      action: 'idle', lockUntil: 0, lastTime: performance.now(),
+      action: 'idle', lockUntil: 0,
       actionStartedAt: performance.now(),
     };
   }
@@ -53,10 +52,11 @@
     if (pending.has(id)) return pending.get(id);
     const task = createActor(id).then(actor => {
       pending.delete(id);
-      if (actor) actors.set(id, actor);
+      actors.set(id, actor);
       return actor;
     }).catch(error => {
       pending.delete(id);
+      actors.set(id, null);
       console.error('Spine角色加载失败:', id, error.message, error.stack);
       return null;
     });
@@ -111,27 +111,25 @@
       options,
     );
   }
-  function installDrawPatch() {
-    const fallback = window.drawAction;
-    if (typeof fallback !== 'function' || fallback.__cultivationSpine) return;
-    const wrapped = function (image, x, y, size, row, frame, alpha = 1, face = 1) {
-      const player = window.S?.player;
-      const isPlayer = player && image === window.imgs?.[player.cls]
-        && Math.abs(x - player.x) < 3 && Math.abs(y - player.y) < 7;
-      if (!isPlayer || !config.classes[player.cls]) {
-        return fallback.apply(this, arguments);
-      }
-      const actor = actors.get(player.cls);
-      if (!actor) {
-        load(player.cls);
-        return fallback.apply(this, arguments);
-      }
-      if (!drawActor(actor, x, y, row, alpha, face)) {
-        return fallback.apply(this, arguments);
-      }
+  function drawPlayer(context, player) {
+    if (!player || !config.classes[player.cls]) return false;
+    const actor = actors.get(player.cls);
+    if (!actor) {
+      if (!actors.has(player.cls)) load(player.cls);
+      return false;
+    }
+    const row = player.hit > 0.15 ? 3 : player.cast > 0 ? 2 : player.moving ? 1 : 0;
+    const bob = player.moving ? Math.sin((player.anim || 0) * Math.PI / 3) * 1.6 : 0;
+    return drawActor(actor, player.x, player.y + bob, row, 1, player.faceX < 0 ? -1 : 1);
+  }
+  function installPlayerPatch() {
+    if (typeof window.drawPlayer !== 'function'
+      || window.drawPlayer.__cultivationSpine) return;
+    const wrapped = function () {
+      return window.RiftWebGL?.renderPlayer?.() || false;
     };
     wrapped.__cultivationSpine = true;
-    window.drawAction = wrapped;
+    window.drawPlayer = wrapped;
   }
   function trigger(action = 'skill', duration = 420) {
     forcedAction = { action, until: performance.now() + duration };
@@ -149,7 +147,7 @@
     window[name] = wrapped;
   }
   function installIntegrations() {
-    installDrawPatch();
+    installPlayerPatch();
     ['burstAt', 'lightBurstAt', 'areaOnTarget', 'fallingAttack',
       'prayerField', 'castFlail', 'castShield'].forEach(wrapSkillFunction);
     const cosmetics = window.Cosmetics;
@@ -162,20 +160,12 @@
       wrapped.__cultivationSpine = true;
       cosmetics.drawSelected = wrapped;
     }
-    const rift = window.RiftWebGL;
-    if (rift?.renderFrame && !rift.renderFrame.__cultivationSpine) {
-      const original = rift.renderFrame;
-      const wrapped = function () {
-        if (config.classes[window.S?.player?.cls]) return false;
-        return original.apply(this, arguments);
-      };
-      wrapped.__cultivationSpine = true;
-      rift.renderFrame = wrapped;
-    }
   }
   Object.entries(config.classes).forEach(([id, def]) => {
     const card = window.CLASSES?.[id]?.card;
-    if (card && window.AS) window.AS[card] = def.preview;
+    if (!window.AS) return;
+    window.AS[id] = def.preview;
+    if (card) window.AS[card] = def.preview;
   });
   document.addEventListener('pointerover', event => {
     const id = event.target.closest?.('[data-c]')?.dataset.c;
@@ -184,10 +174,11 @@
   installIntegrations();
   window.CultivationSpine = {
     load,
+    drawPlayer,
     playSkill: () => trigger('skill', 560),
     actors,
     get backend() {
-      return gpu?.lastBackend || 'canvas';
+      return gpu?.lastBackend || 'unavailable';
     },
   };
 })();

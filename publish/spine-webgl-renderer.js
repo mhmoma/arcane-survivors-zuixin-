@@ -37,7 +37,7 @@
       canvas.addEventListener('webglcontextlost', event => {
         event.preventDefault();
         contextLost = true;
-        api.lastBackend = 'canvas';
+        api.lastBackend = 'unavailable';
       });
       canvas.addEventListener('webglcontextrestored', () => {
         contextLost = false;
@@ -160,10 +160,10 @@
       api.lastBackend = 'webgl';
       return true;
     } catch (error) {
-      api.lastBackend = 'canvas';
+      api.lastBackend = 'unavailable';
       if (!warned) {
         warned = true;
-        console.warn('Spine WebGL 渲染失败，已切换 Canvas:', error.message);
+        console.error('Spine WebGL 渲染失败，角色渲染已停止:', error.message);
       }
       return false;
     }
@@ -187,6 +187,6 @@
   initialize();
   api.canvas = canvas;
   api.gl = gl;
-  api.lastBackend = api.available ? 'webgl' : 'canvas';
+  api.lastBackend = api.available ? 'webgl' : 'unavailable';
   window.CultivationSpineGPU = api;
 })();
