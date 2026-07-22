@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Gamefy 空白起点</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./config.js" defer></script>
+  <script src="./content.js" defer></script>
+  <script src="./sdk-adapter.js" defer></script>
+  <script src="./storage.js" defer></script>
+  <script src="./ai-director.js" defer></script>
+  <script src="./view.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell" id="appShell" aria-busy="true">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <p class="eyebrow" id="brandEyebrow"></p>
+        <h1 id="brandName"></h1>
+      </div>
+      <div class="connection" id="connectionState" role="status">
+        <span class="connection-dot" aria-hidden="true"></span>
+        <span id="connectionLabel"></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="stage" id="stage" aria-live="polite" aria-atomic="true">
+        <div class="stage-art" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="stage-label-row">
+          <span class="stage-label" id="stageLabel"></span>
+          <span class="spinner" id="spinner" hidden aria-hidden="true"></span>
+        </div>
+        <div class="avatar-frame" id="avatarFrame" hidden>
+          <img id="avatar" alt="">
+        </div>
+        <h2 id="stageTitle"></h2>
+        <p id="stageText"></p>
+      </section>
+
+      <section class="action-section" aria-labelledby="actionsTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="actionsEyebrow"></p>
+            <h2 id="actionsTitle"></h2>
+          </div>
+          <p id="actionsDescription"></p>
+        </div>
+        <div class="action-grid" id="actionGrid"></div>
+        <p class="empty-actions" id="emptyActions" hidden></p>
+      </section>
+    </main>
+
+    <footer>
+      <span id="footerText"></span>
+      <code id="footerHint"></code>
+    </footer>
+  </div>
+</body>
+</html>
