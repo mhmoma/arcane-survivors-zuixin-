@@ -177,3 +177,86 @@ html body .mapCard:not(#ui-square-a):not(#ui-square-b)::before,
 html body .mapCard:not(#ui-square-a):not(#ui-square-b)::after{
   border-radius:0!important;
 }
+
+#settings .settingsPanelLatest {
+  width: min(940px, 96vw);
+}
+
+#settings .settingsPanelLatest > .sub {
+  margin-bottom: 14px;
+}
+
+#settings .settingsPanelLatest {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+}
+
+#settings .settingsPanelLatest > .title,
+#settings .settingsPanelLatest > .sub,
+#settings .settingsPanelLatest > p.sub:last-child {
+  grid-column: 1 / -1;
+}
+
+#settings .settingsChoice,
+#settings .settingsPanelLatest > .choice {
+  min-width: 0;
+  margin: 0;
+  padding: 12px;
+  border-radius: 0 !important;
+}
+
+#settings .settingsChoice h2,
+#settings .settingsPanelLatest > .choice h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#settings .settingsChoice p,
+#settings .settingsPanelLatest > .choice p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+}
+
+#settings .settingsChoice small,
+#settings .settingsPanelLatest > .choice small {
+  display: block;
+  color: #b8c9bd;
+  line-height: 1.35;
+}
+
+#settings .settingsPanelLatest input[type="range"] {
+  width: min(330px, 100%);
+  flex: 1;
+  min-width: 120px;
+  accent-color: #d7b968;
+}
+
+#settings .settingsPanelLatest select {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  border-radius: 0 !important;
+}
+
+#settings .settingsPanelLatest b {
+  min-width: 70px;
+  color: #f2d88a;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (orientation: portrait), (max-width: 720px) {
+  #settings .settingsPanelLatest {
+    grid-template-columns: 1fr;
+    max-height: 92dvh;
+  }
+
+  #settings .settingsPanelLatest > .title,
+  #settings .settingsPanelLatest > .sub,
+  #settings .settingsPanelLatest > p.sub:last-child {
+    grid-column: 1;
+  }
+}
