@@ -1,13 +1,11 @@
 (() => {
   'use strict';
-
-  const config = window.CultivationSpineConfig;
-  const spine = window.spine;
-  if (!config?.classes || !spine?.canvas) {
+  const config = window.CultivationSpineConfig, spine = window.spine;
+  const frames = window.CultivationSpineFrames;
+  if (!config?.classes || !spine?.canvas || !frames) {
     console.warn('Spine角色运行时不可用，继续使用原角色素材');
     return;
   }
-
   const actors = new Map(), pending = new Map();
   let forcedAction = null;
   function loadImage(src) {
@@ -18,7 +16,6 @@
       image.src = src;
     });
   }
-
   async function fetchAsset(src, type) {
     const response = await fetch(src, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}: ${src}`);
@@ -39,23 +36,14 @@
     const data = binary.readSkeletonData(new Uint8Array(binaryData));
     const skeleton = new spine.Skeleton(data);
     skeleton.scaleY = -1;
-    const stateData = new spine.AnimationStateData(data);
-    stateData.defaultMix = 0.08;
-    const state = new spine.AnimationState(stateData);
-    const renderer = new spine.canvas.SkeletonRenderer(window.ctx);
-    renderer.triangleRendering = true;
-    state.setAnimation(0, def.animations.idle, true);
-    state.apply(skeleton);
     skeleton.updateWorldTransform();
-    const offset = new spine.Vector2();
-    const size = new spine.Vector2();
+    const offset = new spine.Vector2(), size = new spine.Vector2();
     skeleton.getBounds(offset, size, []);
     return {
-      id, def, data, skeleton, state, renderer,
+      id, def, data,
       bounds: { offset, size },
-      action: 'idle',
-      lockUntil: 0,
-      lastTime: performance.now(),
+      action: 'idle', lockUntil: 0, lastTime: performance.now(),
+      actionStartedAt: performance.now(),
     };
   }
   function load(id) {
@@ -81,15 +69,14 @@
     if (actor.action === action) return;
     const name = actor.def.animations[action] || actor.def.animations.idle;
     const loop = action === 'idle' || action === 'run';
-    const entry = actor.state.setAnimation(0, name, loop);
-    entry.timeScale = config.speeds[action] || 1;
     actor.action = action;
+    actor.actionStartedAt = now;
+    const speed = config.speeds[action] || 1;
     actor.lockUntil = loop ? 0 : now + Math.min(
       action === 'skill' ? 1050 : 720,
-      clipDuration(actor, action) / entry.timeScale * 920,
+      clipDuration(actor, action) / speed * 920,
     );
   }
-
   function desiredAction(actor, player, row, now) {
     if (forcedAction && forcedAction.until > now) return forcedAction.action;
     if (actor.action === 'skill' && actor.lockUntil > now) return 'skill';
@@ -98,29 +85,19 @@
     if (actor.lockUntil > now) return actor.action;
     return player.moving || row === 1 ? 'run' : 'idle';
   }
-
   function drawActor(actor, x, y, row, alpha, face) {
     const player = window.S.player;
     const now = performance.now();
     play(actor, desiredAction(actor, player, row, now), now);
-    const delta = Math.min(0.05, Math.max(0, (now - actor.lastTime) / 1000));
-    actor.lastTime = now;
-    actor.state.update(delta);
-    actor.state.apply(actor.skeleton);
-    actor.skeleton.updateWorldTransform();
-    actor.skeleton.color.a = Number.isFinite(alpha) ? alpha : 1;
-    const bounds = actor.bounds;
-    const scale = actor.def.height / Math.max(1, bounds.size.y);
-    const centerX = bounds.offset.x + bounds.size.x / 2;
-    const bottom = bounds.offset.y + bounds.size.y;
-    window.ctx.save();
-    window.ctx.translate(x, y + actor.def.groundOffset);
-    window.ctx.scale((face || 1) * actor.def.facing * scale, scale);
-    window.ctx.translate(-centerX, -bottom);
-    actor.renderer.draw(actor.skeleton);
-    window.ctx.restore();
+    frames.draw(window.ctx, actor, actor.action, x, y, {
+      elapsed: now - actor.actionStartedAt,
+      speed: config.speeds[actor.action] || 1,
+      height: actor.def.height,
+      groundOffset: actor.def.groundOffset,
+      alpha: Number.isFinite(alpha) ? alpha : 1,
+      face: face || 1,
+    });
   }
-
   function installDrawPatch() {
     const fallback = window.drawAction;
     if (typeof fallback !== 'function' || fallback.__cultivationSpine) return;
@@ -141,13 +118,11 @@
     wrapped.__cultivationSpine = true;
     window.drawAction = wrapped;
   }
-
   function trigger(action = 'skill', duration = 420) {
     forcedAction = { action, until: performance.now() + duration };
     const id = window.S?.player?.cls;
     if (id) load(id);
   }
-
   function wrapSkillFunction(name) {
     const original = window[name];
     if (typeof original !== 'function' || original.__cultivationSpine) return;
@@ -158,7 +133,6 @@
     wrapped.__cultivationSpine = true;
     window[name] = wrapped;
   }
-
   function installIntegrations() {
     installDrawPatch();
     ['burstAt', 'lightBurstAt', 'areaOnTarget', 'fallingAttack',
@@ -184,7 +158,6 @@
       rift.renderFrame = wrapped;
     }
   }
-
   Object.entries(config.classes).forEach(([id, def]) => {
     const card = window.CLASSES?.[id]?.card;
     if (card && window.AS) window.AS[card] = def.preview;
