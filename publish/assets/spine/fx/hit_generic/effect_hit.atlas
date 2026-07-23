@@ -1,0 +1,153 @@
+
+effect_hit.png
+size: 761,219
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/guangyun_00000
+  rotate: false
+  xy: 721, 18
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+effect/xian/1_00000
+  rotate: false
+  xy: 155, 21
+  size: 127, 66
+  orig: 150, 150
+  offset: 10, 2
+  index: -1
+effect/yinfu/yinfu_1_00000
+  rotate: false
+  xy: 555, 117
+  size: 94, 100
+  orig: 100, 100
+  offset: 3, 0
+  index: -1
+effect/yinfu/yinfu_2_00000
+  rotate: false
+  xy: 651, 117
+  size: 93, 100
+  orig: 100, 100
+  offset: 4, 0
+  index: -1
+effect/yinfu/yinfu_3_00000
+  rotate: true
+  xy: 2, 2
+  size: 85, 99
+  orig: 100, 100
+  offset: 8, 1
+  index: -1
+effect/yinfu/yinfu_4_00000
+  rotate: false
+  xy: 563, 15
+  size: 94, 100
+  orig: 100, 100
+  offset: 3, 0
+  index: -1
+effect/yinfu/yinfu_5_00000
+  rotate: false
+  xy: 466, 7
+  size: 95, 100
+  orig: 100, 100
+  offset: 2, 0
+  index: -1
+effect/zhuan/1_00000
+  rotate: true
+  xy: 721, 52
+  size: 63, 38
+  orig: 128, 64
+  offset: 0, 14
+  index: -1
+effect/zhuan/1_00001
+  rotate: true
+  xy: 508, 111
+  size: 106, 45
+  orig: 128, 64
+  offset: 0, 6
+  index: -1
+effect/zhuan/1_00002
+  rotate: true
+  xy: 324, 89
+  size: 128, 52
+  orig: 128, 64
+  offset: 0, 5
+  index: -1
+effect/zhuan/1_00004
+  rotate: true
+  xy: 262, 89
+  size: 128, 60
+  orig: 128, 64
+  offset: 0, 3
+  index: -1
+effect/zhuan/1_00006
+  rotate: true
+  xy: 199, 89
+  size: 128, 61
+  orig: 128, 64
+  offset: 0, 2
+  index: -1
+effect/zhuan/1_00008
+  rotate: true
+  xy: 134, 89
+  size: 128, 63
+  orig: 128, 64
+  offset: 0, 1
+  index: -1
+effect/zhuan/1_00010
+  rotate: true
+  xy: 2, 89
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+effect/zhuan/1_00012
+  rotate: true
+  xy: 68, 89
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+effect/zhuan/1_00014
+  rotate: false
+  xy: 284, 23
+  size: 124, 64
+  orig: 128, 64
+  offset: 4, 0
+  index: -1
+effect/zhuan/1_00016
+  rotate: true
+  xy: 378, 96
+  size: 121, 64
+  orig: 128, 64
+  offset: 7, 0
+  index: -1
+effect/zhuan/1_00018
+  rotate: true
+  xy: 444, 109
+  size: 108, 62
+  orig: 128, 64
+  offset: 20, 1
+  index: -1
+effect/zhuan/1_00020
+  rotate: true
+  xy: 659, 15
+  size: 100, 60
+  orig: 128, 64
+  offset: 28, 2
+  index: -1
+effect/zhuan/1_00022
+  rotate: true
+  xy: 410, 3
+  size: 91, 54
+  orig: 128, 64
+  offset: 35, 5
+  index: -1
+effect/zhuan/1_00024
+  rotate: true
+  xy: 103, 13
+  size: 74, 50
+  orig: 128, 64
+  offset: 50, 5
+  index: -1

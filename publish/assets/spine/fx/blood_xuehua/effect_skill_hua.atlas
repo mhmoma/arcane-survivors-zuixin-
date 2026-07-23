@@ -1,0 +1,258 @@
+
+effect_skill_hua.png
+size: 1003,453
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/skill1/glow_01
+  rotate: false
+  xy: 365, 121
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
+effect/skill1/hua/jaixuehua_01
+  rotate: true
+  xy: 956, 176
+  size: 55, 43
+  orig: 139, 92
+  offset: 40, 33
+  index: -1
+effect/skill1/hua/jaixuehua_04
+  rotate: false
+  xy: 685, 128
+  size: 73, 51
+  orig: 139, 92
+  offset: 31, 30
+  index: -1
+effect/skill1/hua/jaixuehua_07
+  rotate: false
+  xy: 466, 120
+  size: 120, 57
+  orig: 139, 92
+  offset: 5, 27
+  index: -1
+effect/skill1/hua/jaixuehua_10
+  rotate: false
+  xy: 872, 72
+  size: 128, 62
+  orig: 139, 92
+  offset: 6, 25
+  index: -1
+effect/skill1/hua/jaixuehua_13
+  rotate: false
+  xy: 828, 136
+  size: 126, 73
+  orig: 139, 92
+  offset: 3, 17
+  index: -1
+effect/skill1/hua/jaixuehua_16
+  rotate: true
+  xy: 737, 319
+  size: 134, 84
+  orig: 139, 92
+  offset: 2, 8
+  index: -1
+effect/skill1/hua/jaixuehua_19
+  rotate: false
+  xy: 634, 34
+  size: 135, 87
+  orig: 139, 92
+  offset: 2, 5
+  index: -1
+effect/skill1/hua/jaixuehua_22
+  rotate: true
+  xy: 466, 179
+  size: 136, 88
+  orig: 139, 92
+  offset: 2, 4
+  index: -1
+effect/skill1/hua/jaixuehua_25
+  rotate: false
+  xy: 496, 30
+  size: 136, 88
+  orig: 139, 92
+  offset: 2, 3
+  index: -1
+effect/skill1/hua/jaixuehua_28
+  rotate: true
+  xy: 469, 317
+  size: 136, 88
+  orig: 139, 92
+  offset: 2, 2
+  index: -1
+effect/skill1/hua/jaixuehua_31
+  rotate: true
+  xy: 556, 180
+  size: 135, 88
+  orig: 139, 92
+  offset: 2, 2
+  index: -1
+effect/skill1/hua/jaixuehua_34
+  rotate: true
+  xy: 559, 318
+  size: 135, 87
+  orig: 139, 92
+  offset: 2, 2
+  index: -1
+effect/skill1/hua/jaixuehua_37
+  rotate: true
+  xy: 646, 181
+  size: 135, 87
+  orig: 139, 92
+  offset: 2, 2
+  index: -1
+effect/skill1/hua/jaixuehua_40
+  rotate: true
+  xy: 648, 318
+  size: 135, 87
+  orig: 139, 92
+  offset: 2, 2
+  index: -1
+effect/skill1/hua/jaixuehua_43
+  rotate: true
+  xy: 735, 181
+  size: 135, 87
+  orig: 139, 92
+  offset: 2, 2
+  index: -1
+effect/skill1/hua/jaixuehua_46
+  rotate: true
+  xy: 823, 323
+  size: 130, 86
+  orig: 139, 92
+  offset: 3, 3
+  index: -1
+effect/skill1/hua/jaixuehua_49
+  rotate: true
+  xy: 911, 335
+  size: 118, 83
+  orig: 139, 92
+  offset: 4, 5
+  index: -1
+effect/skill1/hua/jaixuehua_52
+  rotate: false
+  xy: 588, 123
+  size: 95, 55
+  orig: 139, 92
+  offset: 17, 27
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_01
+  rotate: false
+  xy: 123, 118
+  size: 119, 165
+  orig: 126, 193
+  offset: 3, 13
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_04
+  rotate: false
+  xy: 246, 290
+  size: 120, 163
+  orig: 126, 193
+  offset: 3, 18
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_07
+  rotate: false
+  xy: 0, 272
+  size: 121, 181
+  orig: 126, 193
+  offset: 3, 2
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_10
+  rotate: false
+  xy: 0, 97
+  size: 121, 173
+  orig: 126, 193
+  offset: 3, 9
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_13
+  rotate: false
+  xy: 123, 285
+  size: 121, 168
+  orig: 126, 193
+  offset: 3, 22
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_16
+  rotate: false
+  xy: 244, 118
+  size: 119, 165
+  orig: 126, 193
+  offset: 5, 18
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_19
+  rotate: true
+  xy: 164, 2
+  size: 114, 165
+  orig: 126, 193
+  offset: 9, 21
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_22
+  rotate: true
+  xy: 331, 2
+  size: 114, 163
+  orig: 126, 193
+  offset: 9, 21
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_25
+  rotate: true
+  xy: 0, 0
+  size: 95, 162
+  orig: 126, 193
+  offset: 17, 23
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_28
+  rotate: false
+  xy: 365, 148
+  size: 99, 140
+  orig: 126, 193
+  offset: 2, 48
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_31
+  rotate: false
+  xy: 368, 317
+  size: 99, 136
+  orig: 126, 193
+  offset: 2, 55
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_34
+  rotate: false
+  xy: 771, 4
+  size: 99, 117
+  orig: 126, 193
+  offset: 2, 61
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_37
+  rotate: false
+  xy: 824, 211
+  size: 94, 110
+  orig: 126, 193
+  offset: 2, 73
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_40
+  rotate: false
+  xy: 920, 233
+  size: 83, 100
+  orig: 126, 193
+  offset: 2, 84
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_43
+  rotate: false
+  xy: 760, 123
+  size: 66, 56
+  orig: 126, 193
+  offset: 2, 92
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_46
+  rotate: false
+  xy: 634, 0
+  size: 32, 32
+  orig: 126, 193
+  offset: 6, 104
+  index: -1
+effect/skill1/jiaxue/jiaxuebaofaz_49
+  rotate: true
+  xy: 123, 112
+  size: 4, 3
+  orig: 126, 193
+  offset: 20, 127
+  index: -1

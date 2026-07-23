@@ -1,0 +1,167 @@
+
+effect_skill1.png
+size: 852,515
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/effects/skill0/glow_00012
+  rotate: false
+  xy: 409, 172
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+images/effects/skill1/bingzhu/1_00023
+  rotate: false
+  xy: 744, 426
+  size: 106, 87
+  orig: 200, 209
+  offset: 52, 21
+  index: -1
+images/effects/skill1/bingzhu/1_00024
+  rotate: false
+  xy: 637, 14
+  size: 126, 129
+  orig: 200, 209
+  offset: 43, 18
+  index: -1
+images/effects/skill1/bingzhu/1_00025
+  rotate: false
+  xy: 665, 145
+  size: 143, 172
+  orig: 200, 209
+  offset: 33, 15
+  index: -1
+images/effects/skill1/bingzhu/1_00027
+  rotate: true
+  xy: 485, 172
+  size: 145, 178
+  orig: 200, 209
+  offset: 32, 15
+  index: -1
+images/effects/skill1/bingzhu/1_00029
+  rotate: false
+  xy: 508, 2
+  size: 127, 168
+  orig: 200, 209
+  offset: 42, 15
+  index: -1
+images/effects/skill1/bingzhu/1_00031
+  rotate: false
+  xy: 368, 6
+  size: 138, 155
+  orig: 200, 209
+  offset: 36, 17
+  index: -1
+images/effects/skill1/bingzhu/1_00033
+  rotate: false
+  xy: 243, 8
+  size: 123, 108
+  orig: 200, 209
+  offset: 44, 20
+  index: -1
+images/effects/skill1/suduxian2/1_00039
+  rotate: true
+  xy: 485, 342
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+images/effects/skill1/suduxian2/1_00041
+  rotate: true
+  xy: 457, 191
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+images/effects/skill1/suduxian2/1_00043
+  rotate: false
+  xy: 744, 404
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+images/effects/skill1/suduxian2/1_00045
+  rotate: false
+  xy: 774, 404
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+images/effects/skill1/suduxian2/1_00047
+  rotate: false
+  xy: 804, 404
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+images/effects/xin/skii1/lanseshangshengyun_00049
+  rotate: false
+  xy: 765, 2
+  size: 78, 141
+  orig: 92, 144
+  offset: 6, 2
+  index: -1
+images/effects/xin/skii1/tuoweici_add/tuoweici_00077
+  rotate: false
+  xy: 2, 308
+  size: 481, 101
+  orig: 618, 128
+  offset: 6, 15
+  index: -1
+images/effects/xin/skii1/tuoweici_add/tuoweici_00078
+  rotate: false
+  xy: 2, 221
+  size: 465, 85
+  orig: 618, 128
+  offset: 143, 22
+  index: -1
+images/effects/xin/skii1/tuoweici_add/tuoweici_00080
+  rotate: false
+  xy: 2, 411
+  size: 510, 102
+  orig: 618, 128
+  offset: 67, 18
+  index: -1
+images/effects/xin/skii1/tuoweici_add/tuoweici_00082
+  rotate: false
+  xy: 2, 8
+  size: 239, 108
+  orig: 618, 128
+  offset: 100, 16
+  index: -1
+images/effects/xin/skii1/tuoweici_add/tuoweici_00084
+  rotate: false
+  xy: 514, 415
+  size: 228, 98
+  orig: 618, 128
+  offset: 94, 16
+  index: -1
+images/effects/xin/skii1/tuoweici_add/tuoweici_00086
+  rotate: false
+  xy: 514, 319
+  size: 218, 94
+  orig: 618, 128
+  offset: 95, 18
+  index: -1
+images/effects/xin/skii1/tuoweici_add/tuoweici_00088
+  rotate: true
+  xy: 485, 372
+  size: 37, 27
+  orig: 618, 128
+  offset: 272, 49
+  index: -1
+images/effects/xin/skii1/xiecici_add/xiecici_00047
+  rotate: false
+  xy: 2, 163
+  size: 405, 56
+  orig: 418, 62
+  offset: 2, 5
+  index: -1
+images/effects/xin/skii1/xiecici_add/xiecici_00049
+  rotate: false
+  xy: 2, 118
+  size: 360, 43
+  orig: 418, 62
+  offset: 20, 13
+  index: -1

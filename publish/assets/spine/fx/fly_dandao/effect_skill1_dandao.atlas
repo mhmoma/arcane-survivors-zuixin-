@@ -1,0 +1,41 @@
+
+effect_skill1_dandao.png
+size: 118,281
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill1/biu/1_00024
+  rotate: true
+  xy: 2, 149
+  size: 130, 56
+  orig: 147, 57
+  offset: 1, 0
+  index: -1
+skill1/biu/1_00025
+  rotate: true
+  xy: 2, 22
+  size: 125, 55
+  orig: 147, 57
+  offset: 6, 1
+  index: -1
+skill1/biu/1_00026
+  rotate: true
+  xy: 60, 161
+  size: 118, 55
+  orig: 147, 57
+  offset: 28, 1
+  index: -1
+skill1/biu/1_00027
+  rotate: true
+  xy: 59, 41
+  size: 106, 49
+  orig: 147, 57
+  offset: 28, 3
+  index: -1
+skill1/biu/1_00028
+  rotate: false
+  xy: 59, 2
+  size: 57, 37
+  orig: 147, 57
+  offset: 74, 12
+  index: -1

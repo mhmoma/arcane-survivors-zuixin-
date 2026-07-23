@@ -8,7 +8,7 @@ window.GameModules.season = (() => {
       theme: '太虚裂界',
       levelCap: 20,
       introTitle: '第一纪元：太虚裂界',
-      promo: './assets/generated/cultivation-cover-landscape.c17ae7e5.webp',
+      promo: './assets/generated/cover-xiandao-piaomiao-cb20260722.webp',
       story: [
         '千年前，太虚天门崩裂，九州灵脉从此昼夜震荡。',
         '近日北斗倒悬，妖雾自古战场涌出，被遗忘的魔尊开始借尸还魂。',

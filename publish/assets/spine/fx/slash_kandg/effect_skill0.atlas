@@ -1,0 +1,55 @@
+
+effect_skill0.png
+size: 825,202
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill0/guangyun_00030
+  rotate: true
+  xy: 747, 12
+  size: 49, 51
+  orig: 50, 51
+  offset: 1, 0
+  index: -1
+skill0/kandg_normal/kandaoguang_00026
+  rotate: false
+  xy: 2, 9
+  size: 200, 191
+  orig: 214, 202
+  offset: 7, 4
+  index: -1
+skill0/kandg_normal/kandaoguang_00027
+  rotate: false
+  xy: 204, 20
+  size: 194, 180
+  orig: 214, 202
+  offset: 10, 7
+  index: -1
+skill0/kandg_normal/kandaoguang_00028
+  rotate: false
+  xy: 400, 36
+  size: 191, 164
+  orig: 214, 202
+  offset: 13, 7
+  index: -1
+skill0/kandg_normal/kandaoguang_00029
+  rotate: true
+  xy: 593, 56
+  size: 144, 152
+  orig: 214, 202
+  offset: 58, 11
+  index: -1
+skill0/kandg_normal/kandaoguang_00030
+  rotate: false
+  xy: 747, 63
+  size: 76, 137
+  orig: 214, 202
+  offset: 115, 24
+  index: -1
+skill0/kandg_normal/kandaoguang_00031
+  rotate: true
+  xy: 593, 2
+  size: 52, 115
+  orig: 214, 202
+  offset: 130, 37
+  index: -1

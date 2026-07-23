@@ -36,12 +36,21 @@
     const binary = new spine.SkeletonBinary(loader);
     const data = binary.readSkeletonData(new Uint8Array(binaryData));
     const skeleton = new spine.Skeleton(data);
+    // 用站姿量包围盒，并去掉 shadow 贴片，避免脚底阴影把角色“抬离”程序阴影
+    const idleName = def.animations?.idle || 'stand';
+    if (data.findAnimation(idleName)) {
+      const state = new spine.AnimationState(new spine.AnimationStateData(data));
+      state.setAnimation(0, idleName, true);
+      state.update(0);
+      state.apply(skeleton);
+    }
+    gpu.stripShadowSlots?.(skeleton);
     skeleton.updateWorldTransform();
     const offset = new spine.Vector2(), size = new spine.Vector2();
     skeleton.getBounds(offset, size, []);
     return {
       id, def, data,
-      bounds: { offset, size },
+      bounds: { offset: { x: offset.x, y: offset.y }, size: { x: size.x, y: size.y } },
       gpuInstance: null,
       action: 'idle', lockUntil: 0,
       actionStartedAt: performance.now(),
@@ -82,12 +91,15 @@
   function desiredAction(actor, player, row, now) {
     if (forcedAction && forcedAction.until > now) return forcedAction.action;
     if (actor.action === 'skill' && actor.lockUntil > now) return 'skill';
-    if ((player.cast || 0) > 0 || row === 2) return 'attack';
+    // 施法：按职业 castAction（剑侠=skill，其它默认 attack）
+    if ((player.cast || 0) > 0 || row === 2) {
+      return actor.def.castAction || 'attack';
+    }
     if (row === 3) return 'hurt';
     if (actor.lockUntil > now) return actor.action;
     return player.moving || row === 1 ? 'run' : 'idle';
   }
-  function drawActor(actor, x, y, row, alpha, face) {
+  function drawActor(context, actor, x, y, row, alpha, face, extra) {
     const player = window.S.player;
     const now = performance.now();
     play(actor, desiredAction(actor, player, row, now), now);
@@ -98,11 +110,15 @@
       groundOffset: actor.def.groundOffset,
       alpha: Number.isFinite(alpha) ? alpha : 1,
       face: face || 1,
+      minDpr: extra?.minDpr,
+      clear: extra?.clear,
     };
     if (!gpu.available) return false;
     actor.gpuInstance ||= gpu.createInstance(actor);
+    const drawCtx = context || window.ctx;
+    if (!drawCtx) return false;
     return gpu.draw(
-      window.ctx,
+      drawCtx,
       actor,
       actor.gpuInstance,
       actor.action,
@@ -111,7 +127,7 @@
       options,
     );
   }
-  function drawPlayer(context, player) {
+  function drawPlayer(context, player, extra) {
     if (!player || !config.classes[player.cls]) return false;
     const actor = actors.get(player.cls);
     if (!actor) {
@@ -120,7 +136,7 @@
     }
     const row = player.hit > 0.15 ? 3 : player.cast > 0 ? 2 : player.moving ? 1 : 0;
     const bob = player.moving ? Math.sin((player.anim || 0) * Math.PI / 3) * 1.6 : 0;
-    return drawActor(actor, player.x, player.y + bob, row, 1, player.faceX < 0 ? -1 : 1);
+    return drawActor(context, actor, player.x, player.y + bob, row, 1, player.faceX < 0 ? -1 : 1, extra);
   }
   function installPlayerPatch() {
     if (typeof window.drawPlayer !== 'function'

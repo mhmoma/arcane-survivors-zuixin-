@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "livePack": "live-pack.json",
+  "worlds": [
+    {
+      "id": "builtin-town",
+      "name": "仙道城镇",
+      "kind": "town",
+      "mapId": "town",
+      "entities": 73
+    },
+    {
+      "id": "builtin-chaos",
+      "name": "太虚荒原",
+      "kind": "combat",
+      "mapId": "chaos",
+      "entities": 51
+    },
+    {
+      "id": "builtin-ruins",
+      "name": "上古剑冢",
+      "kind": "combat",
+      "mapId": "ruins",
+      "entities": 46
+    },
+    {
+      "id": "builtin-frost",
+      "name": "北冥雪境",
+      "kind": "combat",
+      "mapId": "frost",
+      "entities": 43
+    }
+  ]
+}

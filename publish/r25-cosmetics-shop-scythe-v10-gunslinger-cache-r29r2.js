@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 const KEY='arcane-cosmetics-v1',SHOP_GOLD=2000,COSTUME_CORE=200,SACRIFICE_CORE=150,TICKET_ICON='./assets/generated/shop/rift-ticket-cb20260618a.webp?v=20260629-cache-refresh-r1',LAOYANG_ICON='./assets/generated/laoyang-5090.e37e4947.webp',HARD_DRIVE_ICON='./assets/generated/hard-drive-sacrifice.77268ef6.webp';
-const CLASS_CN={paladin:'圣骑士',mage:'大魔法师',ranger:'游侠',lewdSaintess:'淫靡圣女',scytheMaiden:'琦琦',gunslinger:'枪手'};
+const CLASS_CN={paladin:'圣骑士',mage:'大魔法师',ranger:'游侠',lewdSaintess:'淫靡圣女',scytheMaiden:'琦琦',gunslinger:'玄墨笔修'};
 const SHOP_COSTUMES=[];
 const SPECIAL={};
 let state={owned:{},selected:{}},ready=false,imgs={},lastDraw={},shopOpening=false;

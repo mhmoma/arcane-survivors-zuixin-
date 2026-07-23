@@ -6,7 +6,7 @@ function setCd(id,v){S._evoTuneCd=S._evoTuneCd||{};S._evoTuneCd[id]=v}
 function t(){return targetEnemy(S.player)}
 function eliteTarget(){return S.enemies.find(e=>e.boss)||S.enemies.find(e=>e.elite)||t()}
 function ep(id){return typeof evoPower==='function'?evoPower(id):1}
-const EVO_GUIDE_EXTRA={holyWard:'适配：辉金守护 / 圣钉战槌；秘境联动圣盾环掷。',judgmentLance:'适配：黎明审判 / 朝圣者遗步；秘境联动审判烙印。',bloodOath:'适配：荆棘壁垒 / 血契重甲；秘境联动荆棘誓约。',dragonMeteor:'适配：余烬陨星 / 爆燃核心；火球进化后由陨星碎片套装放大火海。',thunderRing:'适配：风暴符印 / 逆时针环；暴击堆叠雷弧连乘。',prismFinale:'适配：奥术射线 / 棱镜；射线扫射压制 Boss。',astralImplosion:'适配：星界飞弹 / 星陨秘典；飞弹穿透撕开星界黑洞。',frostCore:'适配：霜月王冠；冰球、晶刺、护盾形成冰系完整流派。',stormAxe:'适配：旋风飞斧；飞斧回旋、移速和切割风暴成长。',skyTempest:'适配：风刃猎杀；攻速越高风刃弹幕越密。',hunterBarrage:'适配：猎王箭幕；优先精英与 Boss，击杀追加箭幕。',lunarHunt:'适配：月影猎手；月牙斩暴击触发二级冰爆。',venomPhantom:'适配：毒影伏击；毒雾破抗并召影刃引爆毒层。',demonSpring:'适配：绯红圣器；反涌、承伤和自爆形成近战反击流。',fallenSanctum:'适配：紫罗兰圣歌；满血溢出治疗转惩戒脉冲。',roseBind:'适配：蔷薇镜像；飞吻反冲光束会消耗镜池打 Boss。',deathWaltz:'适配：冥月圆舞 / 深渊假面；移动收割、护盾和 DoT 加速。',bloodScythe:'适配：血镰誓约；精英内爆、吸血和血盾续航。',soulReaper:'适配：断魂影镰 / 瘟疫铃 / 深渊假面；残血处决与连锁收割。',scorchedBarrage:'适配：焦土火药；进化后轰炸间隔更短，并周期追加追踪火雨，清群和压制精英更稳定。'};
+const EVO_GUIDE_EXTRA={holyWard:'适配：辉金守护 / 圣钉战槌；秘境联动圣盾环掷。',judgmentLance:'适配：黎明审判 / 朝圣者遗步；秘境联动审判烙印。',bloodOath:'适配：荆棘壁垒 / 血契重甲；秘境联动荆棘誓约。',dragonMeteor:'适配：余烬陨星 / 爆燃核心；火球进化后由陨星碎片套装放大火海。',thunderRing:'适配：风暴符印 / 逆时针环；暴击堆叠雷弧连乘。',prismFinale:'适配：奥术射线 / 棱镜；射线扫射压制 Boss。',astralImplosion:'适配：星界飞弹 / 星陨秘典；飞弹穿透撕开星界黑洞。',frostCore:'适配：霜月王冠；冰球、晶刺、护盾形成冰系完整流派。',stormAxe:'适配：旋风飞斧；飞斧回旋、移速和切割风暴成长。',skyTempest:'适配：风刃猎杀；攻速越高风刃弹幕越密。',hunterBarrage:'适配：猎王箭幕；优先精英与 Boss，击杀追加箭幕。',lunarHunt:'适配：月影猎手；月牙斩暴击触发二级冰爆。',venomPhantom:'适配：毒影伏击；毒雾破抗并召影刃引爆毒层。',demonSpring:'适配：绯红圣器；反涌、承伤和自爆形成近战反击流。',fallenSanctum:'适配：紫罗兰圣歌；满血溢出治疗转惩戒脉冲。',roseBind:'适配：蔷薇镜像；飞吻反冲光束会消耗镜池打 Boss。',deathWaltz:'适配：冥月圆舞 / 深渊假面；移动收割、护盾和 DoT 加速。',bloodScythe:'适配：血镰誓约；精英内爆、吸血和血盾续航。',soulReaper:'适配：断魂影镰 / 瘟疫铃 / 深渊假面；残血处决与连锁收割。',scorchedBarrage:'适配：朱墨丹砂；进化后轰炸间隔更短，并周期追加追踪墨雨，清群和压制精英更稳定。'};
 function bootEvos(){
   if(!window.EVOLUTIONS)return;
   addEvo('astralImplosion',{name:'星界内爆',job:'mage',main:'missile',support:'focus',desc:'魔法飞弹进化形态。飞弹穿透后撕开星界内爆，暴击与星界飞弹套装会放大黑洞牵引和奥术连爆，适配星陨秘典。'});
@@ -18,7 +18,7 @@ function bootEvos(){
   EVOLUTIONS.fallenSanctum.desc='献媚祈祷进化为堕欲圣域，周期伤害、减速并恢复淫荡值；满血溢出治疗会转化为惩戒脉冲。';
   addEvo('roseBind',{name:'蔷薇束缚',job:'lewdSaintess',main:'lustKiss',support:'magnet',desc:'媚心飞吻进化形态。飞吻弹射后束缚精英并触发反冲光束，适配蔷薇镜像套装。'});
   EVOLUTIONS.bloodScythe.desc='血镰回旋进化为血镰祭环，释放血色祭环和飞镰斩影；血镰誓约下会对精英触发暗影内爆与吸血护盾。';
-  EVOLUTIONS.scorchedBarrage.desc='燃烧弹进化为焦土弹幕，轰炸更频繁、火场更大，并周期追加追踪火雨，适合压制密集怪潮和精英。';
+  EVOLUTIONS.scorchedBarrage.desc='朱砂爆墨进化为朱墨天罗，轰炸更频繁、灼墨火阵更大，并周期追加追踪墨雨，适合压制密集妖潮和精英。';
 }
 function extraMage(){let e=t();if(!e)return;if(S.evolutions.astralImplosion&&cd('astralImplosion',{dt:0})){let lv=skillLv('missile'),d=(38+lv*12)*dmgBase('missile')*ep('astralImplosion'),n=3+Math.floor(lv/3)+(hasSet('astral-missile')?2:0);volley('missile',e,n,510,d,1.9,36+lv*2,0,true);burstAt('voidRift',e.x,e.y,d*.58,82+lv*5,1.2,'#c084fc',160,.55);setCd('astralImplosion',1.35)}
   if(S.evolutions.frostCore&&cd('frostCore',{dt:0})){let lv=skillLv('iceorb'),d=(36+lv*11)*dmgBase('iceorb')*ep('frostCore'),rad=66+lv*5;volley('ice',e,2+Math.floor(lv/3),330,d,2.4,0,1.8,true);fallingAttack('crystal',e,d*1.15,rad,1.8,'#93c5fd',130,.28);if(hasUnique('unique-moon-crown'))S.player.shield=Math.min(S.player.max,(S.player.shield||0)+S.player.max*.03);setCd('frostCore',1.55)}

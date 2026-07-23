@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "ruins",
+  "name": "上古剑冢",
+  "diff": 1,
+  "spawn": 1,
+  "count": 1,
+  "gold": 1,
+  "xp": 1,
+  "boss": "golem",
+  "notes": "由现有 MAP_RULES.ruins 迁出，供地图包 rulesRef 引用"
+}

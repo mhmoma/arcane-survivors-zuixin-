@@ -1,7 +1,7 @@
 window.GameModules = window.GameModules || {};
 window.GameModules.progression = (() => {
   const KEY = 'arcane-meta-v3';
-  const CLASSES = { paladin: '圣骑士', mage: '大魔法师', ranger: '游侠', lewdSaintess: '淫靡圣女', scytheMaiden: '琦琦', gunslinger: '枪手' };
+  const CLASSES = { paladin: '圣骑士', mage: '大魔法师', ranger: '游侠', lewdSaintess: '淫靡圣女', scytheMaiden: '琦琦', gunslinger: '玄墨笔修' };
   const BASE = [
     ['hp', '秘境体魄', '最大生命 +5%，提高高层秘境容错', 10, 30, 50, 16],
     ['damage', '深渊战意', '全技能伤害 +4%，与套装核心技能增伤叠加', 10, 50, 28, 38],
@@ -47,11 +47,11 @@ window.GameModules.progression = (() => {
       ['execute', '终末收割', '镰刀系技能对 Boss、精英与护盾敌人更强，残血敌人受到额外处决伤害', 4, 145, 50, 126, 'damage', ['scytheArc', 'bloodReap', 'wraithBlade', 'reaperChain'], 30, 'arc'],
     ],
     gunslinger: [
-      ['quick', '银弹速射', '速射每级冷却 -4%、伤害 +5%，Lv.2/Lv.4 各 +1 发，枪手开荒核心', 5, 85, 22, 82, 'damage', ['quickShot'], 24],
-      ['ricochet', '跳弹赌徒', '跳弹每级 +1 跳、范围 +8、冷却 -4%，强化密集怪潮清场', 5, 90, 50, 86, 'damage', ['ricochetBullet'], 24],
-      ['roll', '翻滚霰弹', '霰弹翻滚每级弹丸 +1、翻滚减伤提高并略微提升移速', 5, 90, 78, 82, 'utility', ['shotgunRoll'], 24],
-      ['bomb', '焦土爆破', '燃烧弹每级范围 +6、伤害 +5%、冷却 -4%，火场压制更强', 4, 115, 50, 108, 'damage', ['fireBomb'], 26, 'ricochet'],
-      ['gunmaster', '枪斗宗师', '枪械技能对 Boss、精英与护盾敌人更强，速射和跳弹暴击收益更高', 4, 140, 50, 126, 'damage', ['quickShot', 'ricochetBullet', 'shotgunRoll', 'fireBomb'], 30, 'quick'],
+      ['quick', '飞墨点锋', '飞墨点锋每级冷却 -4%、伤害 +5%，Lv.2/Lv.4 各 +1 点，玄墨笔修开荒核心', 5, 85, 22, 82, 'damage', ['quickShot'], 24],
+      ['ricochet', '游墨连环', '游墨连环每级 +1 折返、范围 +8、冷却 -4%，强化密集妖潮清场', 5, 90, 50, 86, 'damage', ['ricochetBullet'], 24],
+      ['roll', '泼墨闪身', '泼墨闪身每级墨点 +1、闪身减伤提高并略微提升移速', 5, 90, 78, 82, 'utility', ['shotgunRoll'], 24],
+      ['bomb', '朱砂爆墨', '朱砂爆墨每级范围 +6、伤害 +5%、冷却 -4%，灼墨火阵压制更强', 4, 115, 50, 108, 'damage', ['fireBomb'], 26, 'ricochet'],
+      ['gunmaster', '墨海宗师', '笔墨功法对 Boss、精英与护盾敌人更强，飞墨点锋与游墨连环暴击收益更高', 4, 140, 50, 126, 'damage', ['quickShot', 'ricochetBullet', 'shotgunRoll', 'fireBomb'], 30, 'quick'],
     ],
   };
   const COST_GROWTH = 1.72;
@@ -115,7 +115,9 @@ window.GameModules.progression = (() => {
       const can = pre && !full && (core ? meta.soulGold >= price : meta.soulCore >= n.core);
       const state = !pre ? '需前置节点' : !core ? `解锁 ${n.core} 魔核` : full ? '已满级' : `消耗 ${price}`;
       const tip = `${n.name} Lv.${lv}/${n.max}\n${n.desc}\n${!pre ? '需要先升级前置节点' : !core ? `需要 ${n.core} 魔核解锁，之后用金币升级` : full ? '已满级' : `下一次升级消耗 ${price} 灵魂金币`}`;
-      return `<button class="treeNode ${tone(n)} ${!pre || !core ? 'locked' : ''} ${full ? 'full' : ''}" style="left:${n.x}%;top:${posY(n.y)}" data-prog-node="${n.id}" data-tip="${esc(tip)}" ${can ? '' : 'disabled'}><b>${n.name}</b><small>Lv.${lv}/${n.max}</small><span>${state}</span><em>${n.desc}</em></button>`;
+      const icons = (n.skills || []).slice(0, 3).map(id => typeof skillIcon === 'function' ? skillIcon(id) : '').filter(Boolean).join('');
+      const iconHtml = icons ? `<span class="treeNodeIcons">${icons}</span>` : '';
+      return `<button class="treeNode ${tone(n)} ${!pre || !core ? 'locked' : ''} ${full ? 'full' : ''}" style="left:${n.x}%;top:${posY(n.y)}" data-prog-node="${n.id}" data-tip="${esc(tip)}" ${can ? '' : 'disabled'}>${iconHtml}<b>${n.name}</b><small>Lv.${lv}/${n.max}</small><span>${state}</span><em>${n.desc}</em></button>`;
     }).join('');
     container.innerHTML = `<div class="progressHead"><b>灵魂金币：${meta.soulGold}　魔核：${meta.soulCore}</b><small>当前职业：${CLASSES[active]} / Boss 固定掉落魔核，通关额外 +2</small></div><div class="classTabs">${Object.entries(CLASSES).map(([id, name]) => `<button class="${id === active ? 'selected' : ''}" data-prog-class="${id}">${name}</button>`).join('')}</div><div class="treeLegend"><span class="life">生存</span><span class="damage">伤害</span><span class="speed">速度/冷却</span><span class="boss">首领</span><span class="wealth">收益</span><span class="utility">机制</span></div><div class="treeCanvas"><svg viewBox="0 0 100 132" preserveAspectRatio="none">${lines}</svg>${cards}<div class="treeTip" id="treeTip"></div></div>`;
     container.querySelectorAll('[data-prog-class]').forEach(b => b.onclick = () => renderTree(container, onChange, b.dataset.progClass));

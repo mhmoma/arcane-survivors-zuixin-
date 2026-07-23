@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>仙道 · 地图编辑器</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app" id="editorMain">
+    <header class="topbar">
+      <div class="brand">
+        <strong>地图编辑器</strong>
+        <span>场景摆放 · 互动 · 多边形碰撞 · schema v2</span>
+      </div>
+      <div class="toolbar">
+        <button type="button" class="btn primary" id="btnNew">新建</button>
+        <button type="button" class="btn" id="btnSave">保存</button>
+        <button type="button" class="btn" id="btnUndo" title="撤回上一步 (Ctrl+Z)" disabled>撤回</button>
+        <button type="button" class="btn" id="btnDup">另存副本</button>
+        <label class="file-btn">导入 zip<input type="file" id="btnImport" accept=".zip,application/zip" /></label>
+        <button type="button" class="btn gold" id="btnExport">导出 zip</button>
+        <button type="button" class="btn primary" id="btnApply" title="写入游戏 live 数据并热更新">应用到游戏</button>
+        <button type="button" class="btn" id="btnValidate">校验</button>
+        <button type="button" class="btn" id="btnResetBuiltin">重置内置图</button>
+        <button type="button" class="btn danger" id="btnDelete">删除</button>
+        <div class="dir-group">
+          <button type="button" class="btn tool-btn active" data-tool="select">选择</button>
+          <button type="button" class="btn tool-btn" data-tool="place">放置</button>
+          <button type="button" class="btn tool-btn" data-tool="poly">碰撞连线</button>
+          <button type="button" class="btn tool-btn" data-tool="air-line" title="两点画空气墙线段">空气墙·线</button>
+          <button type="button" class="btn tool-btn" data-tool="air-rect" title="拖出矩形空气墙">空气墙·框</button>
+          <button type="button" class="btn gold" id="btnCommitPoly" title="闭合当前碰撞多边形并写入场景">完成碰撞</button>
+          <button type="button" class="btn tool-btn" data-tool="pan">平移</button>
+          <button type="button" class="btn" id="btnFit">适配</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="workspace scene-layout">
+      <aside class="panel left">
+        <h2>地图</h2>
+        <ul id="worldList"></ul>
+        <h2>素材库</h2>
+        <div class="palette-filters">
+          <button type="button" class="chip active" data-group="all">全部</button>
+          <button type="button" class="chip" data-group="town">城镇</button>
+          <button type="button" class="chip" data-group="decor">装饰</button>
+          <button type="button" class="chip" data-group="building">房屋</button>
+          <button type="button" class="chip" data-group="terrain">地形</button>
+        </div>
+        <div id="palette" class="palette"></div>
+      </aside>
+
+      <section class="center scene-center">
+        <div id="sceneWrap" class="scene-wrap">
+          <canvas id="sceneCanvas"></canvas>
+          <div id="entFloatBar" class="ent-float-bar" hidden>
+            <button type="button" data-act="dup" title="复制 Ctrl+D">复制</button>
+            <button type="button" data-act="del" class="danger" title="删除 Delete">删除</button>
+            <button type="button" data-act="flipx" title="左右镜像">镜像</button>
+            <button type="button" data-act="flipy" title="上下翻转">翻转</button>
+            <button type="button" data-act="rotm" title="逆时针 15°">↺15°</button>
+            <button type="button" data-act="rotp" title="顺时针 15°">↻15°</button>
+            <button type="button" data-act="zup" title="图层上移">图层+</button>
+            <button type="button" data-act="zdn" title="图层下移">图层-</button>
+          </div>
+        </div>
+        <div class="validate-box" id="validatePanel">
+          <p class="muted">点对点至少 4 点圈出的红色区域才是碰撞体积；红区可拖动。完成后点「应用到游戏」。</p>
+        </div>
+      </section>
+
+      <aside class="panel right">
+        <h2>属性</h2>
+        <div class="inspector-body" id="inspector">
+          <p class="section-title">世界</p>
+          <div class="field">
+            <label>显示名</label>
+            <input type="text" id="worldName" />
+          </div>
+          <div class="field">
+            <label>世界 id</label>
+            <input type="text" id="worldId" disabled />
+          </div>
+          <div class="row-2">
+            <div class="field">
+              <label>宽</label>
+              <input type="number" id="worldW" />
+            </div>
+            <div class="field">
+              <label>高</label>
+              <input type="number" id="worldH" />
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="field">
+              <label>出生 X</label>
+              <input type="number" id="spawnX" />
+            </div>
+            <div class="field">
+              <label>出生 Y</label>
+              <input type="number" id="spawnY" />
+            </div>
+          </div>
+          <p class="hint">单击画布空地设置出生点；双击空地打开设置面板</p>
+          <label class="file-btn btn">更换地面
+            <input type="file" id="btnGround" accept="image/webp,image/png,image/jpeg" />
+          </label>
+
+          <div id="entityPanel">
+            <p class="section-title">选中物体</p>
+            <p class="hint" id="entityHint">点击场景中的物体进行编辑</p>
+            <div class="field">
+              <label>名称 / 标签</label>
+              <input type="text" id="entLabel" />
+            </div>
+            <div class="row-2">
+              <div class="field">
+                <label>X</label>
+                <input type="number" id="entX" step="1" />
+              </div>
+              <div class="field">
+                <label>Y</label>
+                <input type="number" id="entY" step="1" />
+              </div>
+            </div>
+            <div class="row-2">
+              <div class="field">
+                <label>宽</label>
+                <input type="number" id="entW" min="8" step="1" />
+              </div>
+              <div class="field">
+                <label>高</label>
+                <input type="number" id="entH" min="8" step="1" />
+              </div>
+            </div>
+            <div class="field">
+              <label>图层高度（越大越靠前 / 盖住别人）</label>
+              <input type="number" id="entZ" step="1" />
+            </div>
+            <p class="hint" style="margin:-4px 0 10px;opacity:.7;font-size:12px">也可选中后拖四角调节大小；图层用于前后遮挡</p>
+
+            <div class="field" id="classClsField" style="display:none">
+              <label>展示职业</label>
+              <select id="entCls"></select>
+            </div>
+            <p class="hint" id="classClsHint" style="display:none;margin:-4px 0 10px;opacity:.7;font-size:12px">切换后编辑器与游戏内都会显示对应职业外形</p>
+
+            <p class="section-title">方向 / 变换</p>
+            <div class="field">
+              <label>旋转角度（任意度 · 0～360）</label>
+              <div class="row-2" style="gap:6px;align-items:center">
+                <input type="number" id="entRot" step="1" min="0" max="359" style="flex:0 0 72px" />
+                <input type="range" id="entRotSlider" min="0" max="359" step="1" value="0" title="拖动自由旋转" style="flex:1;min-width:0" />
+              </div>
+            </div>
+            <div class="row-2" style="gap:6px;margin-bottom:8px">
+              <button type="button" class="btn" id="btnRotM15" title="逆时针 15°">↺ 15°</button>
+              <button type="button" class="btn" id="btnRotP15" title="顺时针 15°">↻ 15°</button>
+            </div>
+            <div class="row-2" style="gap:6px;margin-bottom:8px">
+              <button type="button" class="btn" id="btnRotM1" title="逆时针 1°">↺ 1°</button>
+              <button type="button" class="btn" id="btnRotP1" title="顺时针 1°">↻ 1°</button>
+            </div>
+            <div class="row-2" style="gap:6px;margin-bottom:8px">
+              <button type="button" class="btn" id="btnRotM90" title="逆时针 90°">↺ 90°</button>
+              <button type="button" class="btn" id="btnRotP90" title="顺时针 90°">↻ 90°</button>
+            </div>
+            <div class="row-2" style="gap:6px;margin-bottom:8px">
+              <button type="button" class="btn" id="btnFlipX">左右镜像</button>
+              <button type="button" class="btn" id="btnFlipY">上下翻转</button>
+            </div>
+            <div class="row-2" style="gap:6px;margin-bottom:8px">
+              <button type="button" class="btn" id="btnRot0" title="快捷：正立">0°</button>
+              <button type="button" class="btn" id="btnRot90" title="快捷：右倾">90°</button>
+              <button type="button" class="btn" id="btnRot180" title="快捷：倒立">180°</button>
+              <button type="button" class="btn" id="btnRot270" title="快捷：左倾">270°</button>
+            </div>
+            <p class="hint" style="margin:-4px 0 10px;opacity:.7;font-size:12px">可拖滑条 / 填任意角度 / 拖选中物上方青色圆点自由旋转（按住 Shift 吸附 15°）。应用到游戏后生效。</p>
+
+            <p class="section-title">互动</p>
+            <div class="field">
+              <label>互动类型</label>
+              <select id="entInteract"></select>
+            </div>
+            <div class="field">
+              <label>互动半径</label>
+              <input type="number" id="entInteractR" />
+            </div>
+            <div class="field">
+              <label>payload JSON</label>
+              <textarea id="entPayload" placeholder='{"cls":"mage"}'></textarea>
+            </div>
+
+            <p class="section-title">碰撞体积</p>
+            <div class="field">
+              <label>模式</label>
+              <select id="entColMode">
+                <option value="none">无</option>
+                <option value="circle">圆形</option>
+                <option value="polygon">多边形（点对点）</option>
+              </select>
+            </div>
+            <div class="field" id="colRadiusField">
+              <label>圆半径</label>
+              <input type="number" id="entColR" />
+            </div>
+            <button type="button" class="btn gold" id="btnDrawPoly">为此物体画多边形碰撞</button>
+            <button type="button" class="btn gold" id="btnCommitPoly2">完成并保存碰撞</button>
+            <button type="button" class="btn" id="btnDrawZone">画独立碰撞区</button>
+            <button type="button" class="btn danger" id="btnDelCollision">删除碰撞 / 空气墙</button>
+            <p class="hint" id="colPolyInfo">规则：至少 4 个点连成的红色封闭区 = 碰撞体积。点顶点 →「完成碰撞」→「应用到游戏」。左键选中后 Delete 删除。空气墙同理。</p>
+            <button type="button" class="btn gold" id="btnDupEntity" title="复制当前素材（含旋转/大小）Ctrl+D">复制素材</button>
+            <button type="button" class="btn danger" id="btnDelEntity">删除此物体</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="status" id="statusBar">加载中…</footer>
+  </div>
+
+  <div id="spawnModal" class="spawn-modal" hidden>
+    <div class="spawn-modal-card" role="dialog" aria-labelledby="spawnModalTitle">
+      <h3 id="spawnModalTitle">出生点设置</h3>
+      <p class="hint">单击画布空地可直接落点；也可在此输入精确坐标。</p>
+      <div class="row-2">
+        <div class="field">
+          <label>出生 X</label>
+          <input type="number" id="spawnModalX" step="1" />
+        </div>
+        <div class="field">
+          <label>出生 Y</label>
+          <input type="number" id="spawnModalY" step="1" />
+        </div>
+      </div>
+      <div class="spawn-modal-actions">
+        <button type="button" class="btn" id="spawnModalCancel">取消</button>
+        <button type="button" class="btn" id="spawnModalCenter">地图中心</button>
+        <button type="button" class="btn primary" id="spawnModalOk">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./vendor/jszip.min.js"></script>
+  <script src="./js/schema.js"></script>
+  <script src="./js/catalog.js"></script>
+  <script src="./js/validate.js"></script>
+  <script src="./js/store.js"></script>
+  <script src="./js/zip-io.js"></script>
+  <script src="./js/scene.js"></script>
+  <script src="./js/live-apply.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+effect_daoguan.png
+size: 883,521
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/skill0/qxdgy_add
+  rotate: false
+  xy: 687, 125
+  size: 154, 126
+  orig: 160, 131
+  offset: 3, 3
+  index: -1
+images/skill1/dg/daoguan_1/daoguang_0000
+  rotate: true
+  xy: 698, 253
+  size: 266, 152
+  orig: 341, 157
+  offset: 73, 3
+  index: -1
+images/skill1/dg/daoguan_1/daoguang_0001
+  rotate: false
+  xy: 383, 212
+  size: 302, 102
+  orig: 341, 157
+  offset: 27, 51
+  index: -1
+images/skill1/dg/daoguan_1/daoguang_0003
+  rotate: false
+  xy: 2, 2
+  size: 283, 60
+  orig: 341, 157
+  offset: 8, 80
+  index: -1
+images/skill1/dg/daoguan_1/daoguang_0005
+  rotate: true
+  xy: 843, 9
+  size: 242, 38
+  orig: 341, 157
+  offset: 48, 102
+  index: -1
+images/skill1/dg/daoguan_1/daoguang_0007
+  rotate: true
+  xy: 852, 310
+  size: 209, 28
+  orig: 341, 157
+  offset: 76, 112
+  index: -1
+images/skill1/dg/daoguan_2/daoguang_0000
+  rotate: false
+  xy: 357, 14
+  size: 314, 196
+  orig: 384, 239
+  offset: 23, 29
+  index: -1
+images/skill1/dg/daoguan_2/daoguang_0002
+  rotate: false
+  xy: 2, 64
+  size: 353, 218
+  orig: 384, 239
+  offset: 9, 14
+  index: -1
+images/skill1/dg/daoguan_2/daoguang_0004
+  rotate: false
+  xy: 2, 284
+  size: 379, 235
+  orig: 384, 239
+  offset: 2, 2
+  index: -1
+images/skill1/dg/daoguan_2/daoguang_0006
+  rotate: false
+  xy: 383, 316
+  size: 313, 203
+  orig: 384, 239
+  offset: 36, 23
+  index: -1
+images/skill1/dg/dgtw1/tuowei_0000
+  rotate: false
+  xy: 287, 33
+  size: 37, 29
+  orig: 58, 93
+  offset: 15, 6
+  index: -1

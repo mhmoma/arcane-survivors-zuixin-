@@ -43,9 +43,9 @@ window.GameModules.equipData = (() => {
     ['scytheMaiden','reaper-waltz','冥月圆舞','setScythe',{dotDmg:.40,shadow:.22,critDmg:.32,move:.14,skillDmgAdd:{scytheArc:.28}}],
     ['scytheMaiden','blood-reaping','血镰誓约','setScythe',{skillDmgAdd:{bloodReap:.30},atkSpeed:.16,armor:.15,crit:.09}],
     ['scytheMaiden','soul-shadow','断魂影镰','setScythe',{crit:.12,critDmg:.35,cooldown:.12,move:.16,skillDmgAdd:{wraithBlade:.30}}],
-    ['gunslinger','silver-barrage','银星弹幕','setGunslinger',{atkSpeed:.18,crit:.10,physical:.22,skillDmgAdd:{quickShot:.30}}],
-    ['gunslinger','ricochet-gambit','跳弹赌局','setGunslinger',{crit:.12,critDmg:.34,physical:.20,skillDmgAdd:{ricochetBullet:.30}}],
-    ['gunslinger','scorched-powder','焦土火药','setGunslinger',{fire:.24,cooldown:.12,critDmg:.28,skillDmgAdd:{fireBomb:.30,shotgunRoll:.18}}],
+    ['gunslinger','silver-barrage','飞墨星雨','setGunslinger',{atkSpeed:.18,crit:.10,physical:.22,skillDmgAdd:{quickShot:.30}}],
+    ['gunslinger','ricochet-gambit','游墨赌局','setGunslinger',{crit:.12,critDmg:.34,physical:.20,skillDmgAdd:{ricochetBullet:.30}}],
+    ['gunslinger','scorched-powder','朱墨丹砂','setGunslinger',{fire:.24,cooldown:.12,critDmg:.28,skillDmgAdd:{fireBomb:.30,shotgunRoll:.18}}],
   ];
   const SET_BONUS = {
     'aureate-guardian':{n:'辉金守护',s:'3件 暴击+10% 精英免伤+6%；6件 [x]大蒜光环获黑洞属性，全屏吸附，护甲1:2融入光环暴击。',b3:{crit:.10,eliteDmgReduce:.06},b6:{skill:'garlic',skillDmg:4.5,special:'blackhole'}},
@@ -63,9 +63,9 @@ window.GameModules.equipData = (() => {
     'reaper-waltz':{n:'冥月圆舞',s:'3件 暴击+10% 护甲+14% 暗影抗性+12%；6件 [x]残月镰舞伤害+450%，每命中1名敌人获得1%最大生命护盾，命中精英/Boss额外获得2%/3%护盾(上限100%)；每10%护盾使残月镰舞最终伤害+3%(最高+30%)；护盾满时进入5秒死神状态：受伤降低20%，残月镰舞范围+20%、最终伤害额外+25%、命中回血，命中精英/Boss延长0.3秒(最高8秒)。',b3:{crit:.10,armor:.14,shadow:.12},b6:{skill:'scytheArc',skillDmg:4.5,special:'deathShield'}},
     'blood-reaping':{n:'血镰誓约',s:'3件 暴击伤害+26% Boss免伤+5% 恐惧上限+100；6件 [x]血镰收割伤害+450%，血镰命中使敌人陷入恐惧并回复恐惧值，命中精英/Boss回复更多；受到生命伤害时优先消耗恐惧承担，单次消耗上限为最大生命，周围恐惧敌人使恐惧消耗降低(最高70%)；周围恐惧敌人使血镰收割最终伤害提高(最高+40%)，恐惧高于50%时额外+15%，低于35%时血镰回恐惧提升；击杀恐惧敌人回复大量恐惧。',b3:{critDmg:.26,bossDmgReduce:.05,fearMax:100},b6:{skill:'bloodReap',skillDmg:4.5,special:'splitImplode'}},
     'soul-shadow':{n:'断魂影镰',s:'3件 精英伤害+20% 攻速+12% 暗影抗性+18%；6件 [x]幽魂刃舞伤害+450%，击杀提供1秒全技能无CD并叠+15%最终伤害(最高+75%)；命中精英/Boss生成2.5%/3.5%最大生命影盾(上限45%)；魂甲每层4%减伤(最高8层32%)，低血时魂甲化盾并减免本次伤害45%；有护盾时最终伤害额外+12%。',b3:{eliteDmg:.20,atkSpeed:.12,shadow:.18},b6:{skill:'wraithBlade',skillDmg:4.5,special:'shadowGuard'}},
-    'silver-barrage':{n:'银星弹幕',s:'3件 攻速+12% 暴击+8%；6件 [x]速射伤害+450%，速射额外连射并对精英/Boss叠加银星标记，6层引爆处决弹并溅射周围敌人。',b3:{atkSpeed:.12,crit:.08},b6:{skill:'quickShot',skillDmg:4.5,special:'silverBarrage'}},
-    'ricochet-gambit':{n:'跳弹赌局',s:'3件 暴击伤害+30% 移速+10%；6件 [x]跳弹伤害+450%，弹射次数提高并优先寻找精英目标，幸运跳弹有概率不消耗跳数，单体战剩余跳数折算为Boss伤害。',b3:{critDmg:.30,move:.10},b6:{skill:'ricochetBullet',skillDmg:4.5,special:'ricochetGambit'}},
-    'scorched-powder':{n:'焦土火药',s:'3件 冷却+12% 火焰伤害+18%；6件 [x]燃烧弹伤害+450%，火场持续更久且Boss火场灼烧更强，霰弹翻滚穿过火场会复制小火场并额外引爆火花。',b3:{cooldown:.12,fire:.18},b6:{skill:'fireBomb',skillDmg:4.5,special:'scorchedPowder'}},
+    'silver-barrage':{n:'飞墨星雨',s:'3件 攻速+12% 暴击+8%；6件 [x]飞墨点锋伤害+450%，额外连点并对精英/Boss叠加墨星标记，6层引爆处决墨锋并溅射周围敌人。',b3:{atkSpeed:.12,crit:.08},b6:{skill:'quickShot',skillDmg:4.5,special:'silverBarrage'}},
+    'ricochet-gambit':{n:'游墨赌局',s:'3件 暴击伤害+30% 移速+10%；6件 [x]游墨连环伤害+450%，折返次数提高并优先寻找精英目标，幸运游墨有概率不消耗折返，单体战剩余折返折算为Boss伤害。',b3:{critDmg:.30,move:.10},b6:{skill:'ricochetBullet',skillDmg:4.5,special:'ricochetGambit'}},
+    'scorched-powder':{n:'朱墨丹砂',s:'3件 冷却+12% 火焰伤害+18%；6件 [x]朱砂爆墨伤害+450%，灼墨火阵持续更久且Boss火阵灼烧更强，泼墨闪身穿过火阵会复制小火阵并额外引爆墨焰。',b3:{cooldown:.12,fire:.18},b6:{skill:'fireBomb',skillDmg:4.5,special:'scorchedPowder'}},
   };
   const STAT_CN = {hp:'最大生命提高',hpBase:'最大生命',hpFlat:'最大生命',weaponDamagePct:'本武器白字伤害提高',damage:'全伤害提高',armor:'总护甲提高',move:'移动速度提高',cooldown:'冷却缩减',atkSpeed:'攻击速度提高',range:'技能范围提高',pickup:'拾取范围提高',gold:'金币获取提高',regen:'生命回复提高',crit:'暴击率',critDmg:'暴击伤害提高',eliteDmg:'对精英伤害提高',bossDmg:'对Boss伤害提高',dotDmg:'持续伤害提高',dodge:'闪避率',eliteDmgReduce:'受到精英伤害降低',bossDmgReduce:'受到Boss伤害降低',skillFreq:'技能释放频率提高',projectileSpeed:'技能飞行速度提高',extraProjectile:'弹幕数量提高',splitChance:'弹幕分裂概率',riftBossDmg:'秘境Boss伤害提高',riftEliteDmg:'秘境精英伤害提高',shieldBreak:'对护盾伤害提高',executeDmg:'对低血敌人伤害提高',dotTickRate:'持续伤害生效频率提高',progressBonus:'秘境进度获取提高',slowResist:'受到减速效果降低',healBonus:'治疗效果提高',fearMax:'恐惧上限提高',lustMaxBonus:'淫荡上限提高',lustGainBonus:'淫荡获取提高',setReqReduce:'套装需求减少',thorns:'荆棘伤害',allRes:'所有属性抗性',attrCapBonus:'全抗性上限提高',rangeDmg:'远距离伤害提高',healthyDmg:'对高血量敌人伤害提高'};
   return { SACRIFICES, UNIQUES, SET_FAMILIES, SET_BONUS, STAT_CN };

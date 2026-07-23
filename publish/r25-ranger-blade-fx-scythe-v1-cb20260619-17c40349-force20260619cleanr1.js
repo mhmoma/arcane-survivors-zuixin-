@@ -58,10 +58,21 @@ function meteorRainAttack(target,dmg,rad,slow,color,size,delay=.5,extra=null){
   if(!target)return;
   let evo=!!extra?.burn&&delay<.4,key=evo?'_meteorRainEvoTime':'_meteorRainCastTime';
   if(S[key]===S.time)return;S[key]=S.time;
-  let lv=skillLv('meteorShard'),cp=comboPower('meteorShard'),frames=clamp(Math.ceil(lv),1,4),tx=target.x,ty=target.y;
+  let lv=skillLv('meteorShard'),cp=comboPower('meteorShard'),frames=clamp(Math.ceil(lv),1,4);
+  let tx=target.x+(typeof rand==='function'?rand(-12,12):0),ty=target.y+(typeof rand==='function'?rand(-8,8):0);
+  let drop=150+(typeof rand==='function'?rand(20,55):35);
   rad=Math.max(rad||0,78+lv*8+cp*5+skillMod('meteorShard','radius'));
   size=Math.max(size||0,rad*2.05);
-  S.falls.push({kind:meteorKind(frames),meteorRain:true,x:tx,y:ty,sx:tx,sy:ty,tx,ty,dmg,rad,slow,color:color||'#fb923c',size,life:delay,max:delay,rot:0,frames,hit:false,...(extra||{})});
+  // 坠落只画火球；落地后由 burstAt 再出范围圈
+  let life=Math.max(delay||.42,.45);
+  let sx=tx,sy=ty-drop;
+  S.falls.push({
+    // 坠落别名固定火球帧；落地爆发再切范围圈帧
+    kind:meteorKind(1),meteorRain:true,falling:true,
+    x:sx,y:sy,sx,sy,tx,ty,dmg,rad,slow,color:color||'#fb923c',size,
+    tipSize:Math.max(58,Math.min(92,rad*.85)),
+    life,max:life,rot:0,frames,hit:false,ballFrame:0,...(extra||{})
+  });
   sfx('fall');
 }
 window.fallingAttack=function(kind,target,dmg,rad,slow,color,size,delay=.42,extra=null){
@@ -73,9 +84,15 @@ window.burstAt=function(kind,x,y,dmg,rad,slow=0,color='#facc15',size=100,life=.5
   if(S?._forceVoidFixedBurst&&kind==='voidRift')kind='voidRiftFixed';
   if(isDaggerKind(kind)||isMeteorKind(kind)||kind==='voidRiftFixed'||isVoidFixedKind(kind)){
     let meteor=isMeteorKind(kind),voidFx=kind==='voidRiftFixed'||isVoidFixedKind(kind),skill=voidFx?'voidRift':meteor?'meteorShard':'daggerRain';
-    let fxKind=voidFx?voidKind(4):meteor?(kind==='meteor'?meteorKind(4):kind):(kind==='dagger'?daggerKind(4):kind);
+    // 天火落地：固定用末帧范围圈（勿再用坠落火球帧）
+    let fxKind=voidFx?voidKind(4):meteor?meteorKind(4):(kind==='dagger'?daggerKind(4):kind);
     let hits=rangeDamage(skill,x,y,dmg,rad,slow);
-    S.artFx.push({x,y,type:voidFx?'voidRiftFixed':meteor?'meteorRain':'daggerRain',kind:fxKind,color,life,max:life,size,rad});
+    let boomSize=Math.max(size||0,rad*2);
+    S.artFx.push({
+      x,y,type:voidFx?'voidRiftFixed':meteor?'meteorRain':'daggerRain',
+      kind:fxKind,color,life,max:life,size:boomSize,rad,
+      meteorImpact:!!meteor,impactFrame:meteor?2:undefined,impactHold:meteor?0.32:undefined
+    });
     if(!voidFx)for(let n=0;n<8;n++)S.parts.push({x,y,vx:rand(-70,70),vy:rand(-70,70),life:rand(.18,.45),max:.45,a:1,c:color});
     sfx(voidFx?'rift':meteor?'boom':'throw');return hits;
   }

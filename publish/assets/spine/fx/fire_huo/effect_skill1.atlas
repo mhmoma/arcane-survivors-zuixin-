@@ -1,0 +1,181 @@
+
+effect_skill1.png
+size: 1008,490
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/huo/huo1
+  rotate: false
+  xy: 822, 289
+  size: 36, 41
+  orig: 54, 48
+  offset: 12, 0
+  index: -1
+effect/huo/huo10
+  rotate: false
+  xy: 819, 380
+  size: 29, 29
+  orig: 54, 48
+  offset: 18, 7
+  index: -1
+effect/huo/huo2
+  rotate: false
+  xy: 769, 289
+  size: 51, 41
+  orig: 54, 48
+  offset: 0, 0
+  index: -1
+effect/huo/huo3
+  rotate: false
+  xy: 769, 396
+  size: 48, 42
+  orig: 54, 48
+  offset: 5, 0
+  index: -1
+effect/huo/huo4
+  rotate: true
+  xy: 596, 202
+  size: 51, 44
+  orig: 54, 48
+  offset: 3, 0
+  index: -1
+effect/huo/huo5
+  rotate: true
+  xy: 546, 201
+  size: 52, 48
+  orig: 54, 48
+  offset: 2, 0
+  index: -1
+effect/huo/huo6
+  rotate: false
+  xy: 769, 440
+  size: 48, 48
+  orig: 54, 48
+  offset: 2, 0
+  index: -1
+effect/huo/huo7
+  rotate: true
+  xy: 769, 332
+  size: 46, 47
+  orig: 54, 48
+  offset: 3, 0
+  index: -1
+effect/huo/huo8
+  rotate: true
+  xy: 819, 446
+  size: 42, 37
+  orig: 54, 48
+  offset: 5, 1
+  index: -1
+effect/huo/huo9
+  rotate: false
+  xy: 819, 411
+  size: 35, 33
+  orig: 54, 48
+  offset: 12, 4
+  index: -1
+effect/xin_skill1/daoguang0/dg_0001
+  rotate: true
+  xy: 257, 202
+  size: 286, 161
+  orig: 294, 192
+  offset: 7, 5
+  index: -1
+effect/xin_skill1/daoguang0/dg_0002
+  rotate: false
+  xy: 2, 2
+  size: 248, 183
+  orig: 294, 192
+  offset: 44, 7
+  index: -1
+effect/xin_skill1/daoguang0/dg_0003
+  rotate: false
+  xy: 487, 15
+  size: 210, 174
+  orig: 294, 192
+  offset: 79, 14
+  index: -1
+effect/xin_skill1/daoguang0/dg_0005
+  rotate: false
+  xy: 860, 198
+  size: 134, 132
+  orig: 294, 192
+  offset: 111, 32
+  index: -1
+effect/xin_skill1/daoguang0/dg_0006
+  rotate: true
+  xy: 642, 191
+  size: 96, 115
+  orig: 294, 192
+  offset: 149, 49
+  index: -1
+effect/xin_skill1/daoguang1/dg_0001
+  rotate: false
+  xy: 252, 11
+  size: 233, 174
+  orig: 309, 260
+  offset: 12, 47
+  index: -1
+effect/xin_skill1/daoguang1/dg_0002
+  rotate: true
+  xy: 2, 187
+  size: 301, 253
+  orig: 309, 260
+  offset: 6, 3
+  index: -1
+effect/xin_skill1/daoguang1/dg_0004
+  rotate: true
+  xy: 420, 255
+  size: 233, 190
+  orig: 309, 260
+  offset: 31, 44
+  index: -1
+effect/xin_skill1/daoguang1/dg_0005
+  rotate: true
+  xy: 612, 289
+  size: 199, 155
+  orig: 309, 260
+  offset: 66, 44
+  index: -1
+effect/xin_skill1/daoguang1/dg_0006
+  rotate: true
+  xy: 699, 21
+  size: 168, 127
+  orig: 309, 260
+  offset: 97, 44
+  index: -1
+effect/xin_skill1/daoguang2/dg_0001
+  rotate: true
+  xy: 860, 332
+  size: 156, 146
+  orig: 199, 207
+  offset: 8, 60
+  index: -1
+effect/xin_skill1/daoguang2/dg_0002
+  rotate: true
+  xy: 828, 2
+  size: 194, 167
+  orig: 199, 207
+  offset: 2, 2
+  index: -1
+effect/xin_skill1/yun_0001
+  rotate: true
+  xy: 492, 200
+  size: 53, 52
+  orig: 53, 52
+  offset: 0, 0
+  index: -1
+effect/xin_skill1/yun_0002
+  rotate: false
+  xy: 759, 198
+  size: 99, 89
+  orig: 101, 89
+  offset: 0, 0
+  index: -1
+effect/xin_skill1/yun_0003
+  rotate: false
+  xy: 420, 191
+  size: 70, 62
+  orig: 71, 62
+  offset: 0, 0
+  index: -1

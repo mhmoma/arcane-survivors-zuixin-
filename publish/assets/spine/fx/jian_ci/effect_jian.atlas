@@ -1,0 +1,62 @@
+
+effect_jian.png
+size: 456,45
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/skill/jianci_add/jianci_00083
+  rotate: false
+  xy: 156, 2
+  size: 73, 21
+  orig: 161, 23
+  offset: 1, 1
+  index: -1
+images/skill/jianci_add/jianci_00084
+  rotate: false
+  xy: 2, 20
+  size: 146, 23
+  orig: 161, 23
+  offset: 0, 0
+  index: -1
+images/skill/jianci_add/jianci_00085
+  rotate: false
+  xy: 150, 25
+  size: 149, 18
+  orig: 161, 23
+  offset: 4, 2
+  index: -1
+images/skill/jianci_add/jianci_00086
+  rotate: false
+  xy: 301, 29
+  size: 153, 14
+  orig: 161, 23
+  offset: 8, 4
+  index: -1
+images/skill/jianci_add/jianci_00087
+  rotate: false
+  xy: 2, 5
+  size: 152, 13
+  orig: 161, 23
+  offset: 8, 4
+  index: -1
+images/skill/jianci_add/jianci_00088
+  rotate: false
+  xy: 301, 15
+  size: 149, 12
+  orig: 161, 23
+  offset: 9, 5
+  index: -1
+images/skill/jianci_add/jianci_00089
+  rotate: false
+  xy: 231, 3
+  size: 148, 10
+  orig: 161, 23
+  offset: 10, 6
+  index: -1
+images/skill/jianci_add/jianci_00090
+  rotate: false
+  xy: 2, 2
+  size: 143, 1
+  orig: 161, 23
+  offset: 14, 10
+  index: -1

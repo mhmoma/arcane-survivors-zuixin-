@@ -1,0 +1,34 @@
+
+bingniao.png
+size: 441,178
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+niao1
+  rotate: false
+  xy: 270, 76
+  size: 153, 100
+  orig: 153, 100
+  offset: 0, 0
+  index: -1
+niao3
+  rotate: true
+  xy: 132, 39
+  size: 137, 136
+  orig: 137, 136
+  offset: 0, 0
+  index: -1
+niao4
+  rotate: true
+  xy: 2, 9
+  size: 167, 128
+  orig: 167, 128
+  offset: 0, 0
+  index: -1
+niao5
+  rotate: false
+  xy: 270, 2
+  size: 169, 72
+  orig: 169, 72
+  offset: 0, 0
+  index: -1

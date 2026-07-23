@@ -1,0 +1,97 @@
+
+effect_skill0_fly.png
+size: 486,149
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/ghost/1_00000
+  rotate: false
+  xy: 245, 122
+  size: 189, 25
+  orig: 190, 25
+  offset: 1, 0
+  index: -1
+effect/wuya_fly/1_00000
+  rotate: true
+  xy: 436, 80
+  size: 67, 48
+  orig: 75, 55
+  offset: 3, 5
+  index: -1
+effect/wuya_fly/1_00001
+  rotate: false
+  xy: 213, 2
+  size: 63, 46
+  orig: 75, 55
+  offset: 3, 4
+  index: -1
+effect/wuya_fly/1_00002
+  rotate: true
+  xy: 175, 4
+  size: 71, 36
+  orig: 75, 55
+  offset: 3, 2
+  index: -1
+effect/wuya_fly/1_00003
+  rotate: true
+  xy: 436, 7
+  size: 71, 42
+  orig: 75, 55
+  offset: 2, 2
+  index: -1
+effect/yan/1_00000
+  rotate: false
+  xy: 2, 7
+  size: 92, 68
+  orig: 120, 70
+  offset: 28, 0
+  index: -1
+effect/yan/1_00002
+  rotate: false
+  xy: 245, 50
+  size: 117, 70
+  orig: 120, 70
+  offset: 3, 0
+  index: -1
+effect/yan/1_00004
+  rotate: false
+  xy: 2, 77
+  size: 120, 70
+  orig: 120, 70
+  offset: 0, 0
+  index: -1
+effect/yan/1_00006
+  rotate: false
+  xy: 124, 77
+  size: 119, 70
+  orig: 120, 70
+  offset: 0, 0
+  index: -1
+effect/yan/1_00008
+  rotate: true
+  xy: 364, 5
+  size: 115, 70
+  orig: 120, 70
+  offset: 0, 0
+  index: -1
+effect/yan/1_00010
+  rotate: false
+  xy: 96, 14
+  size: 77, 61
+  orig: 120, 70
+  offset: 4, 0
+  index: -1
+effect/yan/1_00012
+  rotate: true
+  xy: 278, 11
+  size: 37, 54
+  orig: 120, 70
+  offset: 28, 4
+  index: -1
+effect/yan/1_00014
+  rotate: false
+  xy: 213, 51
+  size: 24, 24
+  orig: 120, 70
+  offset: 29, 32
+  index: -1

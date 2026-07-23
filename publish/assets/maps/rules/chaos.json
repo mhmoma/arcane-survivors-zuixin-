@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "chaos",
+  "name": "太虚荒原",
+  "diff": 1,
+  "spawn": 1,
+  "count": 1,
+  "gold": 1,
+  "xp": 1,
+  "boss": "demon",
+  "notes": "由现有 MAP_RULES.chaos 迁出，供地图包 rulesRef 引用"
+}

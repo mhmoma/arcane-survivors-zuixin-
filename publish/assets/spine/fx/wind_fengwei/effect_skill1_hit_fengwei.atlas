@@ -1,0 +1,111 @@
+
+effect_skill1_hit_fengwei.png
+size: 946,270
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill1/cuao/1_00002
+  rotate: true
+  xy: 2, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00004
+  rotate: false
+  xy: 2, 2
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00006
+  rotate: true
+  xy: 101, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00008
+  rotate: false
+  xy: 171, 2
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00010
+  rotate: true
+  xy: 200, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00012
+  rotate: true
+  xy: 299, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00014
+  rotate: false
+  xy: 340, 2
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00016
+  rotate: true
+  xy: 398, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00018
+  rotate: true
+  xy: 497, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00020
+  rotate: false
+  xy: 509, 2
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00022
+  rotate: true
+  xy: 596, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00024
+  rotate: false
+  xy: 678, 2
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00026
+  rotate: true
+  xy: 847, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/cuao/1_00028
+  rotate: true
+  xy: 695, 101
+  size: 167, 97
+  orig: 167, 103
+  offset: 0, 0
+  index: -1
+skill1/pp_00055
+  rotate: true
+  xy: 794, 151
+  size: 117, 48
+  orig: 119, 53
+  offset: 1, 2
+  index: -1

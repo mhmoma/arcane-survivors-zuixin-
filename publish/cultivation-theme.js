@@ -100,7 +100,7 @@
         <div class="portrait cultivationPortrait" style="background-image:url('${portrait}');background-position:center;background-size:contain"></div>
         <h2>${locked ? '秘传 · ' : ''}${cls.cn}</h2>
         <p><b>道基</b> 气血 ${boosted.hp} / 身法 ${Math.round(boosted.spd)} / 道威 ${boosted.dmg.toFixed(2)}</p>
-        <p><b>本命功法</b> ${INFO[cls.skill][0]}${boosted.startXp ? ` / 初始灵气 +${boosted.startXp}` : ''}</p>
+        <p class="classSkillLine"><b>本命功法</b> ${typeof skillIcon === 'function' ? skillIcon(cls.skill) : ''}<span>${INFO[cls.skill][0]}${boosted.startXp ? ` / 初始灵气 +${boosted.startXp}` : ''}</span></p>
         <p>${cls.desc}</p>${locked ? '<p class="rewardHint">未得传承：消耗 200 道种永久解锁</p>' : ''}</button>`;
     }).join('');
   }
@@ -154,7 +154,10 @@
       window.applyBgmVol?.();
       sync();
     });
-    slider.addEventListener('input', sync);
+    slider.addEventListener('input', () => {
+      window.applyBgmVol?.();
+      sync();
+    });
     host.appendChild(button);
     sync();
     window.CultivationThemeSyncMusicToggle = sync;
@@ -162,7 +165,7 @@
   function install() {
     applyData();
     window.renderClassCards = renderClasses;
-    document.title = '太虚仙途';
+    document.title = '仙道飘渺';
     const originalNotice = window.showNotice;
     if (originalNotice && !originalNotice.__cultivation) {
       const wrapped = message => originalNotice(rewrite(message));

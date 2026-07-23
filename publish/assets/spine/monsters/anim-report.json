@@ -1,0 +1,272 @@
+[
+  {
+    "id": "cha_101",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "fx2",
+      "fx3",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_1011",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_102",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "fx2",
+      "fx3",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_1021",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_103",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "fx2",
+      "fx3",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_1032",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_1042",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_1052",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_1063",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_1073",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_1083",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_1094",
+    "humanoid": true,
+    "anims": [
+      "attack",
+      "dead",
+      "hurt",
+      "run",
+      "skill",
+      "stand",
+      "stand2",
+      "walk"
+    ]
+  },
+  {
+    "id": "cha_201",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_202",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_203",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_301",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "fx2",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_302",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "fx2",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_303",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "fx2",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_401",
+    "humanoid": true,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_402",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_403",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_501",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_502",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  },
+  {
+    "id": "cha_503",
+    "humanoid": false,
+    "anims": [
+      "fx",
+      "jewelly",
+      "stand"
+    ]
+  }
+]

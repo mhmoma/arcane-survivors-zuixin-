@@ -1,0 +1,132 @@
+
+effect_skill1_hit.png
+size: 922,233
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baokailvshi/baokailvshi_00043
+  rotate: true
+  xy: 338, 15
+  size: 34, 31
+  orig: 41, 36
+  offset: 4, 3
+  index: -1
+dicizhakai/dicizhakai_00038_00038
+  rotate: true
+  xy: 496, 87
+  size: 144, 103
+  orig: 158, 104
+  offset: 7, 1
+  index: -1
+dicizhakai/dicizhakai_00038_00039
+  rotate: false
+  xy: 500, 7
+  size: 126, 78
+  orig: 158, 104
+  offset: 17, 18
+  index: -1
+dicizhakai/dicizhakai_00038_00040
+  rotate: true
+  xy: 628, 2
+  size: 86, 52
+  orig: 158, 104
+  offset: 54, 39
+  index: -1
+dizhalv/dizhalv_00001
+  rotate: true
+  xy: 601, 90
+  size: 141, 69
+  orig: 185, 94
+  offset: 43, 12
+  index: -1
+dizhalv/dizhalv_00002
+  rotate: true
+  xy: 402, 51
+  size: 180, 92
+  orig: 185, 94
+  offset: 4, 1
+  index: -1
+dizhalv/dizhalv_00003
+  rotate: true
+  xy: 307, 51
+  size: 180, 93
+  orig: 185, 94
+  offset: 0, 1
+  index: -1
+dizhalv/dizhalv_00004
+  rotate: true
+  xy: 216, 47
+  size: 184, 89
+  orig: 185, 94
+  offset: 0, 1
+  index: -1
+dizhalv/dizhalv_00005
+  rotate: true
+  xy: 121, 47
+  size: 184, 93
+  orig: 185, 94
+  offset: 0, 1
+  index: -1
+zadiyan/zadiyan_00020
+  rotate: false
+  xy: 251, 5
+  size: 85, 40
+  orig: 129, 56
+  offset: 20, 8
+  index: -1
+zadiyan/zadiyan_00022
+  rotate: false
+  xy: 799, 123
+  size: 108, 53
+  orig: 129, 56
+  offset: 9, 0
+  index: -1
+zadiyan/zadiyan_00024
+  rotate: false
+  xy: 799, 178
+  size: 120, 53
+  orig: 129, 56
+  offset: 4, 0
+  index: -1
+zadiyan/zadiyan_00026
+  rotate: true
+  xy: 749, 103
+  size: 128, 48
+  orig: 129, 56
+  offset: 0, 0
+  index: -1
+zadiyan/zadiyan_00028
+  rotate: false
+  xy: 121, 3
+  size: 128, 42
+  orig: 129, 56
+  offset: 1, 6
+  index: -1
+zadiyan/zadiyan_00030
+  rotate: false
+  xy: 371, 18
+  size: 127, 31
+  orig: 129, 56
+  offset: 1, 17
+  index: -1
+zhaci/zhakaicici_00000
+  rotate: false
+  xy: 682, 14
+  size: 238, 77
+  orig: 238, 117
+  offset: 0, 8
+  index: -1
+zhaci/zhakaicici_00002
+  rotate: true
+  xy: 2, 7
+  size: 224, 117
+  orig: 238, 117
+  offset: 14, 0
+  index: -1
+zhaci/zhakaicici_00004
+  rotate: true
+  xy: 672, 93
+  size: 138, 75
+  orig: 238, 117
+  offset: 56, 2
+  index: -1

@@ -1,0 +1,272 @@
+
+effect_skill1.png
+size: 993,559
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/feng1/f_0001
+  rotate: false
+  xy: 827, 253
+  size: 139, 47
+  orig: 194, 61
+  offset: 20, 2
+  index: -1
+effect/feng1/f_0002
+  rotate: false
+  xy: 827, 302
+  size: 160, 61
+  orig: 194, 61
+  offset: 9, 0
+  index: -1
+effect/feng1/f_0004
+  rotate: true
+  xy: 771, 215
+  size: 148, 54
+  orig: 194, 61
+  offset: 3, 5
+  index: -1
+effect/feng1/f_0006
+  rotate: true
+  xy: 267, 367
+  size: 190, 38
+  orig: 194, 61
+  offset: 2, 16
+  index: -1
+effect/feng1/f_0007
+  rotate: true
+  xy: 307, 372
+  size: 185, 41
+  orig: 194, 61
+  offset: 9, 14
+  index: -1
+effect/feng1/f_0009
+  rotate: false
+  xy: 605, 168
+  size: 164, 47
+  orig: 194, 61
+  offset: 29, 9
+  index: -1
+effect/feng2/f_0001
+  rotate: true
+  xy: 434, 382
+  size: 175, 84
+  orig: 190, 84
+  offset: 11, 0
+  index: -1
+effect/feng2/f_0002
+  rotate: true
+  xy: 605, 217
+  size: 169, 84
+  orig: 190, 84
+  offset: 14, 0
+  index: -1
+effect/feng2/f_0003
+  rotate: true
+  xy: 520, 382
+  size: 175, 83
+  orig: 190, 84
+  offset: 2, 1
+  index: -1
+effect/feng2/f_0004
+  rotate: true
+  xy: 521, 206
+  size: 174, 82
+  orig: 190, 84
+  offset: 0, 1
+  index: -1
+effect/feng2/f_0005
+  rotate: true
+  xy: 827, 82
+  size: 169, 77
+  orig: 190, 84
+  offset: 0, 5
+  index: -1
+effect/feng2/f_0006
+  rotate: true
+  xy: 350, 373
+  size: 184, 82
+  orig: 190, 84
+  offset: 6, 1
+  index: -1
+effect/gb_0002
+  rotate: true
+  xy: 771, 168
+  size: 45, 46
+  orig: 45, 46
+  offset: 0, 0
+  index: -1
+effect/huoxing/hx_0001
+  rotate: false
+  xy: 705, 462
+  size: 169, 95
+  orig: 169, 95
+  offset: 0, 0
+  index: -1
+effect/huoxing/hx_0003
+  rotate: true
+  xy: 605, 388
+  size: 169, 95
+  orig: 169, 95
+  offset: 0, 0
+  index: -1
+effect/huoxing/hx_0005
+  rotate: true
+  xy: 876, 388
+  size: 169, 95
+  orig: 169, 95
+  offset: 0, 0
+  index: -1
+effect/huoxing/hx_0007
+  rotate: false
+  xy: 705, 365
+  size: 169, 95
+  orig: 169, 95
+  offset: 0, 0
+  index: -1
+effect/huoyan1/h_00022
+  rotate: false
+  xy: 521, 167
+  size: 37, 37
+  orig: 70, 69
+  offset: 10, 17
+  index: -1
+effect/huoyan1/h_00023
+  rotate: false
+  xy: 906, 94
+  size: 51, 53
+  orig: 70, 69
+  offset: 7, 9
+  index: -1
+effect/huoyan1/h_00024
+  rotate: true
+  xy: 906, 149
+  size: 54, 57
+  orig: 70, 69
+  offset: 7, 7
+  index: -1
+effect/huoyan1/h_00025
+  rotate: false
+  xy: 827, 20
+  size: 57, 60
+  orig: 70, 69
+  offset: 8, 4
+  index: -1
+effect/huoyan1/h_00026
+  rotate: false
+  xy: 691, 220
+  size: 54, 61
+  orig: 70, 69
+  offset: 11, 4
+  index: -1
+effect/huoyan1/h_00027
+  rotate: false
+  xy: 886, 23
+  size: 56, 57
+  orig: 70, 69
+  offset: 10, 8
+  index: -1
+effect/huoyan1/h_00028
+  rotate: true
+  xy: 944, 205
+  size: 46, 47
+  orig: 70, 69
+  offset: 10, 11
+  index: -1
+effect/huoyan1/h_00029
+  rotate: false
+  xy: 389, 161
+  size: 25, 30
+  orig: 70, 69
+  offset: 20, 17
+  index: -1
+effect/penhuo/huo_0001
+  rotate: true
+  xy: 407, 2
+  size: 157, 136
+  orig: 202, 162
+  offset: 3, 11
+  index: -1
+effect/penhuo/huo_0003
+  rotate: true
+  xy: 276, 178
+  size: 187, 111
+  orig: 202, 162
+  offset: 3, 14
+  index: -1
+effect/penhuo/huo_0005
+  rotate: true
+  xy: 136, 362
+  size: 195, 129
+  orig: 202, 162
+  offset: 3, 8
+  index: -1
+effect/penhuo/huo_0007
+  rotate: true
+  xy: 389, 193
+  size: 178, 130
+  orig: 202, 162
+  offset: 2, 0
+  index: -1
+effect/penhuo/huo_0009
+  rotate: true
+  xy: 2, 159
+  size: 197, 127
+  orig: 202, 162
+  offset: 1, 19
+  index: -1
+effect/penhuo/huo_0011
+  rotate: true
+  xy: 2, 358
+  size: 199, 132
+  orig: 202, 162
+  offset: 2, 21
+  index: -1
+effect/penhuo/huo_0013
+  rotate: true
+  xy: 131, 161
+  size: 195, 143
+  orig: 202, 162
+  offset: 2, 10
+  index: -1
+effect/penhuo/huo_0015
+  rotate: true
+  xy: 263, 2
+  size: 157, 142
+  orig: 202, 162
+  offset: 3, 12
+  index: -1
+effect/penhuo/huo_0017
+  rotate: false
+  xy: 104, 9
+  size: 157, 148
+  orig: 202, 162
+  offset: 3, 0
+  index: -1
+effect/penhuo/huo_0019
+  rotate: true
+  xy: 705, 6
+  size: 160, 120
+  orig: 202, 162
+  offset: 0, 23
+  index: -1
+effect/penhuo/huo_0021
+  rotate: true
+  xy: 2, 5
+  size: 152, 100
+  orig: 202, 162
+  offset: 7, 23
+  index: -1
+effect/wuqi_00
+  rotate: false
+  xy: 545, 5
+  size: 158, 160
+  orig: 185, 188
+  offset: 14, 14
+  index: -1
+effect/yun_0004
+  rotate: false
+  xy: 691, 283
+  size: 75, 80
+  orig: 76, 86
+  offset: 1, 4
+  index: -1

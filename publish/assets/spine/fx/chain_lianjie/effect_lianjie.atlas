@@ -1,0 +1,76 @@
+
+effect_lianjie.png
+size: 752,196
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/chuanshu/1_00000
+  rotate: false
+  xy: 486, 2
+  size: 233, 68
+  orig: 240, 72
+  offset: 0, 3
+  index: -1
+effect/chuanshu/1_00002
+  rotate: false
+  xy: 200, 73
+  size: 240, 63
+  orig: 240, 72
+  offset: 0, 3
+  index: -1
+effect/chuanshu/1_00004
+  rotate: false
+  xy: 2, 5
+  size: 240, 66
+  orig: 240, 72
+  offset: 0, 2
+  index: -1
+effect/chuanshu/1_00006
+  rotate: false
+  xy: 244, 4
+  size: 240, 66
+  orig: 240, 72
+  offset: 0, 2
+  index: -1
+effect/chuanshu/1_00008
+  rotate: false
+  xy: 442, 72
+  size: 232, 63
+  orig: 240, 72
+  offset: 2, 1
+  index: -1
+effect/chuanshu/1_00010
+  rotate: false
+  xy: 2, 79
+  size: 196, 61
+  orig: 240, 72
+  offset: 8, 3
+  index: -1
+effect/chuanshu/1_00012
+  rotate: false
+  xy: 564, 137
+  size: 186, 57
+  orig: 240, 72
+  offset: 18, 7
+  index: -1
+effect/chuanshu/1_00014
+  rotate: false
+  xy: 384, 138
+  size: 178, 56
+  orig: 240, 72
+  offset: 29, 8
+  index: -1
+effect/chuanshu/1_00016
+  rotate: false
+  xy: 188, 142
+  size: 194, 52
+  orig: 240, 72
+  offset: 14, 10
+  index: -1
+effect/chuanshu/1_00018
+  rotate: false
+  xy: 2, 147
+  size: 184, 47
+  orig: 240, 72
+  offset: 16, 12
+  index: -1

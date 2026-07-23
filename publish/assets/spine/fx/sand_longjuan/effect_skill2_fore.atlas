@@ -1,0 +1,258 @@
+
+effect_skill2_fore.png
+size: 953,156
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/pic/gl_00043
+  rotate: false
+  xy: 904, 4
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+images/pic/skill1/longjuan/longjuan_00000
+  rotate: false
+  xy: 840, 2
+  size: 38, 15
+  orig: 96, 80
+  offset: 27, 4
+  index: -1
+images/pic/skill1/longjuan/longjuan_00001
+  rotate: true
+  xy: 904, 31
+  size: 37, 39
+  orig: 96, 80
+  offset: 25, 2
+  index: -1
+images/pic/skill1/longjuan/longjuan_00002
+  rotate: true
+  xy: 840, 19
+  size: 45, 39
+  orig: 96, 80
+  offset: 24, 2
+  index: -1
+images/pic/skill1/longjuan/longjuan_00003
+  rotate: true
+  xy: 606, 4
+  size: 66, 42
+  orig: 96, 80
+  offset: 18, 3
+  index: -1
+images/pic/skill1/longjuan/longjuan_00004
+  rotate: true
+  xy: 334, 71
+  size: 83, 69
+  orig: 96, 80
+  offset: 12, 6
+  index: -1
+images/pic/skill1/longjuan/longjuan_00005
+  rotate: true
+  xy: 198, 65
+  size: 89, 68
+  orig: 96, 80
+  offset: 6, 9
+  index: -1
+images/pic/skill1/longjuan/longjuan_00006
+  rotate: true
+  xy: 64, 63
+  size: 91, 66
+  orig: 96, 80
+  offset: 4, 11
+  index: -1
+images/pic/skill1/longjuan/longjuan_00007
+  rotate: true
+  xy: 132, 64
+  size: 90, 64
+  orig: 96, 80
+  offset: 1, 12
+  index: -1
+images/pic/skill1/longjuan/longjuan_00008
+  rotate: true
+  xy: 554, 72
+  size: 82, 65
+  orig: 96, 80
+  offset: 4, 11
+  index: -1
+images/pic/skill1/longjuan/longjuan_00009
+  rotate: true
+  xy: 405, 71
+  size: 83, 66
+  orig: 96, 80
+  offset: 4, 9
+  index: -1
+images/pic/skill1/longjuan/longjuan_00010
+  rotate: true
+  xy: 621, 73
+  size: 81, 62
+  orig: 96, 80
+  offset: 4, 8
+  index: -1
+images/pic/skill1/longjuan/longjuan_00011
+  rotate: false
+  xy: 285, 2
+  size: 81, 64
+  orig: 96, 80
+  offset: 4, 7
+  index: -1
+images/pic/skill1/longjuan/longjuan_00012
+  rotate: false
+  xy: 447, 3
+  size: 81, 66
+  orig: 96, 80
+  offset: 4, 6
+  index: -1
+images/pic/skill1/longjuan/longjuan_00013
+  rotate: false
+  xy: 368, 2
+  size: 77, 67
+  orig: 96, 80
+  offset: 8, 5
+  index: -1
+images/pic/skill1/longjuan/longjuan_00014
+  rotate: true
+  xy: 788, 3
+  size: 73, 50
+  orig: 96, 80
+  offset: 15, 23
+  index: -1
+images/pic/skill1/longjuan/longjuan_00015
+  rotate: false
+  xy: 898, 121
+  size: 53, 33
+  orig: 96, 80
+  offset: 39, 40
+  index: -1
+images/pic/skill1/longjuan/longjuan_00016
+  rotate: false
+  xy: 840, 90
+  size: 50, 26
+  orig: 96, 80
+  offset: 34, 47
+  index: -1
+images/pic/skill1/longjuan/longjuan_00017
+  rotate: false
+  xy: 760, 3
+  size: 24, 6
+  orig: 96, 80
+  offset: 29, 65
+  index: -1
+images/pic/skill2/jufeng/jufeng_00035
+  rotate: false
+  xy: 840, 66
+  size: 46, 22
+  orig: 101, 70
+  offset: 36, 39
+  index: -1
+images/pic/skill2/jufeng/jufeng_00037
+  rotate: true
+  xy: 704, 2
+  size: 71, 54
+  orig: 101, 70
+  offset: 13, 5
+  index: -1
+images/pic/skill2/jufeng/jufeng_00039
+  rotate: true
+  xy: 2, 62
+  size: 92, 60
+  orig: 101, 70
+  offset: 1, 1
+  index: -1
+images/pic/skill2/jufeng/jufeng_00041
+  rotate: true
+  xy: 268, 68
+  size: 86, 64
+  orig: 101, 70
+  offset: 14, 4
+  index: -1
+images/pic/skill2/jufeng/jufeng_00043
+  rotate: false
+  xy: 2, 2
+  size: 87, 58
+  orig: 101, 70
+  offset: 8, 7
+  index: -1
+images/pic/skill2/jufeng/jufeng_00045
+  rotate: false
+  xy: 91, 3
+  size: 68, 58
+  orig: 101, 70
+  offset: 13, 7
+  index: -1
+images/pic/skill2/jufeng/jufeng_00047
+  rotate: true
+  xy: 161, 2
+  size: 60, 58
+  orig: 101, 70
+  offset: 19, 3
+  index: -1
+images/pic/skill2/jufeng/jufeng_00049
+  rotate: false
+  xy: 898, 70
+  size: 52, 49
+  orig: 101, 70
+  offset: 25, 2
+  index: -1
+images/pic/skill2/jufeng/jufeng_00051
+  rotate: true
+  xy: 881, 24
+  size: 40, 21
+  orig: 101, 70
+  offset: 41, 26
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00020
+  rotate: true
+  xy: 760, 11
+  size: 62, 26
+  orig: 85, 80
+  offset: 14, 15
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00021
+  rotate: false
+  xy: 840, 118
+  size: 56, 36
+  orig: 85, 80
+  offset: 20, 15
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00022
+  rotate: true
+  xy: 473, 72
+  size: 82, 79
+  orig: 85, 80
+  offset: 3, 0
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00023
+  rotate: true
+  xy: 685, 75
+  size: 79, 78
+  orig: 85, 80
+  offset: 6, 1
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00024
+  rotate: false
+  xy: 765, 78
+  size: 73, 76
+  orig: 85, 80
+  offset: 10, 2
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00025
+  rotate: true
+  xy: 530, 4
+  size: 66, 74
+  orig: 85, 80
+  offset: 17, 4
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00026
+  rotate: false
+  xy: 221, 7
+  size: 62, 56
+  orig: 85, 80
+  offset: 21, 20
+  index: -1
+images/pic/skill2/shangtiao/shangtiao_00027
+  rotate: true
+  xy: 650, 8
+  size: 63, 52
+  orig: 85, 80
+  offset: 20, 23
+  index: -1

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "frost",
+  "name": "北冥雪境",
+  "diff": 1,
+  "spawn": 1,
+  "count": 1,
+  "gold": 1,
+  "xp": 1,
+  "boss": "queen",
+  "notes": "由现有 MAP_RULES.frost 迁出，供地图包 rulesRef 引用"
+}

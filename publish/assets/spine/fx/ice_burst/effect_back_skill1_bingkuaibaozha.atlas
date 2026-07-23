@@ -1,0 +1,13 @@
+
+effect_back_skill1_bingkuaibaozha.png
+size: 438,187
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/effects/skill1/dilie_00066
+  rotate: false
+  xy: 2, 2
+  size: 434, 183
+  orig: 458, 198
+  offset: 16, 9
+  index: -1

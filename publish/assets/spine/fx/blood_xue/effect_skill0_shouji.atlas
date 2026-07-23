@@ -1,0 +1,167 @@
+
+effect_skill0_shouji.png
+size: 709,532
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texiao/skill0/glow2
+  rotate: false
+  xy: 454, 3
+  size: 52, 54
+  orig: 64, 65
+  offset: 4, 5
+  index: -1
+texiao/skill0/sj01_add/sj01_01
+  rotate: false
+  xy: 454, 132
+  size: 139, 124
+  orig: 306, 185
+  offset: 51, 27
+  index: -1
+texiao/skill0/sj01_add/sj01_03
+  rotate: false
+  xy: 458, 258
+  size: 156, 130
+  orig: 306, 185
+  offset: 41, 24
+  index: -1
+texiao/skill0/sj01_add/sj01_04
+  rotate: true
+  xy: 2, 2
+  size: 258, 136
+  orig: 306, 185
+  offset: 0, 21
+  index: -1
+texiao/skill0/sj01_add/sj01_06
+  rotate: true
+  xy: 314, 265
+  size: 265, 142
+  orig: 306, 185
+  offset: 0, 19
+  index: -1
+texiao/skill0/sj01_add/sj01_08
+  rotate: true
+  xy: 164, 262
+  size: 268, 148
+  orig: 306, 185
+  offset: 0, 16
+  index: -1
+texiao/skill0/sj01_add/sj01_10
+  rotate: true
+  xy: 2, 262
+  size: 268, 160
+  orig: 306, 185
+  offset: 5, 10
+  index: -1
+texiao/skill0/sj01_add/sj01_12
+  rotate: true
+  xy: 140, 12
+  size: 248, 159
+  orig: 306, 185
+  offset: 26, 7
+  index: -1
+texiao/skill0/sj01_add/sj01_14
+  rotate: true
+  xy: 301, 12
+  size: 248, 151
+  orig: 306, 185
+  offset: 28, 12
+  index: -1
+texiao/skill0/sj01_add/sj01_16
+  rotate: false
+  xy: 458, 459
+  size: 167, 71
+  orig: 306, 185
+  offset: 110, 58
+  index: -1
+texiao/skill0/sj01_add/sj01_18
+  rotate: false
+  xy: 458, 390
+  size: 162, 67
+  orig: 306, 185
+  offset: 114, 58
+  index: -1
+texiao/skill0/sj01_add/sj01_20
+  rotate: false
+  xy: 595, 192
+  size: 18, 64
+  orig: 306, 185
+  offset: 162, 58
+  index: -1
+texiao/skill0/sj01_add/sj01_22
+  rotate: false
+  xy: 692, 263
+  size: 15, 60
+  orig: 306, 185
+  offset: 165, 59
+  index: -1
+texiao/skill0/xue01/xue01_01
+  rotate: false
+  xy: 508, 18
+  size: 57, 39
+  orig: 125, 94
+  offset: 7, 21
+  index: -1
+texiao/skill0/xue01/xue01_03
+  rotate: false
+  xy: 616, 193
+  size: 72, 68
+  orig: 125, 94
+  offset: 14, 1
+  index: -1
+texiao/skill0/xue01/xue01_05
+  rotate: false
+  xy: 454, 59
+  size: 69, 71
+  orig: 125, 94
+  offset: 21, 6
+  index: -1
+texiao/skill0/xue01/xue01_07
+  rotate: false
+  xy: 596, 66
+  size: 66, 64
+  orig: 125, 94
+  offset: 27, 16
+  index: -1
+texiao/skill0/xue01/xue01_09
+  rotate: false
+  xy: 525, 60
+  size: 69, 70
+  orig: 125, 94
+  offset: 29, 13
+  index: -1
+texiao/skill0/xue01/xue01_11
+  rotate: true
+  xy: 627, 398
+  size: 70, 77
+  orig: 125, 94
+  offset: 30, 8
+  index: -1
+texiao/skill0/xue01/xue01_13
+  rotate: true
+  xy: 622, 325
+  size: 71, 81
+  orig: 125, 94
+  offset: 32, 0
+  index: -1
+texiao/skill0/xue01/xue01_15
+  rotate: true
+  xy: 615, 132
+  size: 59, 72
+  orig: 125, 94
+  offset: 47, 9
+  index: -1
+texiao/skill0/xue01/xue01_17
+  rotate: true
+  xy: 616, 263
+  size: 60, 74
+  orig: 125, 94
+  offset: 51, 6
+  index: -1
+texiao/skill0/xue01/xue01_19
+  rotate: true
+  xy: 627, 470
+  size: 60, 78
+  orig: 125, 94
+  offset: 55, 0
+  index: -1

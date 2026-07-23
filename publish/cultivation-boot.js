@@ -2,12 +2,12 @@
   'use strict';
 
   const text = {
-    '#loading h1': '太虚仙途',
-    '#loadingText': '正在引灵入体，稳固周天...',
-    '#bossWarn': '魔尊劫将至',
-    '#start .title': '太虚仙途',
-    '#start .sub': '太虚裂界将开，择一道途，逆劫登仙。',
-    '#newBtn': '踏上仙途',
+    '#loading h1': '仙道飘渺',
+    '#loadingText': '修士正在赶往劫域...',
+    '#bossWarn': '魔君即将降临',
+    '#start .title': '仙道飘渺',
+    '#start .sub': '仙雾初起，道途未定。踏入仙坊，择途问道。',
+    '#newBtn': '踏入仙途',
     '#loadBtn': '读取轮回录',
     '#boardBtn': '查看天榜',
     '#evoGuideBtn': '功法蜕变图鉴',
@@ -36,7 +36,7 @@
   };
   Object.entries(text).forEach(([selector, value]) => {
     const node = document.querySelector(selector);
-    if (node) node.textContent = value;
+    if (node && node.tagName !== 'IMG') node.textContent = value;
   });
 
   const hud = [
@@ -50,5 +50,5 @@
   });
   const bossLabel = document.querySelector('#hudBoss label span:first-child');
   if (bossLabel) bossLabel.textContent = '下次魔尊劫';
-  document.title = '太虚仙途';
+  document.title = '仙道飘渺';
 })();

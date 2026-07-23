@@ -1,0 +1,480 @@
+/* 仙道飘渺 · 修仙 UI 主题层（覆盖中世纪木纹边框） */
+:root{
+  --xd-ink:#071018;
+  --xd-ink-2:#0c1a22;
+  --xd-jade:#7dd3c0;
+  --xd-jade-deep:#2f6f63;
+  --xd-mist:#b8f0ff;
+  --xd-gold:#e8d5a3;
+  --xd-gold-deep:#b0894a;
+  --xd-paper:rgba(232,245,240,.92);
+  --xd-panel:linear-gradient(165deg,rgba(18,36,42,.94),rgba(8,16,22,.96) 55%,rgba(6,12,16,.98));
+  --xd-panel-light:linear-gradient(180deg,#eef6f1 0%,#d5e6dc 48%,#b9cfc4 100%);
+  --xd-border:rgba(125,211,192,.42);
+  --xd-border-gold:rgba(232,213,163,.55);
+  --xd-glow:0 0 22px rgba(125,211,192,.22),0 14px 36px rgba(0,0,0,.45);
+  --xd-font:"Noto Serif SC","Songti SC","STSong",serif;
+  --xd-title:"Ma Shan Zheng","Noto Serif SC","KaiTi",cursive;
+}
+
+html,body,.game{
+  font-family:var(--xd-font)!important;
+  color:#e8f4ef!important;
+  background:#060d12!important;
+}
+
+/* —— 通用按钮：玉牌形 —— */
+button,
+.ghostBtn,
+.startBtn,
+.modeBtn,
+.equipTabs button,
+.choiceActions button,
+.levelTools button,
+.shopBtn,
+.redeemBtn,
+.saveBtn,
+.settingsBtn,
+.relicBtn,
+.skillBtn,
+.invBtn,
+.equipBtn{
+  border:1px solid var(--xd-border-gold)!important;
+  border-radius:4px 16px 4px 16px!important;
+  background:
+    linear-gradient(180deg,rgba(232,213,163,.14),transparent 34%),
+    linear-gradient(165deg,rgba(28,52,58,.92),rgba(10,20,26,.95))!important;
+  color:var(--xd-gold)!important;
+  font-family:var(--xd-font)!important;
+  font-weight:700!important;
+  letter-spacing:.12em!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.55),0 0 12px rgba(125,211,192,.25)!important;
+  box-shadow:
+    inset 0 0 0 1px rgba(125,211,192,.18),
+    inset 0 -10px 18px rgba(0,0,0,.22),
+    0 8px 20px rgba(0,0,0,.35)!important;
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease,border-color .15s ease!important;
+}
+button:before,
+.ghostBtn:before,
+.startBtn:before{
+  border-color:rgba(125,211,192,.2)!important;
+}
+button:hover,
+.ghostBtn:hover,
+.startBtn:hover,
+.equipTabs button:hover{
+  border-color:rgba(184,240,255,.7)!important;
+  background:
+    linear-gradient(180deg,rgba(184,240,255,.16),transparent 40%),
+    linear-gradient(165deg,rgba(36,68,74,.95),rgba(12,24,30,.96))!important;
+  box-shadow:0 0 22px rgba(125,211,192,.35),inset 0 0 16px rgba(232,213,163,.1)!important;
+  transform:translateY(-1px);
+}
+button:active{transform:translateY(0)}
+button:disabled{filter:grayscale(.45);opacity:.5}
+
+.startBtn{
+  background:
+    radial-gradient(circle at 50% 0,rgba(255,255,255,.18),transparent 42%),
+    linear-gradient(180deg,rgba(232,213,163,.28),transparent 36%),
+    linear-gradient(165deg,#3a6b5e,#1a3a36 55%,#0f2422)!important;
+  color:#fff8e7!important;
+  border-color:rgba(232,213,163,.75)!important;
+}
+.ghostBtn{
+  background:
+    linear-gradient(180deg,rgba(125,211,192,.1),transparent 40%),
+    linear-gradient(165deg,rgba(20,36,44,.88),rgba(8,14,20,.94))!important;
+  color:#d7efe8!important;
+}
+
+/* —— 面板：玉简/云雾 —— */
+.overlay{
+  background:radial-gradient(circle at 50% 20%,rgba(125,211,192,.12),transparent 42%),rgba(3,8,12,.72)!important;
+  backdrop-filter:blur(4px);
+}
+.panel,
+.redeemPanel,
+.classPanel,
+.skillPanel,
+.statModalPanel,
+.equipDetailPanel,
+.seasonIntroPanel,
+.result{
+  background:var(--xd-panel)!important;
+  border:1px solid var(--xd-border)!important;
+  border-radius:18px!important;
+  box-shadow:var(--xd-glow),inset 0 0 40px rgba(125,211,192,.06)!important;
+  color:#e8f4ef!important;
+  position:relative;
+  overflow:hidden;
+}
+.panel:before,
+.redeemPanel:before,
+.classPanel:before{
+  content:""!important;
+  position:absolute!important;
+  inset:8px!important;
+  border:1px solid rgba(232,213,163,.16)!important;
+  border-radius:14px!important;
+  pointer-events:none!important;
+  box-shadow:none!important;
+  background:none!important;
+  height:auto!important;
+  left:8px!important;right:8px!important;top:8px!important;bottom:8px!important;
+}
+.panel:after,
+.redeemPanel:after,
+.classPanel:after{
+  content:""!important;
+  position:absolute!important;
+  left:18%!important;right:18%!important;top:0!important;
+  height:2px!important;
+  border-radius:0!important;
+  background:linear-gradient(90deg,transparent,rgba(232,213,163,.55),rgba(125,211,192,.45),transparent)!important;
+  box-shadow:0 0 12px rgba(125,211,192,.35)!important;
+}
+
+.title,
+.panel .title,
+h1.title,
+#endTitle,
+#equipTitle,
+#treeTitle,
+#statModalTitle{
+  font-family:var(--xd-title)!important;
+  font-weight:400!important;
+  letter-spacing:.2em!important;
+  color:var(--xd-gold)!important;
+  text-shadow:0 0 18px rgba(125,211,192,.35),0 2px 8px rgba(0,0,0,.55)!important;
+}
+.sub,
+.panel .sub,
+#boardSub,
+#equipSub,
+#skillPanelSub,
+#altarSub,
+#treeSub{
+  color:#a8c8be!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.4)!important;
+  letter-spacing:.06em;
+}
+
+/* —— 选项卡 / 机缘卡 —— */
+.choice,
+.node,
+.eqCard,
+.mapCard,
+.shopCard,
+.evoGrid > *,
+.bagGrid > *{
+  border:1px solid rgba(125,211,192,.28)!important;
+  border-radius:12px!important;
+  background:
+    linear-gradient(180deg,rgba(125,211,192,.08),transparent 40%),
+    linear-gradient(165deg,rgba(16,32,38,.9),rgba(8,14,20,.94))!important;
+  box-shadow:inset 0 0 0 1px rgba(232,213,163,.08),0 8px 18px rgba(0,0,0,.28)!important;
+  color:#e8f4ef!important;
+}
+.choice:hover,
+.node:hover,
+.eqCard:hover,
+.mapCard:hover{
+  border-color:rgba(232,213,163,.55)!important;
+  box-shadow:0 0 20px rgba(125,211,192,.25)!important;
+}
+.choice h2,
+.node h2,
+.mapCard h2{
+  font-family:var(--xd-font)!important;
+  color:var(--xd-gold)!important;
+  letter-spacing:.08em;
+}
+
+/* —— 封面菜单 —— */
+.coverMenu{
+  background:linear-gradient(180deg,transparent,rgba(4,12,16,.35) 42%,rgba(4,12,16,.72))!important;
+}
+.coverMenu .sub{
+  color:#c5e6dc!important;
+  font-size:14px!important;
+  letter-spacing:.14em!important;
+}
+.mainActions{
+  gap:12px!important;
+}
+.mainActions button{
+  min-width:168px!important;
+  max-width:240px!important;
+  padding:10px 22px!important;
+  border-radius:3px 18px 3px 18px!important;
+  border:1px solid rgba(232,213,163,.65)!important;
+  background:
+    linear-gradient(180deg,rgba(184,240,255,.1),transparent 45%),
+    rgba(6,14,18,.42)!important;
+  color:#f3e7c7!important;
+  letter-spacing:.18em!important;
+  font-size:15px!important;
+  backdrop-filter:blur(4px)!important;
+  box-shadow:0 0 0 1px rgba(0,0,0,.35),0 0 18px rgba(125,211,192,.18)!important;
+}
+.mainActions button:hover{
+  background:rgba(20,48,52,.55)!important;
+  border-color:rgba(184,240,255,.75)!important;
+  box-shadow:0 0 24px rgba(125,211,192,.4)!important;
+}
+#start #redeemBtn,
+#start #shopBtn{
+  border-radius:999px!important;
+  min-height:34px!important;
+  padding:6px 14px!important;
+  letter-spacing:.14em!important;
+  background:rgba(6,16,20,.45)!important;
+  border:1px solid rgba(125,211,192,.4)!important;
+  color:#d9f5ee!important;
+}
+
+/* —— 加载 —— */
+.loadingBox{
+  background:
+    linear-gradient(180deg,rgba(125,211,192,.08),transparent 40%),
+    rgba(6,14,18,.72)!important;
+  border:1px solid rgba(232,213,163,.35)!important;
+  border-radius:18px!important;
+  box-shadow:0 0 28px rgba(125,211,192,.2)!important;
+  color:#e8f4ef!important;
+}
+.loadingTrack{
+  background:rgba(8,18,24,.85)!important;
+  border:1px solid rgba(125,211,192,.28)!important;
+  border-radius:999px!important;
+  overflow:hidden;
+}
+.loadingFill{
+  background:linear-gradient(90deg,#2f6f63,#7dd3c0,#e8d5a3)!important;
+  box-shadow:0 0 12px rgba(125,211,192,.55)!important;
+}
+.loadingPercent,#loadingText{color:#cfe9e0!important}
+
+/* —— HUD 玉简 —— */
+.hud .pill,
+.hud .bar{
+  border:1px solid rgba(125,211,192,.28)!important;
+  border-radius:4px 14px 4px 14px!important;
+  background:linear-gradient(180deg,rgba(18,36,42,.72),rgba(6,12,16,.78))!important;
+  box-shadow:inset 0 0 12px rgba(125,211,192,.08)!important;
+  color:#d9efe8!important;
+}
+.hud .pill:before,
+.hud .bar:before{
+  border-color:rgba(232,213,163,.12)!important;
+}
+.hud .pill:after,
+.hud .bar:after{
+  content:"◇"!important;
+  color:rgba(125,211,192,.4)!important;
+}
+.hud .pill b,
+.hud .bar label span:last-child{
+  color:var(--xd-gold)!important;
+  text-shadow:0 0 8px rgba(125,211,192,.35)!important;
+}
+.hud .track{background:#0a1418!important;border:1px solid rgba(125,211,192,.18)!important}
+.hud .fill{background:linear-gradient(90deg,#14532d,#34d399,#a7f3d0)!important;box-shadow:0 0 10px rgba(52,211,153,.45)!important}
+.hud .xpfill{background:linear-gradient(90deg,#0e7490,#67e8f9,#e8d5a3)!important;box-shadow:0 0 10px rgba(103,232,249,.45)!important}
+.hud .bossfill{background:linear-gradient(90deg,#7f1d1d,#fb7185,#e8d5a3)!important}
+
+/* —— 局内底栏按钮 —— */
+#modeBtn,#skillBtn,#relicBtn,#invBtn,#saveBtn,#settingsBtn,
+.combatIconButton{
+  border:1px solid rgba(232,213,163,.35)!important;
+  border-radius:10px 16px 10px 16px!important;
+  background:rgba(6,14,18,.42)!important;
+  color:var(--xd-gold)!important;
+  outline:0!important;
+  box-shadow:inset 0 0 12px rgba(125,211,192,.08)!important;
+  backdrop-filter:blur(6px)!important;
+}
+#modeBtn.active{
+  background:rgba(125,211,192,.22)!important;
+  border-color:rgba(184,240,255,.65)!important;
+  box-shadow:0 0 18px rgba(125,211,192,.4)!important;
+}
+.combatIconText{color:#e8d5a3!important}
+.hudFoldBtn{
+  border-radius:6px!important;
+  background:rgba(6,14,18,.5)!important;
+  border:1px solid rgba(125,211,192,.3)!important;
+  color:#d9efe8!important;
+}
+
+/* —— 摇杆 —— */
+.controls .joystick,
+.townJoy{
+  border:1px solid rgba(125,211,192,.35)!important;
+  background:radial-gradient(circle,rgba(125,211,192,.16),rgba(6,14,18,.62))!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.35)!important;
+}
+.controls .stick,
+.townStick{
+  background:radial-gradient(circle,#f5ecd0,#8f7340)!important;
+  border:2px solid rgba(255,255,255,.4)!important;
+}
+
+/* —— 排行榜：玉简卷轴浅色 —— */
+#leaderboard .panel{
+  background:
+    radial-gradient(circle at 18% 16%,rgba(255,255,255,.55),transparent 28%),
+    radial-gradient(circle at 80% 78%,rgba(47,111,99,.12),transparent 34%),
+    linear-gradient(180deg,#eef6f1 0%,#d8ebe2 52%,#b9d4c8 100%)!important;
+  border:1px solid rgba(47,111,99,.35)!important;
+  color:#1f3a34!important;
+  box-shadow:0 18px 40px rgba(0,0,0,.4),inset 0 0 0 1px rgba(255,255,255,.35)!important;
+}
+#leaderboard .panel:before,
+#leaderboard .panel:after{display:none!important;content:none!important}
+#leaderboard .panel .title{
+  color:#1f3a34!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.65)!important;
+}
+#leaderboard #boardSub{color:#3f6b60!important;text-shadow:none!important}
+#leaderboard .riftBoardRow{
+  border:1px solid rgba(47,111,99,.28)!important;
+  background:linear-gradient(90deg,rgba(47,111,99,.1),rgba(255,255,255,.35) 50%,rgba(47,111,99,.1))!important;
+  color:#1f3a34!important;
+}
+#leaderboard .boardName,
+#leaderboard .riftBoardRow .boardLv{color:#1f3a34!important;text-shadow:none!important}
+#leaderboard #boardClose{
+  background:linear-gradient(180deg,#5f9e8c,#2f6f63)!important;
+  color:#f4fffb!important;
+  border-color:#1f3a34!important;
+}
+
+/* —— 装备/商店：去木纹，改玉匣 —— */
+#equipmentPanel .panel,
+.shopPanel,
+.shopDetailPanel{
+  background:var(--xd-panel)!important;
+  border:1px solid var(--xd-border)!important;
+  color:#e8f4ef!important;
+}
+#equipmentPanel #equipGrid{
+  background:linear-gradient(180deg,rgba(18,40,46,.75),rgba(8,16,22,.9))!important;
+  border:1px solid rgba(125,211,192,.2)!important;
+  border-radius:12px!important;
+}
+.eqSlot,
+#equipmentPanel #equipSlots .eqSlot{
+  border:1px solid rgba(125,211,192,.28)!important;
+  background:rgba(8,18,24,.72)!important;
+  border-radius:10px!important;
+}
+.equipTabs button.selected,
+.classTabs .selected{
+  border-color:rgba(232,213,163,.7)!important;
+  background:linear-gradient(180deg,rgba(232,213,163,.22),rgba(47,111,99,.35))!important;
+  color:#fff8e7!important;
+}
+
+/* —— 地图选择 —— */
+.mapTip{
+  background:linear-gradient(180deg,#eef6f1,#c5ddd2)!important;
+  border:1px solid rgba(47,111,99,.4)!important;
+  color:#1f3a34!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.28)!important;
+}
+.mapTip:before{background:#eef6f1!important;border-color:rgba(47,111,99,.4)!important}
+.mapElement{color:#2f6f63!important}
+
+/* —— 输入框 —— */
+.nameBox,
+textarea.nameBox,
+select.nameBox,
+input.nameBox{
+  background:rgba(6,14,18,.75)!important;
+  border:1px solid rgba(125,211,192,.35)!important;
+  border-radius:10px!important;
+  color:#e8f4ef!important;
+  font-family:var(--xd-font)!important;
+}
+.nameBox::placeholder{color:#7fa89c!important}
+
+/* —— 通知 / Boss —— */
+.notice{
+  border:1px solid rgba(125,211,192,.45)!important;
+  background:rgba(6,14,18,.82)!important;
+  color:#d9f5ee!important;
+  border-radius:999px!important;
+  box-shadow:0 0 20px rgba(125,211,192,.25)!important;
+}
+.bossWarn{
+  border:1px solid rgba(232,213,163,.65)!important;
+  border-radius:8px 20px 8px 20px!important;
+  background:linear-gradient(180deg,rgba(80,20,28,.9),rgba(12,8,16,.94))!important;
+  color:var(--xd-gold)!important;
+  font-family:var(--xd-title)!important;
+  letter-spacing:.18em!important;
+}
+
+/* —— 城镇 HUD —— */
+.townHud{
+  border:1px solid rgba(125,211,192,.4)!important;
+  background:rgba(6,14,18,.7)!important;
+  color:var(--xd-gold)!important;
+  border-radius:14px!important;
+  letter-spacing:.12em!important;
+}
+.townLoading{
+  border:1px solid rgba(232,213,163,.4)!important;
+  background:rgba(6,14,18,.8)!important;
+  color:var(--xd-gold)!important;
+  border-radius:16px!important;
+}
+.townBack,.townInteract{
+  letter-spacing:.14em!important;
+}
+
+/* —— 进度树 / 强化 —— */
+.treeCanvas,
+.progressTreeWrap{
+  border:1px solid rgba(125,211,192,.3)!important;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(125,211,192,.12),transparent 36%),
+    linear-gradient(180deg,rgba(12,24,30,.92),rgba(6,12,16,.96))!important;
+}
+.classTitleBoostR15{
+  background:linear-gradient(135deg,#3a6b5e,#b0894a)!important;
+  border:1px solid rgba(232,213,163,.7)!important;
+  color:#fff8e7!important;
+  box-shadow:0 0 16px rgba(125,211,192,.35)!important;
+  border-radius:12px!important;
+}
+
+/* —— 滚动条修仙化（若显示） —— */
+*{scrollbar-color:#5f9e8c #0a1418}
+*::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#7dd3c0,#2f6f63)!important;
+  border:2px solid #0a1418!important;
+}
+
+@media (orientation:portrait){
+  .mainActions button{min-width:150px!important;letter-spacing:.12em!important}
+  .title{letter-spacing:.14em!important}
+}
+@media (prefers-reduced-motion:reduce){
+  button, .startBtn, .ghostBtn{transition:none!important}
+}
+
+
+/* 道途设置面板 */
+#settings .settingsPanel{max-width:min(520px,92vw)}
+#settings .settingsPanel .choice{margin:.72rem 0;padding:.55rem .7rem;border-radius:12px;background:linear-gradient(180deg,rgba(20,48,42,.42),rgba(12,28,26,.28));border:1px solid rgba(180,210,170,.18)}
+#settings .settingsPanel .choice h2{margin:0 0 .35rem;font-size:1.02rem;letter-spacing:.06em;color:#d8f0c8}
+#settings .settingsPanel .choice small{display:block;margin-top:.35rem;opacity:.78;line-height:1.45;color:#b7cfc0}
+#settings .settingsPanel .choice p{display:flex;align-items:center;gap:.65rem;margin:.2rem 0}
+#settings .settingsPanel select.nameBox{flex:1;min-width:0}
+#settings .settingsPanel #settingsClose{min-width:7.5rem}
+
+#settings #joyMode{flex:1;min-width:0}

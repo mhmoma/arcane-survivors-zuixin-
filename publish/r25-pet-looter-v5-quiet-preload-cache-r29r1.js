@@ -1,12 +1,13 @@
 (function(){
 'use strict';
-const KEY='arcane-pets-v2',PET_CORE=150,CFG={seek:520,collect:34,gemSweep:120,screenPad:80,follow:4.2,run:260};
+const KEY='arcane-pets-v2',PET_CORE=150,CFG={seek:520,collect:34,gemSweep:120,screenPad:80,follow:4.2,run:260,draw:72};
+// 宠物素材改自 小怪跟boss 动物骨骼（保留旧 id，存档仍可出战）
 const PETS=[
-  {id:'sprigatito',name:'新叶喵',src:'./assets/pokemom/sprigatito.gif'},
-  {id:'fuecoco',name:'呆火鳄',src:'./assets/pokemom/fuecoco.gif'},
-  {id:'quaxly',name:'润水鸭',src:'./assets/pokemom/quaxly.gif'}
+  {id:'sprigatito',name:'青岚猊',spine:'cha_101',src:'./assets/pets/cha_101.png'},
+  {id:'fuecoco',name:'丹羽雀',spine:'cha_201',src:'./assets/pets/cha_201.png'},
+  {id:'quaxly',name:'玄甲龟',spine:'cha_301',src:'./assets/pets/cha_301.png'}
 ];
-let raf=0,state={owned:{},selected:null},ready=false,petImg=null,lastEquipSave=0,shopPick=null;
+let raf=0,state={owned:{},selected:null},ready=false,petImg=null,petCanvas=null,lastEquipSave=0,shopPick=null,petSpineHost=null,lastPetWall=0;
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function notice(t){try{typeof showNotice==='function'&&showNotice(t)}catch(_){} }
 function petDef(id=state.selected){return PETS.find(p=>p.id===id)||PETS[0]}
@@ -14,16 +15,16 @@ function normalize(v){let owned={...(v?.ownedPets||{})};let selected=owned[v?.se
 async function init(){if(ready)return state;try{state=normalize(await StorageSync.get(KEY));ready=true}catch(e){ready=true;console.error('宠物数据读取失败:',e.message,e.stack)}return state}
 async function save(){try{await StorageSync.put(KEY,{ownedPets:state.owned,selected:state.selected},'宠物')}catch(e){console.error('宠物数据保存失败:',e.message,e.stack)}}
 function waitPetImage(src,timeout=1800){return new Promise(resolve=>{let img=new Image(),done=false,t=setTimeout(()=>{if(done)return;done=true;resolve(false)},timeout);img.onload=()=>{if(done)return;done=true;clearTimeout(t);resolve(true)};img.onerror=()=>{if(done)return;done=true;clearTimeout(t);resolve(false)};img.src=src})}
-function preloadPetImages(){PETS.forEach(p=>{let img=new Image();img.src=p.src})}
-async function preloadOutgame(){await init();await Promise.all(PETS.map(p=>waitPetImage(p.src)));return true}
+function preloadPetImages(){PETS.forEach(p=>{let img=new Image();img.src=p.src;try{window.SpineEnemies?.loadPack?.(p.spine)}catch(_){}})}
+async function preloadOutgame(){await init();await Promise.all(PETS.map(p=>waitPetImage(p.src)));try{PETS.forEach(p=>window.SpineEnemies?.loadPack?.(p.spine))}catch(_){}return true}
 function owns(id){return !!state.owned?.[id]}
 function hasPet(){return !!state.selected&&owns(state.selected)}
 function active(){let s=window.S;return !!(hasPet()&&s&&s.run&&s.player&&!s.rift?.active&&s.mapId!=='rift')}
 function num(name,fallback){try{return typeof window[name]==='number'?window[name]:eval(`typeof ${name}==='number'?${name}:${fallback}`)}catch(_){return fallback}}
 function ensureUi(){
   if(!$('petPanel'))document.querySelector('.game')?.insertAdjacentHTML('beforeend',`<section id="petPanel" class="overlay hidden"><div class="panel petPanelBox"><h1 class="title">宠物</h1><div id="petPanelBody" class="shopDetailBody"></div><p class="sub"><button id="petPanelClose" class="ghostBtn" type="button">关闭</button></p></div></section>`);
-  if(!$('petLayer'))document.querySelector('.game')?.insertAdjacentHTML('beforeend',`<div id="petLayer" style="position:absolute;inset:0;pointer-events:none;z-index:13;overflow:hidden"><img id="petFollower" alt="宠物" style="position:absolute;width:26px;height:26px;object-fit:contain;transform:translate(-50%,-70%);display:none;filter:drop-shadow(0 2px 4px #000) drop-shadow(0 0 6px rgba(125,211,252,.5));image-rendering:auto"></div>`);
-  petImg=$('petFollower');if($('petPanelClose'))$('petPanelClose').onclick=closePanel;
+  if(!$('petLayer'))document.querySelector('.game')?.insertAdjacentHTML('beforeend',`<div id="petLayer" style="position:absolute;inset:0;pointer-events:none;z-index:13;overflow:hidden"><canvas id="petFollowerCanvas" width="96" height="96" style="position:absolute;width:56px;height:56px;transform:translate(-50%,-70%);display:none;filter:drop-shadow(0 2px 4px #000) drop-shadow(0 0 6px rgba(125,211,252,.5))"></canvas><img id="petFollower" alt="宠物" style="position:absolute;width:42px;height:42px;object-fit:contain;transform:translate(-50%,-70%);display:none;filter:drop-shadow(0 2px 4px #000) drop-shadow(0 0 6px rgba(125,211,252,.5));image-rendering:auto"></div>`);
+  petImg=$('petFollower');petCanvas=$('petFollowerCanvas');if($('petPanelClose'))$('petPanelClose').onclick=closePanel;
   if(!$('petStyle'))document.head.insertAdjacentHTML('beforeend',`<style id="petStyle">.petEquipBtn{margin-left:6px!important;min-width:34px!important;padding:5px 9px!important;border-radius:10px!important;background:rgba(56,189,248,.18)!important;color:#dff8ff!important;border:1px solid rgba(125,211,252,.6)!important;box-shadow:0 0 12px rgba(56,189,248,.22)!important}.petPanelBox{max-width:430px!important;padding:14px!important}.petPanelBox .title{margin:0 0 6px!important;font-size:24px!important}.petPanelBox .sub{margin:8px 0 0!important}.petStatusCard{display:grid;gap:6px;text-align:left;font-size:12px;line-height:1.35}.petStatusCard p{margin:0}.petPickGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.petPick{min-height:78px!important;padding:5px!important;border-radius:12px!important;font-size:12px!important;line-height:1.15!important}.petPick small{font-size:10px!important;line-height:1.1!important}.petPick.selected{outline:2px solid #facc15!important;background:linear-gradient(180deg,rgba(250,204,21,.28),rgba(56,189,248,.14))!important;box-shadow:0 0 18px rgba(250,204,21,.62),inset 0 0 18px rgba(250,204,21,.16)!important}.petPick.selected::after{content:'出战';position:absolute;right:4px;top:4px;padding:1px 5px;border-radius:999px;background:#facc15;color:#221;font-size:10px;font-weight:800}.petPick{position:relative!important}.petPick.locked{filter:saturate(.55);opacity:.78}.petPick.owned{filter:grayscale(.85) brightness(.55);opacity:.62}.petPick.shopPicked{outline:2px solid #38bdf8!important;box-shadow:0 0 14px rgba(56,189,248,.35)!important}.petPick img,.petOrbPreview img{image-rendering:auto;object-fit:contain}.petPick img{width:42px;height:42px}.petOrbPreview{width:54px;height:54px;margin:0 auto 4px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,rgba(125,211,252,.22),rgba(14,165,233,.08) 65%,transparent);box-shadow:0 0 16px rgba(56,189,248,.32)}.petOrbPreview img{max-width:50px;max-height:50px}</style>`)
 }
 function petCards(mode='panel'){return PETS.map(p=>{let own=owns(p.id),sel=state.selected===p.id,pick=shopPick===p.id,cls=mode==='shop'&&own?'owned':own?'unlocked':'locked';return `<button class="petPick ${sel?'selected':''} ${cls} ${pick?'shopPicked':''}" data-pet-pick="${esc(p.id)}" data-pet-mode="${mode}"><img src="${esc(p.src)}" alt="${esc(p.name)}"><b>${esc(p.name)}</b><small>${own?'已拥有':mode==='shop'?(pick?'待购买':'点击选择'):(sel?'出战中 · 点击休息':'未拥有 · 点击购买')}</small></button>`}).join('')}
@@ -50,7 +51,50 @@ function updatePet(dt){let pet=ensurePet();if(!pet)return;movePet(dt,pet);collec
 function patchUpdate(){if(typeof window.updateObjs!=='function'||window.updateObjs._petLooter)return false;let base=window.updateObjs;window.updateObjs=function(dt){let r=base.apply(this,arguments);try{updatePet(dt||0)}catch(e){console.error('宠物拾取更新失败:',e.message,e.stack)}return r};window.updateObjs._petLooter=true;return true}
 function patchEquipment(){if(typeof window.renderEquipment!=='function'||window.renderEquipment._petLooter)return false;let base=window.renderEquipment;window.renderEquipment=function(){let r=base.apply(this,arguments);addEquipButton();return r};window.renderEquipment._petLooter=true;addEquipButton();return true}
 function addEquipButton(){let sub=$('equipSub');if(!sub||sub.querySelector('[data-pet-open]'))return;let ref=sub.querySelector('[data-eq-class-switch]')||sub.firstChild,btn=document.createElement('button');btn.className='petEquipBtn';btn.type='button';btn.dataset.petOpen='1';btn.textContent='宠';btn.title='宠物';ref?.after?ref.after(btn):sub.prepend(btn)}
-function drawPet(){ensureUi();if(!petImg)return;let s=window.S,pet=active()?s.petCollector:null;if(!pet){petImg.style.display='none';return}let p=petDef();if(!petImg.src.includes(p.src.replace('./','')))petImg.src=p.src;let camX=num('CAMX',0),camY=num('CAMY',0),vw=num('W',innerWidth),vh=num('H',innerHeight),host=$('c'),cw=host?.clientWidth||innerWidth,ch=host?.clientHeight||innerHeight,moving=!!pet.target,bob=moving?Math.abs(Math.sin((s.time||0)*15))*5:Math.sin((s.time||0)*4)*1.5,squash=moving?(.92+Math.abs(Math.sin((s.time||0)*15))*.12):1,x=(pet.x-camX)/vw*cw,y=(pet.y-camY)/vh*ch-bob;petImg.style.display='block';petImg.style.left=x+'px';petImg.style.top=y+'px';petImg.style.transform=`translate(-50%,-70%) scaleX(${pet.target&&pet.target.obj.x<pet.x?-1:1}) scaleY(${squash})`}
+function ensurePetSpineHost(def,pet){
+  if(!petSpineHost)petSpineHost={hit:0,attackAnim:0,skillAnim:0,__prevX:0,__prevY:0};
+  petSpineHost.__spinePack=def.spine;
+  petSpineHost.x=pet.x;petSpineHost.y=pet.y;
+  petSpineHost.type='pet';petSpineHost.img=def.spine;
+  return petSpineHost;
+}
+function drawPet(){
+  ensureUi();
+  let s=window.S,pet=active()?s.petCollector:null;
+  if(!pet){if(petImg)petImg.style.display='none';if(petCanvas)petCanvas.style.display='none';return}
+  let p=petDef(),camX=num('CAMX',0),camY=num('CAMY',0),vw=num('W',innerWidth),vh=num('H',innerHeight),host=$('c'),cw=host?.clientWidth||innerWidth,ch=host?.clientHeight||innerHeight;
+  let moving=!!pet.target,bob=moving?Math.abs(Math.sin((s.time||0)*15))*4:Math.sin((s.time||0)*4)*1.5;
+  let faceLeft=!!(pet.target&&pet.target.obj&&pet.target.obj.x<pet.x);
+  let x=(pet.x-camX)/vw*cw,y=(pet.y-camY)/vh*ch-bob;
+  let SE=window.SpineEnemies,drawn=false;
+  if(SE?.renderEnemy&&petCanvas){
+    try{
+      let now=performance.now(),dt=lastPetWall?Math.min(.05,(now-lastPetWall)/1000):1/60;lastPetWall=now;
+      let spineHost=ensurePetSpineHost(p,pet);
+      // 用移动距离驱动 stand/jewelly（动物包无 walk）
+      spineHost.__prevX=spineHost.__prevX??pet.x;spineHost.__prevY=spineHost.__prevY??pet.y;
+      spineHost.__prevX=pet.x;spineHost.__prevY=pet.y;
+      spineHost.hit=0;spineHost.attackAnim=0;spineHost.skillAnim=0;
+      // 不调用 beginFrame，避免打乱战斗怪的 Spine 帧预算
+      drawn=!!SE.renderEnemy(spineHost,dt,petCanvas,{ignoreCap:true});
+      if(drawn){
+        petImg.style.display='none';
+        petCanvas.style.display='block';
+        petCanvas.style.left=x+'px';
+        petCanvas.style.top=y+'px';
+        petCanvas.style.transform=`translate(-50%,-70%) scaleX(${faceLeft?-1:1})`;
+      }
+    }catch(e){drawn=false}
+  }
+  if(!drawn&&petImg){
+    if(petCanvas)petCanvas.style.display='none';
+    if(!petImg.src.includes(p.src.replace('./','')))petImg.src=p.src;
+    petImg.style.display='block';
+    petImg.style.left=x+'px';
+    petImg.style.top=y+'px';
+    petImg.style.transform=`translate(-50%,-70%) scaleX(${faceLeft?-1:1})`;
+  }
+}
 async function pickPet(btn){let id=btn.dataset.petPick;if(btn.dataset.petMode==='shop'){shopPick=id;refreshShopDetail();return}await buyPet(id,'panel')}
 function bind(){document.addEventListener('click',e=>{let b=e.target.closest('[data-pet-open]');if(b){e.preventDefault();e.stopPropagation();openPanel();return}let p=e.target.closest('[data-pet-pick]');if(p){e.preventDefault();e.stopPropagation();pickPet(p)}},true)}
 function loop(){drawPet();raf=requestAnimationFrame(loop)}

@@ -25,21 +25,23 @@ body {
     linear-gradient(180deg, rgba(18, 60, 54, .18), transparent 46%);
 }
 
-.coverReady .coverOnly,
+.coverReady .coverOnly {
+  background-image: url('./assets/generated/cover-xiandao-piaomiao-cb20260722.webp') !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 .loadingArtReady .loadingScreen {
-  background-image: url('./assets/generated/cultivation-cover-landscape.c17ae7e5.webp') !important;
+  background-image: url('./assets/generated/loading-xiandao-piaomiao-cb20260722.webp') !important;
   background-position: center !important;
   background-size: cover !important;
 }
 
 .coverMenu {
-  background: linear-gradient(180deg, transparent, rgba(7, 17, 15, .76) 32%, rgba(7, 17, 15, .97)) !important;
+  background: linear-gradient(180deg, transparent, rgba(3, 2, 8, .28) 45%, rgba(3, 2, 8, .52)) !important;
 }
 
-.coverMenu:before {
-  content: "✦  太虚问道  ✦" !important;
-  color: #f2d88a !important;
-}
+.coverMenu:before { content: none !important; display: none !important; }
 
 .title,
 .card h2,
@@ -302,7 +304,7 @@ html body .mapCard:not(#ui-square-a):not(#ui-square-b)::after{
   position: absolute !important;
   top: max(12px, env(safe-area-inset-top)) !important;
   right: max(12px, env(safe-area-inset-right)) !important;
-  z-index: 38 !important;
+  z-index: 90 !important;
   width: 44px !important;
   height: 44px !important;
   min-width: 44px !important;
@@ -318,6 +320,8 @@ html body .mapCard:not(#ui-square-a):not(#ui-square-b)::after{
   line-height: 1 !important;
   box-shadow: inset 0 0 14px rgba(143, 216, 208, .12), 0 6px 18px rgba(0, 0, 0, .34) !important;
   backdrop-filter: blur(7px);
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
 }
 
 .musicToggle.muted {
@@ -464,4 +468,114 @@ html body .petPick,
 html body .shopSlot {
   border-radius: 0 !important;
   border-color: rgba(215, 185, 104, .36) !important;
+}
+
+/* 封面仙雾 / 灵珠动态层（对齐修仙游戏 · 仙道飘渺） */
+.coverOnly{position:relative;isolation:isolate}
+.coverFx{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.coverMist{position:absolute;inset:-8% -12%;background-image:var(--mist);background-size:cover;background-position:center;opacity:.55;mix-blend-mode:screen;animation:coverMistDrift 28s linear infinite}
+.coverMistB{opacity:.38;animation-duration:42s;animation-direction:reverse;filter:hue-rotate(18deg) brightness(1.05)}
+.coverOrb{position:absolute;width:54px;height:54px;background:var(--orb) center/contain no-repeat;opacity:.78;mix-blend-mode:screen;filter:drop-shadow(0 0 10px rgba(125,211,252,.55));animation:coverOrbFloat 9s ease-in-out infinite}
+.coverOrb.o1{left:12%;top:22%;width:42px;height:42px;animation-duration:8.5s}
+.coverOrb.o2{right:14%;top:28%;width:58px;height:58px;animation-duration:11s;animation-delay:-2s}
+.coverOrb.o3{left:22%;bottom:38%;width:36px;height:36px;animation-duration:10s;animation-delay:-4s;opacity:.55}
+.coverOrb.o4{right:20%;bottom:42%;width:48px;height:48px;animation-duration:12s;animation-delay:-1.5s}
+.coverQi{position:absolute;width:180px;height:2px;border-radius:999px;background:linear-gradient(90deg,transparent,rgba(186,230,253,.55),rgba(253,230,138,.45),transparent);filter:blur(1.2px);opacity:.55;animation:coverQiSweep 14s ease-in-out infinite}
+.coverQi.q1{left:8%;top:34%;width:220px;animation-duration:16s}
+.coverQi.q2{right:6%;top:46%;width:260px;animation-duration:19s;animation-delay:-5s;transform:rotate(-8deg)}
+.coverQi.q3{left:18%;top:58%;width:200px;animation-duration:17s;animation-delay:-9s;transform:rotate(6deg)}
+.coverMenu{position:relative;z-index:2}.coverTitleArt{display:block;width:min(420px,82vw);height:auto;margin:0 auto 8px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.55)) drop-shadow(0 0 22px rgba(125,211,252,.35));animation:coverTitleBreath 4.8s ease-in-out infinite}.coverMenu .sub{margin-top:2px}.loadingTitleArt{display:block;width:min(360px,78vw);height:auto;margin:0 auto 10px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.5)) drop-shadow(0 0 16px rgba(167,139,250,.35))}.loadingBox h1{display:none}
+@keyframes coverMistDrift{0%{transform:translate3d(0,0,0) scale(1.05)}50%{transform:translate3d(-4%,2%,0) scale(1.08)}100%{transform:translate3d(0,0,0) scale(1.05)}}
+@keyframes coverOrbFloat{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.65}50%{transform:translate3d(0,-16px,0) scale(1.08);opacity:.95}}
+@keyframes coverQiSweep{0%,100%{opacity:.2;transform:translateX(0) scaleX(.85)}50%{opacity:.7;transform:translateX(18px) scaleX(1.05)}}@keyframes coverTitleBreath{0%,100%{filter:drop-shadow(0 8px 18px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(125,211,252,.28));transform:translateY(0)}50%{filter:drop-shadow(0 10px 22px rgba(0,0,0,.6)) drop-shadow(0 0 28px rgba(253,230,138,.42));transform:translateY(-3px)}}
+@media (orientation:landscape){
+.coverTitleArt{width:min(340px,46vw);margin-bottom:4px}
+.coverOrb{width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+.coverMist,.coverOrb,.coverQi,.coverTitleArt{animation:none!important}
+}
+
+
+/* 功法图标图集 8x8 */
+.skillIconSprite{
+  display:inline-block;
+  width:46px;
+  height:46px;
+  vertical-align:middle;
+  margin:0 8px 2px 0;
+  flex:0 0 auto;
+  background-image:url('./assets/generated/cultivation-skill-icons-sheet-r1.webp?v=missile-3f-aim-r20-20260723191500');
+  background-size:800% 800%;
+  background-repeat:no-repeat;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.45), inset 0 0 0 1px rgba(232,213,163,.28);
+  filter:drop-shadow(0 0 8px rgba(125,211,192,.22));
+}
+.upgradeCard h2 .skillIconSprite,
+.skillCard h2 .skillIconSprite{
+  width:40px;
+  height:40px;
+  margin-right:6px;
+}
+.evoItem .skillIconSprite{
+  width:42px;
+  height:42px;
+  float:left;
+  margin:2px 10px 0 0;
+}
+.choice.evoChoice h2 .skillIconSprite{
+  width:38px;
+  height:38px;
+}
+.treeNodeIcons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:2px;
+  margin:0 0 3px;
+  pointer-events:none;
+}
+.treeNode .skillIconSprite{
+  width:20px;
+  height:20px;
+  margin:0;
+  border-radius:5px;
+  box-shadow:0 1px 4px rgba(0,0,0,.55);
+  filter:none;
+}
+.riftMiniBtn .skillIconSprite,
+.upgradeCard .tagLine .skillIconSprite{
+  width:22px;
+  height:22px;
+  margin:0 4px 0 0;
+  border-radius:5px;
+  box-shadow:none;
+  filter:none;
+  vertical-align:middle;
+}
+.upgradeCard .tagLine{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:4px;
+}
+.classSkillLine{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+}
+.classCard .skillIconSprite{
+  width:26px;
+  height:26px;
+  margin:0 2px 0 0;
+  border-radius:7px;
+}
+.upgradeCard h2,
+.skillCard h2,
+.choice.evoChoice h2{
+  display:flex;
+  align-items:center;
+  gap:2px;
 }

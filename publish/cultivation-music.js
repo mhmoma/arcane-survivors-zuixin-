@@ -34,44 +34,146 @@
     },
   };
   const SCALE = [0, 2, 5, 7, 9];
-  const BGM_SRC = './bgm/mystic-theme.mp3?v=cultivation-audio-r2';
+  const MENU_BGM_SRC = './bgm/xiandao-menu-mist-soft-r16.wav?v=menu-mist-soft-r16-20260723181000';
+  const BATTLE_BGM_SRC = './bgm/xiandao-battle-cb20260722-xiandao-r15.wav?v=menu-mist-soft-r16-20260723181000';
+  const FALLBACK_BGM_SRC = './bgm/mystic-theme.mp3?v=cultivation-audio-r2';
 
   function create({ ctx, destination }) {
     let timer = 0;
     let token = 0;
     let state = null;
     let volume = 1;
-    let bgm = null;
+    let menuBgm = null;
+    let battleBgm = null;
+    let fallbackBgm = null;
+    let bgmBroken = { menu: false, battle: false, fallback: false };
+    let wavOk = { menu: false, battle: false };
     let playWarningShown = false;
+    let usingSynth = false;
     const active = new Set();
 
-    function ensureBgm() {
-      if (bgm) return bgm;
-      bgm = new Audio(BGM_SRC);
-      bgm.loop = true;
-      bgm.preload = 'auto';
-      bgm.playsInline = true;
-      bgm.addEventListener('error', () => {
-        console.warn('仙乐底轨加载失败，继续使用职业旋律');
+    function makeTrack(src, key) {
+      const media = new Audio(src);
+      media.loop = true;
+      media.preload = 'auto';
+      media.playsInline = true;
+      media.addEventListener('error', () => {
+        bgmBroken[key] = true;
+        console.warn('仙乐底轨加载失败(' + key + ')，改用备用旋律');
+        if (state) ensurePlayback();
       }, { once: true });
-      return bgm;
+      media.addEventListener('canplay', () => {
+        if (key === 'menu' || key === 'battle') wavOk[key] = true;
+      }, { once: true });
+      return media;
+    }
+    function ensureTracks() {
+      if (!menuBgm) menuBgm = makeTrack(MENU_BGM_SRC, 'menu');
+      if (!battleBgm) battleBgm = makeTrack(BATTLE_BGM_SRC, 'battle');
+      if (!fallbackBgm) fallbackBgm = makeTrack(FALLBACK_BGM_SRC, 'fallback');
+    }
+    function modeKey() {
+      return state?.mode === 'battle' ? 'battle' : 'menu';
+    }
+    function preferredWav() {
+      ensureTracks();
+      const mode = modeKey();
+      if (mode === 'battle') {
+        if (!bgmBroken.battle) return battleBgm;
+        if (!bgmBroken.menu) return menuBgm;
+        return null;
+      }
+      if (!bgmBroken.menu) return menuBgm;
+      if (!bgmBroken.battle) return battleBgm;
+      return null;
+    }
+    function pauseAllWav(except) {
+      [menuBgm, battleBgm, fallbackBgm].forEach(track => {
+        if (!track || track === except) return;
+        try { track.pause(); } catch (_) {}
+      });
     }
     function syncBgmVolume() {
-      if (!bgm) return;
-      const mix = state?.mode === 'battle' ? .5 : .62;
-      bgm.volume = Math.max(0, Math.min(1, volume * mix));
+      // 菜单/城镇：柔和仙雾轨，整体更轻；战斗略高一点
+      const mix = state?.mode === 'battle' ? .48 : .26;
+      const vol = Math.max(0, Math.min(1, volume * mix));
+      const muted = volume <= 0 || vol <= 0.001;
+      [menuBgm, battleBgm, fallbackBgm].forEach(track => {
+        if (!track) return;
+        track.muted = muted;
+        track.volume = muted ? 0 : vol * (track === menuBgm ? .68 : track === fallbackBgm ? .72 : .88);
+      });
+    }
+    function stopSynth() {
+      token += 1;
+      clearTimeout(timer);
+      timer = 0;
+      usingSynth = false;
+      const now = ctx.currentTime;
+      active.forEach(node => { try { node.stop(now + .06); } catch (_) {} });
+      active.clear();
+    }
+    function startSynthLoop() {
+      if (usingSynth && timer) return;
+      stopSynth();
+      usingSynth = true;
+      const runToken = token;
+      const classId = state?.classId || 'paladin';
+      const mode = state?.mode || 'menu';
+      let bar = 0;
+      const loop = () => {
+        if (!state || !usingSynth || runToken !== token) return;
+        const seconds = scheduleBar(mode, classId, bar++);
+        timer = setTimeout(loop, Math.max(250, seconds * 1000 - 35));
+      };
+      loop();
+    }
+    function resumeWav(media) {
+      syncBgmVolume();
+      pauseAllWav(media);
+      if (media.paused === false) return true;
+      const pending = media.play();
+      if (pending && typeof pending.then === 'function') {
+        pending.then(() => {
+          // WAV 成功播放时关闭合成旋律，避免叠轨
+          stopSynth();
+        }).catch(error => {
+          const key = media === battleBgm ? 'battle' : media === menuBgm ? 'menu' : 'fallback';
+          bgmBroken[key] = true;
+          if (!playWarningShown) {
+            playWarningShown = true;
+            console.warn('仙乐等待玩家再次点击解锁:', error.message);
+          }
+          ensurePlayback();
+        });
+        return true;
+      }
+      return !media.paused;
+    }
+    function ensurePlayback() {
+      if (!state || volume <= 0) {
+        pauseAllWav();
+        stopSynth();
+        return;
+      }
+      const wav = preferredWav();
+      if (wav) {
+        stopSynth();
+        resumeWav(wav);
+        return;
+      }
+      // WAV 不可用时退回单条 fallback，再不行才用职业合成
+      ensureTracks();
+      if (fallbackBgm && !bgmBroken.fallback) {
+        stopSynth();
+        resumeWav(fallbackBgm);
+        return;
+      }
+      pauseAllWav();
+      startSynthLoop();
     }
     function resumeBgm() {
-      if (!state || volume <= 0) return;
-      const media = ensureBgm();
-      syncBgmVolume();
-      if (media.paused === false) return;
-      const pending = media.play();
-      pending?.catch?.(error => {
-        if (playWarningShown) return;
-        playWarningShown = true;
-        console.warn('仙乐等待玩家再次点击解锁:', error.message);
-      });
+      ensurePlayback();
     }
     function frequency(path, degree, octave = 0) {
       const index = ((degree % 5) + 5) % 5;
@@ -145,51 +247,53 @@
       const motif = mode === 'battle' ? path.battle : path.menu;
       const density = mode === 'battle' ? 8 : 4;
       const step = beat * (mode === 'battle' ? .5 : 1);
-      voice(frequency(path, path.bass[barIndex % 4], -1), start, beat * 3.8, 'sine', .085, .08, 520);
+      voice(frequency(path, path.bass[barIndex % 4], -1), start, beat * 3.8, 'sine', mode === 'battle' ? .085 : .055, .12, mode === 'battle' ? 520 : 420);
       for (let i = 0; i < density; i += 1) {
         const degree = motif[(barIndex * density + i) % motif.length];
         const at = start + i * step;
-        instrument(path.lead, frequency(path, degree, 1), at, mode === 'battle' ? .12 : .095);
+        const leadKind = mode === 'menu' ? 'wind' : path.lead;
+        instrument(leadKind, frequency(path, degree, 1), at, mode === 'battle' ? .12 : .062);
         if (mode === 'battle' && i % 2 === 0) drum(frequency(path, path.bass[(i / 2) % 4], -2), at, .14);
       }
       for (let i = 0; i < 4; i += 1) {
         const at = start + i * beat;
-        if (mode === 'menu' && i % 2 === 0) instrument(path.accent, frequency(path, motif[i], 1), at + beat * .48, .065);
+        if (mode === 'menu' && i % 2 === 0) instrument('bell', frequency(path, motif[i], 1), at + beat * .48, .038);
         if (mode === 'battle' && i % 2 === 1) instrument(path.accent, frequency(path, motif[i * 2], 1), at + beat * .72, .06);
       }
       return beat * 4;
     }
     function stop() {
-      token += 1;
-      clearTimeout(timer);
-      timer = 0;
       state = null;
-      const now = ctx.currentTime;
-      active.forEach(node => { try { node.stop(now + .06); } catch (_) {} });
-      active.clear();
-      try { bgm?.pause(); } catch (_) {}
+      stopSynth();
+      pauseAllWav();
     }
     function start(mode, classId = 'paladin') {
-      if (state?.mode === mode && state?.classId === classId && timer) {
-        resumeBgm();
+      const prevMode = state?.mode;
+      const prevClass = state?.classId;
+      state = { mode, classId };
+      // WAV 只跟菜单/战斗切换；职业变化仅影响合成回退，避免无意义重播叠音
+      if (prevMode === mode) {
+        const wav = preferredWav();
+        if (wav) {
+          resumeBgm();
+          return;
+        }
+        if (prevClass !== classId) startSynthLoop();
+        else resumeBgm();
         return;
       }
-      stop();
-      state = { mode, classId, bar: 0 };
+      pauseAllWav();
+      stopSynth();
       resumeBgm();
-      const runToken = token;
-      const loop = () => {
-        if (!state || runToken !== token) return;
-        const seconds = scheduleBar(state.mode, state.classId, state.bar++);
-        timer = setTimeout(loop, Math.max(250, seconds * 1000 - 35));
-      };
-      loop();
     }
     function setVolume(next) {
       volume = Math.max(0, Math.min(1, Number(next) || 0));
       syncBgmVolume();
       if (volume > 0) resumeBgm();
-      else try { bgm?.pause(); } catch (_) {}
+      else {
+        pauseAllWav();
+        stopSynth();
+      }
     }
     return { start, stop, resume: resumeBgm, setVolume };
   }

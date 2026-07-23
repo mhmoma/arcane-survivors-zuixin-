@@ -1,0 +1,272 @@
+
+effect_skill1_fly.png
+size: 583,520
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/skill/baodian_add/chg_Add/chg_0001
+  rotate: false
+  xy: 266, 2
+  size: 155, 43
+  orig: 306, 44
+  offset: 74, 1
+  index: -1
+images/skill/baodian_add/hg_add/hg_0001
+  rotate: true
+  xy: 223, 36
+  size: 126, 41
+  orig: 132, 41
+  offset: 3, 0
+  index: -1
+images/skill/baodian_add/ksg_add/ksg_01
+  rotate: false
+  xy: 333, 163
+  size: 113, 133
+  orig: 115, 133
+  offset: 2, 0
+  index: -1
+images/skill/baodian_add/ksgq_add/ksgq_01
+  rotate: true
+  xy: 104, 36
+  size: 118, 117
+  orig: 118, 117
+  offset: 0, 0
+  index: -1
+images/skill/cemianfeng_add/a0001
+  rotate: true
+  xy: 541, 78
+  size: 24, 15
+  orig: 77, 24
+  offset: 53, 8
+  index: -1
+images/skill/cemianfeng_add/a0002
+  rotate: true
+  xy: 562, 117
+  size: 24, 15
+  orig: 77, 24
+  offset: 53, 8
+  index: -1
+images/skill/cemianfeng_add/a0003
+  rotate: true
+  xy: 519, 76
+  size: 45, 20
+  orig: 77, 24
+  offset: 32, 3
+  index: -1
+images/skill/cemianfeng_add/a0004
+  rotate: true
+  xy: 552, 235
+  size: 70, 21
+  orig: 77, 24
+  offset: 5, 0
+  index: -1
+images/skill/cemianfeng_add/a0005
+  rotate: false
+  xy: 515, 55
+  size: 66, 19
+  orig: 77, 24
+  offset: 5, 1
+  index: -1
+images/skill/cemianfeng_add/a0006
+  rotate: true
+  xy: 530, 144
+  size: 65, 20
+  orig: 77, 24
+  offset: 5, 0
+  index: -1
+images/skill/cemianfeng_add/a0007
+  rotate: true
+  xy: 552, 181
+  size: 52, 22
+  orig: 77, 24
+  offset: 1, 0
+  index: -1
+images/skill/cemianfeng_add/a0008
+  rotate: true
+  xy: 552, 143
+  size: 36, 19
+  orig: 77, 24
+  offset: 1, 3
+  index: -1
+images/skill/cemianfeng_add/a0009
+  rotate: true
+  xy: 541, 104
+  size: 37, 19
+  orig: 77, 24
+  offset: 0, 3
+  index: -1
+images/skill/cemianfeng_add/a0010
+  rotate: true
+  xy: 239, 7
+  size: 27, 17
+  orig: 77, 24
+  offset: 0, 5
+  index: -1
+images/skill/cemianfeng_add/a0011
+  rotate: false
+  xy: 104, 21
+  size: 15, 13
+  orig: 77, 24
+  offset: 0, 9
+  index: -1
+images/skill/qiquan_add/qq_0001
+  rotate: true
+  xy: 332, 47
+  size: 31, 85
+  orig: 47, 103
+  offset: 14, 8
+  index: -1
+images/skill/qiquan_add/qq_0003
+  rotate: false
+  xy: 488, 206
+  size: 33, 99
+  orig: 47, 103
+  offset: 4, 1
+  index: -1
+images/skill/qiquan_add/qq_0005
+  rotate: true
+  xy: 135, 2
+  size: 32, 102
+  orig: 47, 103
+  offset: 2, 0
+  index: -1
+images/skill/tybg_add/tybg_01
+  rotate: false
+  xy: 488, 172
+  size: 31, 32
+  orig: 34, 32
+  offset: 2, 0
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00074
+  rotate: false
+  xy: 266, 47
+  size: 64, 115
+  orig: 194, 176
+  offset: 6, 49
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00075
+  rotate: false
+  xy: 71, 291
+  size: 129, 151
+  orig: 194, 176
+  offset: 60, 5
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00076
+  rotate: false
+  xy: 202, 293
+  size: 129, 149
+  orig: 194, 176
+  offset: 50, 7
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00077
+  rotate: false
+  xy: 333, 298
+  size: 130, 144
+  orig: 194, 176
+  offset: 49, 7
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00078
+  rotate: false
+  xy: 202, 164
+  size: 129, 127
+  orig: 194, 176
+  offset: 48, 7
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00079
+  rotate: false
+  xy: 71, 156
+  size: 129, 133
+  orig: 194, 176
+  offset: 48, 8
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00080
+  rotate: false
+  xy: 465, 307
+  size: 116, 135
+  orig: 194, 176
+  offset: 61, 7
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00081
+  rotate: false
+  xy: 2, 21
+  size: 100, 124
+  orig: 194, 176
+  offset: 75, 8
+  index: -1
+images/skill/xuanfengquan_add/xuanfengquan_00082
+  rotate: true
+  xy: 501, 123
+  size: 47, 27
+  orig: 194, 176
+  offset: 84, 11
+  index: -1
+images/skill/zuihouyiji/dtcg_add/dtcg_0001
+  rotate: false
+  xy: 332, 80
+  size: 185, 38
+  orig: 185, 40
+  offset: 0, 0
+  index: -1
+images/skill/zuihouyiji/dtcg_add/dtcg_0003
+  rotate: true
+  xy: 2, 147
+  size: 295, 67
+  orig: 311, 79
+  offset: 16, 7
+  index: -1
+images/skill/zuihouyiji/dtcg_add/dtcg_0005
+  rotate: false
+  xy: 294, 444
+  size: 283, 74
+  orig: 311, 79
+  offset: 28, 5
+  index: -1
+images/skill/zuihouyiji/dtcg_add/dtcg_0006
+  rotate: false
+  xy: 2, 444
+  size: 290, 74
+  orig: 311, 79
+  offset: 21, 5
+  index: -1
+images/skill/zuihouyiji/dtcg_add/dtcg_0008
+  rotate: false
+  xy: 2, 2
+  size: 131, 17
+  orig: 311, 79
+  offset: 180, 29
+  index: -1
+images/skill/zuihouyiji/twtd/twtd_0001
+  rotate: false
+  xy: 419, 48
+  size: 94, 30
+  orig: 172, 48
+  offset: 78, 2
+  index: -1
+images/skill/zuihouyiji/twtd/twtd_0002
+  rotate: false
+  xy: 332, 120
+  size: 167, 41
+  orig: 172, 48
+  offset: 4, 3
+  index: -1
+images/skill/zuihouyiji/twtd/twtd_0003
+  rotate: false
+  xy: 423, 6
+  size: 152, 40
+  orig: 172, 48
+  offset: 5, 4
+  index: -1
+images/skill/zuihouyiji/twtd/twtd_0004
+  rotate: true
+  xy: 448, 163
+  size: 133, 38
+  orig: 172, 48
+  offset: 5, 5
+  index: -1
+images/skill/zuihouyiji/twtd/twtd_0006
+  rotate: true
+  xy: 523, 211
+  size: 94, 27
+  orig: 172, 48
+  offset: 5, 16
+  index: -1

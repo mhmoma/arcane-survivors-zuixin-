@@ -1,0 +1,55 @@
+
+effect_fly.png
+size: 159,549
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/skill0/fx/0_00001
+  rotate: true
+  xy: 81, 83
+  size: 152, 76
+  orig: 154, 77
+  offset: 2, 0
+  index: -1
+effect/skill0/fx/0_00003
+  rotate: true
+  xy: 81, 393
+  size: 154, 76
+  orig: 154, 77
+  offset: 0, 0
+  index: -1
+effect/skill0/fx/0_00005
+  rotate: true
+  xy: 81, 237
+  size: 154, 76
+  orig: 154, 77
+  offset: 0, 0
+  index: -1
+effect/skill0/fx/0_00007
+  rotate: true
+  xy: 2, 393
+  size: 154, 77
+  orig: 154, 77
+  offset: 0, 0
+  index: -1
+effect/skill0/fx/0_00009
+  rotate: true
+  xy: 2, 237
+  size: 154, 77
+  orig: 154, 77
+  offset: 0, 0
+  index: -1
+effect/skill0/fx/0_00011
+  rotate: true
+  xy: 2, 81
+  size: 154, 77
+  orig: 154, 77
+  offset: 0, 0
+  index: -1
+effect/skill0/fx/0_00013
+  rotate: false
+  xy: 2, 2
+  size: 154, 77
+  orig: 154, 77
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,181 @@
+
+effect_skill1_buff.png
+size: 835,124
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texiao/skill1/zhiliaoadd/jiaxue20000
+  rotate: true
+  xy: 524, 62
+  size: 60, 82
+  orig: 80, 101
+  offset: 10, 3
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20002
+  rotate: true
+  xy: 439, 62
+  size: 60, 83
+  orig: 80, 101
+  offset: 10, 4
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20004
+  rotate: true
+  xy: 608, 62
+  size: 60, 81
+  orig: 80, 101
+  offset: 10, 7
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20006
+  rotate: true
+  xy: 2, 61
+  size: 61, 87
+  orig: 80, 101
+  offset: 10, 1
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20008
+  rotate: true
+  xy: 91, 61
+  size: 61, 85
+  orig: 80, 101
+  offset: 10, 2
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20010
+  rotate: true
+  xy: 265, 61
+  size: 61, 84
+  orig: 80, 101
+  offset: 10, 7
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20012
+  rotate: true
+  xy: 178, 61
+  size: 61, 85
+  orig: 80, 101
+  offset: 10, 7
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20014
+  rotate: true
+  xy: 351, 62
+  size: 60, 86
+  orig: 80, 101
+  offset: 11, 5
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20016
+  rotate: true
+  xy: 691, 3
+  size: 59, 85
+  orig: 80, 101
+  offset: 12, 8
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20018
+  rotate: true
+  xy: 351, 2
+  size: 58, 85
+  orig: 80, 101
+  offset: 13, 7
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20020
+  rotate: true
+  xy: 691, 64
+  size: 58, 86
+  orig: 80, 101
+  offset: 13, 7
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20022
+  rotate: true
+  xy: 438, 4
+  size: 56, 82
+  orig: 80, 101
+  offset: 14, 8
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20024
+  rotate: false
+  xy: 779, 41
+  size: 53, 81
+  orig: 80, 101
+  offset: 12, 8
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20026
+  rotate: true
+  xy: 522, 11
+  size: 49, 71
+  orig: 80, 101
+  offset: 10, 20
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20028
+  rotate: true
+  xy: 595, 11
+  size: 49, 70
+  orig: 80, 101
+  offset: 10, 22
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20030
+  rotate: true
+  xy: 2, 10
+  size: 49, 68
+  orig: 80, 101
+  offset: 10, 24
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20032
+  rotate: true
+  xy: 72, 10
+  size: 49, 60
+  orig: 80, 101
+  offset: 10, 26
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20034
+  rotate: true
+  xy: 134, 10
+  size: 49, 58
+  orig: 80, 101
+  offset: 10, 29
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20036
+  rotate: true
+  xy: 194, 11
+  size: 48, 56
+  orig: 80, 101
+  offset: 10, 32
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20038
+  rotate: true
+  xy: 252, 14
+  size: 45, 52
+  orig: 80, 101
+  offset: 10, 37
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20040
+  rotate: false
+  xy: 306, 10
+  size: 40, 49
+  orig: 80, 101
+  offset: 10, 40
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20042
+  rotate: false
+  xy: 778, 11
+  size: 33, 28
+  orig: 80, 101
+  offset: 10, 43
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20044
+  rotate: false
+  xy: 813, 20
+  size: 18, 19
+  orig: 80, 101
+  offset: 11, 46
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20046
+  rotate: false
+  xy: 813, 2
+  size: 16, 16
+  orig: 80, 101
+  offset: 12, 50
+  index: -1
+texiao/skill1/zhiliaoadd/jiaxue20048
+  rotate: false
+  xy: 831, 16
+  size: 2, 2
+  orig: 80, 101
+  offset: 19, 60
+  index: -1

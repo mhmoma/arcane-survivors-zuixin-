@@ -1,0 +1,216 @@
+
+effect_skill1_pinmu.png
+size: 506,520
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texiao/skill1/fenweilizi_add/fenweilizi_01
+  rotate: false
+  xy: 135, 405
+  size: 121, 113
+  orig: 150, 167
+  offset: 14, 26
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_03
+  rotate: false
+  xy: 2, 284
+  size: 126, 118
+  orig: 150, 167
+  offset: 13, 18
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_05
+  rotate: false
+  xy: 258, 413
+  size: 126, 105
+  orig: 150, 167
+  offset: 17, 23
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_07
+  rotate: true
+  xy: 109, 21
+  size: 121, 93
+  orig: 150, 167
+  offset: 24, 33
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_09
+  rotate: true
+  xy: 2, 155
+  size: 127, 107
+  orig: 150, 167
+  offset: 18, 26
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_11
+  rotate: true
+  xy: 411, 84
+  size: 102, 92
+  orig: 150, 167
+  offset: 18, 28
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_13
+  rotate: true
+  xy: 398, 299
+  size: 114, 103
+  orig: 150, 167
+  offset: 11, 23
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_15
+  rotate: false
+  xy: 281, 270
+  size: 113, 116
+  orig: 150, 167
+  offset: 16, 17
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_17
+  rotate: false
+  xy: 307, 43
+  size: 102, 114
+  orig: 150, 167
+  offset: 18, 17
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_19
+  rotate: true
+  xy: 386, 415
+  size: 103, 118
+  orig: 150, 167
+  offset: 20, 17
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_21
+  rotate: true
+  xy: 281, 159
+  size: 109, 116
+  orig: 150, 167
+  offset: 23, 18
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_23
+  rotate: false
+  xy: 399, 188
+  size: 102, 109
+  orig: 150, 167
+  offset: 26, 23
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_25
+  rotate: true
+  xy: 2, 32
+  size: 121, 105
+  orig: 150, 167
+  offset: 16, 24
+  index: -1
+texiao/skill1/fenweilizi_add/fenweilizi_27
+  rotate: true
+  xy: 204, 18
+  size: 124, 101
+  orig: 150, 167
+  offset: 20, 33
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_04
+  rotate: true
+  xy: 111, 144
+  size: 138, 23
+  orig: 156, 54
+  offset: 10, 18
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_07
+  rotate: false
+  xy: 258, 388
+  size: 138, 23
+  orig: 156, 54
+  offset: 10, 18
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_10
+  rotate: true
+  xy: 136, 159
+  size: 138, 14
+  orig: 156, 54
+  offset: 10, 27
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_13
+  rotate: true
+  xy: 152, 159
+  size: 138, 24
+  orig: 156, 54
+  offset: 10, 17
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_16
+  rotate: true
+  xy: 178, 159
+  size: 138, 24
+  orig: 156, 54
+  offset: 10, 17
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_19
+  rotate: false
+  xy: 2, 2
+  size: 138, 17
+  orig: 156, 54
+  offset: 10, 24
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_22
+  rotate: false
+  xy: 136, 144
+  size: 138, 13
+  orig: 156, 54
+  offset: 10, 28
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_25
+  rotate: true
+  xy: 256, 159
+  size: 138, 23
+  orig: 156, 54
+  offset: 10, 18
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_28
+  rotate: true
+  xy: 204, 159
+  size: 138, 24
+  orig: 156, 54
+  offset: 10, 17
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_31
+  rotate: false
+  xy: 307, 18
+  size: 138, 23
+  orig: 156, 54
+  offset: 10, 18
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_34
+  rotate: true
+  xy: 230, 159
+  size: 138, 24
+  orig: 156, 54
+  offset: 10, 17
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_37
+  rotate: false
+  xy: 142, 2
+  size: 138, 14
+  orig: 156, 54
+  offset: 10, 27
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_40
+  rotate: false
+  xy: 130, 339
+  size: 138, 21
+  orig: 156, 54
+  offset: 10, 20
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_43
+  rotate: false
+  xy: 130, 362
+  size: 138, 24
+  orig: 156, 54
+  offset: 10, 17
+  index: -1
+texiao/skill1/fenweixian_add/fenweixian_46
+  rotate: false
+  xy: 130, 318
+  size: 138, 19
+  orig: 156, 54
+  offset: 10, 22
+  index: -1
+texiao/skill1/shan01
+  rotate: false
+  xy: 2, 404
+  size: 131, 114
+  orig: 138, 129
+  offset: 5, 9
+  index: -1

@@ -37,11 +37,14 @@
     }
     const drawOptions = {
       elapsed: performance.now() - instance.startedAt,
-      speed: config.speeds[action] || 1,
-      height: options.height || 96,
+      speed: options.speed || config.speeds[action] || 1,
+      // 城镇默认统一身高；调用方传入 height 时优先生效
+      height: options.height || 80,
       face: options.face || 1,
       alpha: options.alpha ?? 1,
       groundOffset: options.groundOffset || 0,
+      clear: options.clear !== false,
+      minDpr: options.minDpr,
     };
     if (!gpu.available) return false;
     instance.gpu ||= gpu.createInstance(source);

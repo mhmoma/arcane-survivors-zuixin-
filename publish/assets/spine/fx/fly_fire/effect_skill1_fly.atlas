@@ -1,0 +1,174 @@
+
+effect_skill1_fly.png
+size: 842,486
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/huaban_luodi/huaban_luodi_0009
+  rotate: false
+  xy: 654, 123
+  size: 79, 66
+  orig: 85, 100
+  offset: 6, 19
+  index: -1
+effect/huo00/huo_0002
+  rotate: false
+  xy: 654, 9
+  size: 96, 87
+  orig: 170, 183
+  offset: 54, 61
+  index: -1
+effect/huo00/huo_0005
+  rotate: false
+  xy: 739, 209
+  size: 101, 96
+  orig: 170, 183
+  offset: 54, 59
+  index: -1
+effect/huo00/huo_0008
+  rotate: false
+  xy: 739, 98
+  size: 100, 109
+  orig: 170, 183
+  offset: 54, 61
+  index: -1
+effect/huo00/huo_0011
+  rotate: false
+  xy: 207, 18
+  size: 103, 119
+  orig: 170, 183
+  offset: 54, 60
+  index: -1
+effect/huo00/huo_0014
+  rotate: false
+  xy: 99, 14
+  size: 106, 120
+  orig: 170, 183
+  offset: 54, 63
+  index: -1
+effect/huo00/huo_0017
+  rotate: false
+  xy: 2, 12
+  size: 95, 122
+  orig: 170, 183
+  offset: 54, 61
+  index: -1
+effect/huo00/huo_0020
+  rotate: false
+  xy: 647, 191
+  size: 90, 114
+  orig: 170, 183
+  offset: 54, 62
+  index: -1
+effect/huo00/huo_0023
+  rotate: true
+  xy: 709, 395
+  size: 89, 117
+  orig: 170, 183
+  offset: 55, 59
+  index: -1
+effect/huo00/huo_0026
+  rotate: true
+  xy: 709, 307
+  size: 86, 116
+  orig: 170, 183
+  offset: 55, 57
+  index: -1
+effect/huo00/huo_0029
+  rotate: false
+  xy: 312, 5
+  size: 92, 136
+  orig: 170, 183
+  offset: 55, 36
+  index: -1
+effect/huo00/huo_0032
+  rotate: false
+  xy: 564, 16
+  size: 88, 147
+  orig: 170, 183
+  offset: 54, 25
+  index: -1
+effect/huo00/huo_0035
+  rotate: true
+  xy: 448, 325
+  size: 159, 147
+  orig: 170, 183
+  offset: 3, 26
+  index: -1
+effect/huo00/huo_0038
+  rotate: true
+  xy: 349, 146
+  size: 167, 153
+  orig: 170, 183
+  offset: 1, 25
+  index: -1
+effect/huo00/huo_0041
+  rotate: true
+  xy: 406, 2
+  size: 142, 156
+  orig: 170, 183
+  offset: 15, 24
+  index: -1
+effect/huo00/huo_0044
+  rotate: false
+  xy: 504, 165
+  size: 141, 158
+  orig: 170, 183
+  offset: 16, 24
+  index: -1
+effect/huo00/huo_0047
+  rotate: false
+  xy: 597, 329
+  size: 110, 155
+  orig: 170, 183
+  offset: 48, 20
+  index: -1
+effect/huo00/huo_0050
+  rotate: false
+  xy: 112, 312
+  size: 110, 172
+  orig: 170, 183
+  offset: 49, 3
+  index: -1
+effect/huo00/huo_0053
+  rotate: false
+  xy: 235, 143
+  size: 112, 169
+  orig: 170, 183
+  offset: 48, 6
+  index: -1
+effect/huo00/huo_0056
+  rotate: false
+  xy: 2, 136
+  size: 117, 172
+  orig: 170, 183
+  offset: 46, 3
+  index: -1
+effect/huo00/huo_0059
+  rotate: false
+  xy: 2, 310
+  size: 108, 174
+  orig: 170, 183
+  offset: 46, 0
+  index: -1
+effect/huo00/huo_0062
+  rotate: false
+  xy: 224, 314
+  size: 108, 170
+  orig: 170, 183
+  offset: 47, 4
+  index: -1
+effect/huo00/huo_0065
+  rotate: false
+  xy: 121, 139
+  size: 112, 171
+  orig: 170, 183
+  offset: 44, 1
+  index: -1
+effect/huo00/huo_0068
+  rotate: false
+  xy: 334, 315
+  size: 112, 169
+  orig: 170, 183
+  offset: 43, 1
+  index: -1

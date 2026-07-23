@@ -1,0 +1,34 @@
+
+effect_fly.png
+size: 80,86
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+eff/skill1_fashe_nujian_00000
+  rotate: false
+  xy: 2, 2
+  size: 75, 26
+  orig: 86, 37
+  offset: 8, 5
+  index: -1
+eff/skill1_fashe_nujian_00006
+  rotate: false
+  xy: 2, 2
+  size: 75, 26
+  orig: 86, 37
+  offset: 8, 5
+  index: -1
+eff/skill1_fashe_nujian_00002
+  rotate: false
+  xy: 2, 58
+  size: 76, 26
+  orig: 86, 37
+  offset: 7, 5
+  index: -1
+eff/skill1_fashe_nujian_00004
+  rotate: false
+  xy: 2, 30
+  size: 76, 26
+  orig: 86, 37
+  offset: 7, 5
+  index: -1

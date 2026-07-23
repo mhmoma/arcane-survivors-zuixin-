@@ -1,0 +1,2124 @@
+{
+  "scanned": 152,
+  "walkableCount": 131,
+  "walkable": [
+    {
+      "id": "cha_1011",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1021",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1032",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1042",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1052",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1063",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1073",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1083",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1094",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1104",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1114",
+      "walk": true,
+      "anims": [
+        "attack",
+        "backward",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1124",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1134",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1144",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1155",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1156",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1157",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "stand3",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1165",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1166",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1167",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1175",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1176",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1177",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1185",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1186",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1187",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1195",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1196",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1197",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1205",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1206",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1207",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1215",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1216",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1217",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1225",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1227",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1235",
+      "walk": true,
+      "anims": [
+        "attack",
+        "attack2",
+        "attack3",
+        "dead",
+        "fix_skill",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1236",
+      "walk": true,
+      "anims": [
+        "attack",
+        "attack2",
+        "attack3",
+        "dead",
+        "fix_skill",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1237",
+      "walk": true,
+      "anims": [
+        "attack",
+        "attack2",
+        "attack3",
+        "dead",
+        "fix_skill",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_1245",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3175",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3176",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3177",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3185",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3186",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3187",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3195",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3196",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3197",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3205",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3206",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3207",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3215",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "rogue_attack",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3216",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3217",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3225",
+      "walk": true,
+      "anims": [
+        "attack",
+        "attack_ex",
+        "dead",
+        "fix_skill_ex",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3226",
+      "walk": true,
+      "anims": [
+        "attack",
+        "attack_ex",
+        "dead",
+        "fix_skill_ex",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3227",
+      "walk": true,
+      "anims": [
+        "attack",
+        "attack_ex",
+        "dead",
+        "fix_skill_ex",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3235",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3236",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3237",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3245",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_skill",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3246",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_skill",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3247",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_skill",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_3996",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4011",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4021",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4032",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4042",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4052",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4063",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4073",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4083",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4094",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4104",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4114",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4124",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4134",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4144",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4155",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4156",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4157",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4165",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "rogue_attack",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4166",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "rogue_attack",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4167",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "rogue_attack",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4175",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4176",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4177",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4185",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4186",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4187",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4195",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4196",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4197",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4205",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4206",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4207",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4215",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "skill_old",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4216",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "skill_old",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4217",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "skill_old",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4225",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4226",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4227",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4235",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "fix_passive",
+        "fix_skill",
+        "hurt",
+        "passive",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4236",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "fix_passive",
+        "fix_skill",
+        "hurt",
+        "passive",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4237",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "fix_passive",
+        "fix_skill",
+        "hurt",
+        "passive",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4245",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "fix_skill_ex",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4246",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "fix_skill_ex",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4247",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "fix_skill_ex",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4255",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "stand3",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4256",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "stand3",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4257",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "skill_ex",
+        "stand",
+        "stand2",
+        "stand3",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_4996",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5013",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5024",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5034",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5044",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5056",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5057",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5066",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5067",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5075",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5076",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5077",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5085",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5086",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5087",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5095",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5096",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    },
+    {
+      "id": "cha_5097",
+      "walk": true,
+      "anims": [
+        "attack",
+        "dead",
+        "fix_attack",
+        "hurt",
+        "run",
+        "skill",
+        "stand",
+        "stand2",
+        "walk"
+      ]
+    }
+  ],
+  "noWalkSample": [
+    {
+      "id": "101",
+      "walk": false,
+      "anims": [
+        "fx",
+        "fx2",
+        "fx3",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_102",
+      "walk": false,
+      "anims": [
+        "fx",
+        "fx2",
+        "fx3",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_103",
+      "walk": false,
+      "anims": [
+        "fx",
+        "fx2",
+        "fx3",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_201",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_202",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_203",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_301",
+      "walk": false,
+      "anims": [
+        "fx",
+        "fx2",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_302",
+      "walk": false,
+      "anims": [
+        "fx",
+        "fx2",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_303",
+      "walk": false,
+      "anims": [
+        "fx",
+        "fx2",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_3185-立绘",
+      "walk": false,
+      "anims": [
+        "1",
+        "19",
+        "29",
+        "30",
+        "36",
+        "37"
+      ]
+    },
+    {
+      "id": "cha_3195-立绘",
+      "walk": false,
+      "anims": [
+        "1",
+        "10",
+        "15",
+        "25"
+      ]
+    },
+    {
+      "id": "cha_401",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_402",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_403",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_4155-立绘",
+      "walk": false,
+      "anims": [
+        "1",
+        "2",
+        "8",
+        "13",
+        "15",
+        "23",
+        "24"
+      ]
+    },
+    {
+      "id": "cha_4205-立绘",
+      "walk": false,
+      "anims": [
+        "1",
+        "3",
+        "7",
+        "14",
+        "27",
+        "28",
+        "42"
+      ]
+    },
+    {
+      "id": "cha_501",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_502",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_503",
+      "walk": false,
+      "anims": [
+        "fx",
+        "jewelly",
+        "stand"
+      ]
+    },
+    {
+      "id": "cha_5055",
+      "walk": false,
+      "anims": [
+        "1",
+        "7",
+        "13",
+        "15",
+        "31",
+        "31_temp",
+        "31_temp02"
+      ]
+    },
+    {
+      "id": "cha_5065",
+      "walk": false,
+      "anims": [
+        "1",
+        "5",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21"
+      ]
+    }
+  ],
+  "errors": []
+}

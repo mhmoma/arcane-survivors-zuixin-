@@ -1,0 +1,69 @@
+
+effect_skill0.png
+size: 675,551
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/xinxiugai/qxdg_01_add/qxdg_01_0001
+  rotate: true
+  xy: 2, 201
+  size: 348, 221
+  orig: 404, 236
+  offset: 31, 1
+  index: -1
+effect/xinxiugai/qxdg_01_add/qxdg_01_0002
+  rotate: false
+  xy: 2, 2
+  size: 333, 197
+  orig: 404, 236
+  offset: 44, 26
+  index: -1
+effect/xinxiugai/qxdg_01_add/qxdg_01_0004
+  rotate: true
+  xy: 337, 12
+  size: 192, 187
+  orig: 404, 236
+  offset: 165, 39
+  index: -1
+effect/xinxiugai/qxdg_01_add/qxdg_01_0006
+  rotate: true
+  xy: 559, 388
+  size: 161, 114
+  orig: 404, 236
+  offset: 181, 104
+  index: -1
+effect/xinxiugai/qxdg_02_add/qxdg_02_0001
+  rotate: false
+  xy: 337, 376
+  size: 220, 173
+  orig: 404, 236
+  offset: 140, 38
+  index: -1
+effect/xinxiugai/qxdg_02_add/qxdg_02_0002
+  rotate: false
+  xy: 225, 206
+  size: 208, 168
+  orig: 404, 236
+  offset: 152, 40
+  index: -1
+effect/xinxiugai/qxdg_02_add/qxdg_02_0004
+  rotate: false
+  xy: 435, 214
+  size: 187, 160
+  orig: 404, 236
+  offset: 146, 38
+  index: -1
+effect/xinxiugai/qxdg_02_add/qxdg_02_0006
+  rotate: true
+  xy: 526, 30
+  size: 182, 92
+  orig: 404, 236
+  offset: 150, 47
+  index: -1
+effect/xinxiugai/yun_00029
+  rotate: false
+  xy: 225, 437
+  size: 107, 112
+  orig: 115, 113
+  offset: 3, 1
+  index: -1

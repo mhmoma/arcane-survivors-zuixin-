@@ -1,0 +1,41 @@
+
+effect_huo.png
+size: 619,86
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/bo/1_00000
+  rotate: true
+  xy: 575, 8
+  size: 76, 42
+  orig: 152, 88
+  offset: 76, 28
+  index: -1
+effect/bo/1_00001
+  rotate: false
+  xy: 440, 14
+  size: 133, 70
+  orig: 152, 88
+  offset: 19, 10
+  index: -1
+effect/bo/1_00002
+  rotate: false
+  xy: 2, 2
+  size: 148, 82
+  orig: 152, 88
+  offset: 4, 3
+  index: -1
+effect/bo/1_00003
+  rotate: false
+  xy: 298, 10
+  size: 140, 74
+  orig: 152, 88
+  offset: 12, 5
+  index: -1
+effect/bo/1_00004
+  rotate: false
+  xy: 152, 8
+  size: 144, 76
+  orig: 152, 88
+  offset: 8, 4
+  index: -1

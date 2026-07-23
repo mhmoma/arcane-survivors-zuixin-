@@ -1,0 +1,194 @@
+[
+  {
+    "id": "cha_101",
+    "srcFolder": "101",
+    "skel": "cha_101.skel",
+    "atlas": "cha_101.atlas",
+    "png": "cha_101.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_1011",
+    "srcFolder": "cha_1011",
+    "skel": "cha_1011.skel",
+    "atlas": "cha_1011.atlas",
+    "png": "cha_1011.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_102",
+    "srcFolder": "cha_102",
+    "skel": "cha_102.skel",
+    "atlas": "cha_102.atlas",
+    "png": "cha_102.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_1021",
+    "srcFolder": "cha_1021",
+    "skel": "cha_1021.skel",
+    "atlas": "cha_1021.atlas",
+    "png": "cha_1021.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_103",
+    "srcFolder": "cha_103",
+    "skel": "cha_103.skel",
+    "atlas": "cha_103.atlas",
+    "png": "cha_103.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_1032",
+    "srcFolder": "cha_1032",
+    "skel": "cha_1032.skel",
+    "atlas": "cha_1032.atlas",
+    "png": "cha_1032.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_1042",
+    "srcFolder": "cha_1042",
+    "skel": "cha_1042.skel",
+    "atlas": "cha_1042.atlas",
+    "png": "cha_1042.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_1052",
+    "srcFolder": "cha_1052",
+    "skel": "cha_1052.skel",
+    "atlas": "cha_1052.atlas",
+    "png": "cha_1052.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_1063",
+    "srcFolder": "cha_1063",
+    "skel": "cha_1063.skel",
+    "atlas": "cha_1063.atlas",
+    "png": "cha_1063.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_1073",
+    "srcFolder": "cha_1073",
+    "skel": "cha_1073.skel",
+    "atlas": "cha_1073.atlas",
+    "png": "cha_1073.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_1083",
+    "srcFolder": "cha_1083",
+    "skel": "cha_1083.skel",
+    "atlas": "cha_1083.atlas",
+    "png": "cha_1083.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_1094",
+    "srcFolder": "cha_1094",
+    "skel": "cha_1094.skel",
+    "atlas": "cha_1094.atlas",
+    "png": "cha_1094.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_201",
+    "srcFolder": "cha_201",
+    "skel": "cha_201.skel",
+    "atlas": "cha_201.atlas",
+    "png": "cha_201.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_202",
+    "srcFolder": "cha_202",
+    "skel": "cha_202.skel",
+    "atlas": "cha_202.atlas",
+    "png": "cha_202.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_203",
+    "srcFolder": "cha_203",
+    "skel": "cha_203.skel",
+    "atlas": "cha_203.atlas",
+    "png": "cha_203.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_301",
+    "srcFolder": "cha_301",
+    "skel": "cha_301.skel",
+    "atlas": "cha_301.atlas",
+    "png": "cha_301.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_302",
+    "srcFolder": "cha_302",
+    "skel": "cha_302.skel",
+    "atlas": "cha_302.atlas",
+    "png": "cha_302.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_303",
+    "srcFolder": "cha_303",
+    "skel": "cha_303.skel",
+    "atlas": "cha_303.atlas",
+    "png": "cha_303.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_401",
+    "srcFolder": "cha_401",
+    "skel": "cha_401.skel",
+    "atlas": "cha_401.atlas",
+    "png": "cha_401.png",
+    "humanoid": true
+  },
+  {
+    "id": "cha_402",
+    "srcFolder": "cha_402",
+    "skel": "cha_402.skel",
+    "atlas": "cha_402.atlas",
+    "png": "cha_402.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_403",
+    "srcFolder": "cha_403",
+    "skel": "cha_403.skel",
+    "atlas": "cha_403.atlas",
+    "png": "cha_403.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_501",
+    "srcFolder": "cha_501",
+    "skel": "cha_501.skel",
+    "atlas": "cha_501.atlas",
+    "png": "cha_501.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_502",
+    "srcFolder": "cha_502",
+    "skel": "cha_502.skel",
+    "atlas": "cha_502.atlas",
+    "png": "cha_502.png",
+    "humanoid": false
+  },
+  {
+    "id": "cha_503",
+    "srcFolder": "cha_503",
+    "skel": "cha_503.skel",
+    "atlas": "cha_503.atlas",
+    "png": "cha_503.png",
+    "humanoid": false
+  }
+]

@@ -13,7 +13,7 @@ window.GameModules.equipment = (() => {
   const DEFENSE_ALLOWED_STATS = new Set(['hp','hpFlat','armor','regen','move','pickup','gold','cooldown','dodge','eliteDmgReduce','bossDmgReduce','slowResist','healBonus','allRes','attrCapBonus','thorns','fearMax','lustMaxBonus','lustGainBonus','setReqReduce']);
   const JEWELRY_BLOCKED_STATS = new Set(['armor','dodge','eliteDmgReduce','bossDmgReduce','healBonus']);
   const SLOT_CN = { weapon:'武器', helm:'头盔', chest:'胸甲', amulet:'项链', ring:'戒指', boots:'靴子', sacrifice:'祭品', sacrifice1:'祭品', sacrifice2:'祭品' };
-  const CLS_CN = { paladin:'圣骑士', mage:'大魔法师', ranger:'游侠', lewdSaintess:'淫靡圣女', scytheMaiden:'琦琦', gunslinger:'枪手' };
+  const CLS_CN = { paladin:'圣骑士', mage:'大魔法师', ranger:'游侠', lewdSaintess:'淫靡圣女', scytheMaiden:'琦琦', gunslinger:'玄墨笔修' };
   const RES = ['physical','fire','frost','arcane','holy','shadow','poison','lust'];
   const RES_CN = { physical:'物理', fire:'火焰', frost:'霜寒', arcane:'奥术', holy:'神圣', shadow:'暗影', poison:'毒素', lust:'欲望', all:'全属性' };
   const GOLD = [

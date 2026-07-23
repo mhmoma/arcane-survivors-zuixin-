@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>地图接入游戏 · 导出</title>
+  <style>
+    body { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; background: #0b1216; color: #e8e4d8; padding: 24px; }
+    pre { background: #121a1f; padding: 12px; border-radius: 8px; overflow: auto; max-height: 50vh; font-size: 12px; }
+    .ok { color: #5fbf9a; } .err { color: #e08888; }
+    button { margin-right: 8px; padding: 8px 14px; border-radius: 8px; border: 1px solid #334; background: #1a262c; color: inherit; cursor: pointer; }
+    button.primary { background: #2d6a5a; border-color: #3d9b84; }
+  </style>
+</head>
+<body>
+  <h1>地图接入游戏</h1>
+  <p>合并「应用到游戏」缓存 + 编辑器全部世界，写入 <code>publish/assets/maps/live-pack.json</code>。</p>
+  <p id="status">准备中…</p>
+  <p>
+    <button class="primary" id="btnBake" type="button">写入游戏资源</button>
+    <button id="btnDownload" type="button">下载 JSON 备份</button>
+  </p>
+  <pre id="log"></pre>
+  <script>
+    const LIVE_KEY = 'xiandao-map-live-v1';
+    const EDITOR_KEY = 'xiandao-map-editor-v2';
+    const BAKE_URL = 'http://127.0.0.1:5199/bake';
+    const statusEl = document.getElementById('status');
+    const logEl = document.getElementById('log');
+    const TF = { rift:0,rune:1,obelisk:2,vortex:3,crack:4,pillar:5,wall:6,altar:7,snow:8,icecrack:9,crystal:10,icefield:15 };
+
+    function log(msg, cls) {
+      const line = document.createElement('div');
+      if (cls) line.className = cls;
+      line.textContent = msg;
+      logEl.appendChild(line);
+    }
+
+    function toGameSrc(src) {
+      if (!src) return src;
+      return String(src)
+        .replace(/^\/publish\//, './')
+        .replace(/^\.\.\/publish\//, './')
+        .replace(/^\.\/publish\//, './')
+        .replace(/^publish\//, './');
+    }
+
+    function enrichTerrain(e) {
+      if (!String(e.kind || '').startsWith('terrain-')) return e;
+      e.meta = e.meta || {};
+      e.meta.terrainType = e.meta.terrainType || String(e.kind).replace(/^terrain-/, '');
+      if (typeof e.meta.solid !== 'boolean') {
+        e.meta.solid = !!(e.collision && (e.collision.mode === 'circle' || e.collision.mode === 'polygon'));
+      }
+      if (!e.src) e.src = './assets/generated/terrain-atlas.d35ccacd-cb20260722x-alpha.webp';
+      e.src = toGameSrc(e.src);
+      if (!e.atlas) e.atlas = { cols: 4, rows: 4, index: TF[e.meta.terrainType] ?? 0 };
+      if (e.w == null) e.w = 96;
+      if (e.h == null) e.h = 96;
+      return e;
+    }
+
+    function normalizeWorld(raw) {
+      if (!raw || !raw.id) return null;
+      const id = raw.id;
+      const kind = raw.kind === 'town' || id.includes('town')
+        ? 'town'
+        : (raw.kind === 'combat' || raw.mapId || /^builtin-(chaos|ruins|frost)$/.test(id)
+          ? 'combat'
+          : (raw.kind || 'custom'));
+      const entities = (raw.entities || []).map((e) => enrichTerrain(JSON.parse(JSON.stringify(e))));
+      for (const e of entities) {
+        if (e.src) e.src = toGameSrc(e.src);
+      }
+      return {
+        id,
+        name: raw.name || id,
+        kind,
+        mapId: raw.mapId || (id.startsWith('builtin-') ? id.replace(/^builtin-/, '') : null),
+        builtin: !!raw.builtin,
+        worldW: Number(raw.worldW) || 2800,
+        worldH: Number(raw.worldH) || (kind === 'combat' ? 3200 : 1900),
+        spawn: raw.spawn ? { x: Number(raw.spawn.x) || 0, y: Number(raw.spawn.y) || 0 } : { x: 1200, y: 900 },
+        groundUrl: toGameSrc(raw.groundUrl || null),
+        fill: raw.fill || null,
+        entities,
+        paths: JSON.parse(JSON.stringify(raw.paths || [])),
+        collisions: JSON.parse(JSON.stringify(raw.collisions || [])),
+        airWalls: JSON.parse(JSON.stringify(raw.airWalls || [])),
+        updatedAt: raw.updatedAt || new Date().toISOString(),
+      };
+    }
+
+    function worldFromEditorMeta(meta) {
+      if (!meta?.world || !meta?.regions) return null;
+      const w = meta.world;
+      const rid = meta.selectedRegionId || w.originRegionId || 'origin';
+      const reg = meta.regions[rid] || Object.values(meta.regions)[0];
+      if (!reg) return null;
+      return normalizeWorld({
+        id: w.id,
+        name: w.name,
+        kind: w.kind,
+        mapId: w.mapId,
+        builtin: w.builtin,
+        worldW: w.scene?.worldW,
+        worldH: w.scene?.worldH,
+        spawn: w.spawn,
+        groundUrl: reg.groundUrl || w.scene?.groundUrl,
+        fill: reg.fill || w.defaults?.fill,
+        entities: reg.entities || [],
+        paths: reg.paths || [],
+        collisions: reg.collisions || [],
+        airWalls: reg.airWalls || [],
+        updatedAt: w.updatedAt,
+      });
+    }
+
+    function buildPack() {
+      const worlds = {};
+      let source = [];
+
+      // 1) 编辑器全部世界（底）
+      try {
+        const idx = JSON.parse(localStorage.getItem(EDITOR_KEY) || 'null');
+        if (idx?.projects?.length) {
+          source.push(EDITOR_KEY);
+          for (const entry of idx.projects) {
+            const w = worldFromEditorMeta(entry.meta);
+            if (w) worlds[w.id] = w;
+          }
+        }
+      } catch (e) {
+        console.warn(e);
+      }
+
+      // 2) live 包覆盖（通常含 enrich 后的 src/atlas）
+      try {
+        const live = JSON.parse(localStorage.getItem(LIVE_KEY) || 'null');
+        if (live?.worlds) {
+          source.push(LIVE_KEY);
+          for (const [id, raw] of Object.entries(live.worlds)) {
+            const w = normalizeWorld(raw);
+            if (w) worlds[id] = w;
+          }
+        }
+      } catch (e) {
+        console.warn(e);
+      }
+
+      if (!Object.keys(worlds).length) return null;
+      return {
+        pack: {
+          version: 1,
+          worlds,
+          activeWorldId: worlds['builtin-town'] ? 'builtin-town' : Object.keys(worlds)[0],
+          updatedAt: new Date().toISOString(),
+          bakedAt: new Date().toISOString(),
+          source: source.join('+') || 'unknown',
+        },
+        source: source.join('+'),
+      };
+    }
+
+    async function bake() {
+      logEl.textContent = '';
+      const got = buildPack();
+      if (!got) {
+        statusEl.textContent = '没有地图数据。请打开地图编辑器并点「应用到游戏」。';
+        statusEl.className = 'err';
+        return null;
+      }
+      const { pack, source } = got;
+      const list = Object.values(pack.worlds);
+      log('来源: ' + source, 'ok');
+      log('世界数: ' + list.length, 'ok');
+      for (const w of list) {
+        const n = (w.entities || []).length;
+        const t = (w.entities || []).filter((e) => String(e.kind || '').startsWith('terrain-')).length;
+        log(`- ${w.id} [${w.kind}/${w.mapId || '-'}] 物体 ${n} · 地形 ${t} · 出生 (${Math.round(w.spawn?.x||0)},${Math.round(w.spawn?.y||0)})`);
+      }
+      window.__BAKE_PACK__ = pack;
+      try {
+        const res = await fetch(BAKE_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(pack),
+        });
+        const txt = await res.text();
+        if (!res.ok) throw new Error(txt || res.statusText);
+        statusEl.textContent = '已写入 publish/assets/maps/live-pack.json — 硬刷新游戏即可。';
+        statusEl.className = 'ok';
+        log(txt, 'ok');
+        return pack;
+      } catch (e) {
+        statusEl.textContent = '写入失败：请确认 bake 服务在 5199。可先下载 JSON。';
+        statusEl.className = 'err';
+        log(String(e.message || e), 'err');
+        return pack;
+      }
+    }
+
+    function download() {
+      const p = window.__BAKE_PACK__ || buildPack()?.pack;
+      if (!p) return;
+      const blob = new Blob([JSON.stringify(p, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'live-pack.json';
+      a.click();
+    }
+
+    document.getElementById('btnBake').onclick = () => bake();
+    document.getElementById('btnDownload').onclick = () => download();
+    bake();
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+effect_skill1.png
+size: 966,803
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/fengquna02_add/yanquan_0001
+  rotate: false
+  xy: 2, 201
+  size: 482, 147
+  orig: 561, 191
+  offset: 36, 23
+  index: -1
+effect/fengquna02_add/yanquan_0003
+  rotate: false
+  xy: 2, 482
+  size: 505, 156
+  orig: 561, 191
+  offset: 26, 22
+  index: -1
+effect/fengquna02_add/yanquan_0005
+  rotate: false
+  xy: 2, 640
+  size: 527, 161
+  orig: 561, 191
+  offset: 14, 23
+  index: -1
+effect/fengquna03_add/fengquanhongse_00096
+  rotate: false
+  xy: 493, 77
+  size: 313, 54
+  orig: 436, 106
+  offset: 58, 42
+  index: -1
+effect/fengquna03_add/fengquanhongse_00098
+  rotate: false
+  xy: 2, 2
+  size: 352, 71
+  orig: 436, 106
+  offset: 36, 26
+  index: -1
+effect/fengquna03_add/fengquanhongse_00100
+  rotate: false
+  xy: 515, 301
+  size: 366, 81
+  orig: 436, 106
+  offset: 20, 11
+  index: -1
+effect/fengquna03_add/fengquanhongse_00102
+  rotate: false
+  xy: 531, 581
+  size: 403, 66
+  orig: 436, 106
+  offset: 15, 11
+  index: -1
+effect/fengquna03_add/fengquanhongse_00104
+  rotate: false
+  xy: 531, 649
+  size: 412, 69
+  orig: 436, 106
+  offset: 11, 12
+  index: -1
+effect/fengquna03_add/fengquanhongse_00106
+  rotate: false
+  xy: 531, 720
+  size: 416, 81
+  orig: 436, 106
+  offset: 13, 12
+  index: -1
+effect/guangyun_00021
+  rotate: false
+  xy: 808, 55
+  size: 155, 162
+  orig: 162, 166
+  offset: 4, 2
+  index: -1
+effect/qiangci/ciqiang_00082
+  rotate: false
+  xy: 486, 219
+  size: 475, 80
+  orig: 527, 124
+  offset: 26, 22
+  index: -1
+effect/qiangci/ciqiang_00084
+  rotate: false
+  xy: 493, 133
+  size: 305, 84
+  orig: 527, 124
+  offset: 116, 19
+  index: -1
+effect/qiangci/ciqiang_00086
+  rotate: false
+  xy: 493, 65
+  size: 238, 10
+  orig: 527, 124
+  offset: 155, 58
+  index: -1
+effect/qiangci/ciqiang_00088
+  rotate: false
+  xy: 493, 65
+  size: 238, 10
+  orig: 527, 124
+  offset: 155, 58
+  index: -1
+effect/yanquan/yanquan_0000
+  rotate: false
+  xy: 509, 490
+  size: 362, 89
+  orig: 554, 164
+  offset: 93, 44
+  index: -1
+effect/yanquan/yanquan_0004
+  rotate: false
+  xy: 515, 384
+  size: 449, 104
+  orig: 554, 164
+  offset: 49, 30
+  index: -1
+effect/yanquan/yanquan_0008
+  rotate: false
+  xy: 2, 75
+  size: 489, 124
+  orig: 554, 164
+  offset: 30, 21
+  index: -1
+effect/yanquan/yanquan_0010
+  rotate: false
+  xy: 2, 350
+  size: 511, 130
+  orig: 554, 164
+  offset: 17, 16
+  index: -1
